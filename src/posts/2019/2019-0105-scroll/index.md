@@ -8,20 +8,21 @@ tags: ["CSS", "HTML"]
 excerpt: "CSSでスクロールできる天地中央寄せレイアウト"
 ---
 
-<!-- wp:paragraph -->通常の天地中央寄せのやつだと、
+通常の天地中央寄せのやつだと、
 
-    .center {
+```css
+.center {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    }
+}
 
-    .center {
+.center {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    }
-
+}
+```
 みたいな感じになると思うのですが、この場合何が悲しいってはみ出したところがスクロールできないことなんですよね。  
 多分皆さんもうご存知だとは思いますが頻繁に使うので共有します。  
 ハンバーガーメニューみたいなモーダル型の内部が縦に長いやつに重宝します。

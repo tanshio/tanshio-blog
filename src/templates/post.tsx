@@ -1,18 +1,12 @@
 import * as React from "react"
-import { Link, graphql } from "gatsby"
-import { GlobalStyles } from "../styles/GlobalStyle"
-import { createGlobalStyle } from "styled-components"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
-// const GlobalStyle = createGlobalStyle`
-//   body {
-//     color: red;
-//   }
-// `
-// import Layout from "../components/layout"
-import { Image } from "../components/image"
 import Seo from "../components/seo"
 
 interface PostInterface {
+  location: {
+    pathname: string
+  }
   data: {
     markdownRemark: {
       id: string
@@ -35,7 +29,7 @@ interface PostInterface {
 const Post = (props: PostInterface) => {
   const { ...post } = props.data.markdownRemark
   return (
-    <Layout>
+    <Layout location={props.location}>
       <Seo
         title={post.frontmatter.title}
         description={post.excerpt}

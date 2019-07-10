@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 
 const CategoryAll = ({ data, pageContext }: any) => {
   if (!pageContext.categories) {
-    return <div className="content" />
+    return <div className="content">aaa</div>
   }
 
   return (

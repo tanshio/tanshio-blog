@@ -12,6 +12,7 @@ import { connect } from "react-redux"
 import Header from "./Header"
 import { ReactElement, ReactNode } from "react"
 import { GlobalStyles } from "../styles/GlobalStyle"
+import ArticleList from "./article-list"
 
 const mapStateToProps = ({ count }) => {
   return { count }
@@ -33,11 +34,14 @@ const ConnectedCounter = connect(
   mapDispatchToProps
 )(Counter)
 
-interface LayputProps {
+interface LayoutProps {
+  location?: {
+    pathname: string
+  }
   children: ReactNode
 }
 
-const Layout = (props: LayputProps) => {
+const Layout = (props: LayoutProps) => {
   return (
     <StaticQuery
       query={graphql`
@@ -50,11 +54,14 @@ const Layout = (props: LayputProps) => {
         }
       `}
       render={data => {
+        console.log(data, props)
         return (
           <>
             <GlobalStyles />
             <Header siteTitle={data.site.siteMetadata.title} />
+            {/*<p>This works {props.location.pathname}</p>*/}
             <div
+              className={props.location.pathname}
               style={{
                 margin: `0 auto`,
                 maxWidth: 960,
@@ -62,6 +69,7 @@ const Layout = (props: LayputProps) => {
                 paddingTop: 0,
               }}
             >
+              <ArticleList />
               <ConnectedCounter />
               <main>{props.children}</main>
               <footer>

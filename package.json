@@ -4,6 +4,15 @@
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "gen": "ts-node ./tools/generator/index.ts"
+  },
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
     "gatsby": "^2.3.32",
@@ -24,6 +33,7 @@
     "gatsby-source-filesystem": "^2.0.32",
     "gatsby-transformer-remark": "^2.3.12",
     "gatsby-transformer-sharp": "^2.1.18",
+    "mustache": "^3.0.1",
     "prismjs": "^1.16.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
@@ -36,23 +46,20 @@
     "typescript": "^3.4.5"
   },
   "devDependencies": {
+    "@types/inquirer": "^6.0.2",
     "@types/react-helmet": "^5.0.8",
     "@types/react-redux": "^7.0.8",
+    "@types/signale": "^1.2.1",
     "@types/styled-components": "^4.1.14",
-    "prettier": "^1.17.0"
+    "inquirer": "^6.3.1",
+    "prettier": "^1.17.0",
+    "signale": "^1.4.0",
+    "ts-node": "^8.1.0"
   },
   "keywords": [
     "gatsby"
   ],
   "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/gatsbyjs/gatsby-starter-default"

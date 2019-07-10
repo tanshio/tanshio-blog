@@ -3,7 +3,7 @@ title: "Adwords認定試験に挑戦してみた"
 date: "2014-04-13"
 path: "/blog/2014/04/google-adwords-partner/"
 type: "blog"
-categories: ["Marketing]
+categories: ["Marketing"]
 tags: ["google", "Adwords"]
 excerpt: "Adwords認定試験に挑戦してみた"
 ---

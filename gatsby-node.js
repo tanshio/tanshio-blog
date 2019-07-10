@@ -10,12 +10,12 @@ const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 const createCategoryPages = (createPage, posts) => {
-  const TaxsComponent = path.resolve(`./src/templates/taxonomies.tsx`)
+  const TaxsTemplate = path.resolve(`./src/templates/taxonomies.tsx`)
   const postsByCategories = {}
   posts.forEach(({ node }) => {
     console.log(node.frontmatter)
     if (node.frontmatter.categories) {
-      node.frontmatter.categories.forEach((category) => {
+      node.frontmatter.categories.forEach(category => {
         if (!postsByCategories[category]) {
           postsByCategories[category] = []
         }
@@ -25,35 +25,33 @@ const createCategoryPages = (createPage, posts) => {
   })
 
   const categories = Object.keys(postsByCategories)
-  console.log(categories)
   createPage({
     path: `/blog/category`,
-    component: TaxsComponent,
+    component: TaxsTemplate,
     context: {
-      categories: categories.sort()
-    }
+      categories: categories.sort(),
+    },
   })
 
-  // const templateSingle = Path.resolve('src/templates/category-single.js')
-  // categories.forEach((categoryName) => {
-  //   const posts = postsByCategories[categoryName]
-  //   createPage({
-  //     path: `/blog/category/${categoryName}`,
-  //     component: templateSingle,
-  //     context: {
-  //       posts,
-  //       categoryName
-  //     }
-  //   })
-  // })
+  const postsTemplate = path.resolve('src/templates/posts.tsx')
+  categories.forEach((categoryName) => {
+    const posts = postsByCategories[categoryName]
+    createPage({
+      path: `/blog/category/${categoryName}`,
+      component: postsTemplate,
+      context: {
+        posts,
+        categoryName
+      }
+    })
+  })
 }
 
-const createPosts = (createPage, posts)=> {
+const createPosts = (createPage, posts) => {
   // 投稿ページの生成
   const PostComponent = path.resolve(`./src/templates/post.tsx`)
   posts.forEach((post, index) => {
-    const previous =
-      index === posts.length - 1 ? null : posts[index + 1].node
+    const previous = index === posts.length - 1 ? null : posts[index + 1].node
     const next = index === 0 ? null : posts[index - 1].node
 
     createPage({

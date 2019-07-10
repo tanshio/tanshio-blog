@@ -37,9 +37,10 @@ interface IndexPageInterface {
 }
 
 const IndexPage = (props: IndexPageInterface) => (
-  <Layout>
+  <Layout location={props.location}>
     {/*<SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />*/}
     <h1>Hi people</h1>
+    <p>This works {props.location.pathname}</p>
     <h4>{props.data.allMarkdownRemark.totalCount} Posts</h4>
     {props.data.allMarkdownRemark.edges.map(({ node }) => (
       <Link to={node.frontmatter.path} key={node.id}>
