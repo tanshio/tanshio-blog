@@ -22,12 +22,15 @@ const mapDispatchToProps = dispatch => {
   return { increment: () => dispatch({ type: `INCREMENT` }) }
 }
 
-const Counter = ({ count, increment }) => (
-  <div>
-    <p>Count: {count}</p>
-    <button onClick={increment}>Increment</button>
-  </div>
-)
+const Counter = ({ count, increment }) => {
+  console.log('counter')
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={increment}>Increment</button>
+    </div>
+  )
+}
 
 const ConnectedCounter = connect(
   mapStateToProps,
