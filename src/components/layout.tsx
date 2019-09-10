@@ -72,7 +72,7 @@ const Layout = (props: LayoutProps) => {
                 paddingTop: 0,
               }}
             >
-              <ArticleList />
+              <ArticleList location={props.location} />
               <ConnectedCounter />
               <main>{props.children}</main>
               <footer>

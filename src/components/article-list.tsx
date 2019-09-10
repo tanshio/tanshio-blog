@@ -23,26 +23,34 @@ interface ArticleListInterface {
   }
 }
 
-const ArticleList = () => (
-  <StaticQuery
-    query={query}
-    render={(props: ArticleListInterface) => {
-      return (
-        <>
-          {props.allMarkdownRemark.edges.map(({ node }) => (
-            <Link to={node.frontmatter.path} key={node.id}>
-              <span>
-                {node.frontmatter.title} — {node.frontmatter.date}
-              </span>
-              {node.fields.slug}
-              <p>{node.excerpt}</p>
-            </Link>
-          ))}
-        </>
-      )
-    }}
-  />
-)
+type ArticleListProps = {
+  location: string
+}
+
+const ArticleList = (props: ArticleListProps) => {
+  const pathname = props.location.pathname
+  return (
+    <StaticQuery
+      query={query}
+      render={(props: ArticleListInterface) => {
+        return (
+          <>
+            {pathname}
+            {props.allMarkdownRemark.edges.map(({ node }) => (
+              <Link to={node.frontmatter.path} key={node.id}>
+                <span>
+                  {node.frontmatter.title} — {node.frontmatter.date}
+                </span>
+                {node.fields.slug}
+                <p>{node.excerpt}</p>
+              </Link>
+            ))}
+          </>
+        )
+      }}
+    />
+  )
+}
 
 export default ArticleList
 
