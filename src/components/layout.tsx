@@ -13,12 +13,14 @@ import Header from "./Header"
 import { ReactElement, ReactNode } from "react"
 import { GlobalStyles } from "../styles/GlobalStyle"
 import ArticleList from "./article-list"
+import AppState from "../store"
+import { Action, Dispatch } from "redux"
 
-const mapStateToProps = ({ count }) => {
-  return { count }
+const mapStateToProps = (state: AppState) => {
+  return state
 }
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch: Dispatch<Action>) => {
   return { increment: () => dispatch({ type: `INCREMENT` }) }
 }
 
