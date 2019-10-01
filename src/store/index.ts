@@ -26,4 +26,4 @@ const rootReducer = combineReducers({
 })
 
 export type AppState = ReturnType<typeof rootReducer>
-export default AppState
+export default rootReducer
