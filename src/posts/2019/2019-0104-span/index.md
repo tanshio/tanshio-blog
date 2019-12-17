@@ -13,77 +13,77 @@ excerpt: "1文字ずつspanで囲むVue ComponentとPHP"
 
 ## Vueコンポーネント
 
-```vue
-    <template>
-      <span><span v-for="list in lists" :class="!list.flag?'u-clipText':''" :style="list.delay" :data-text="list.text"><span>{{list.text}}</span></span></span>
-    </template>
-    
-    <script lang="ts">
-    import Vue from 'vue'
-    export default Vue.extend({
-      props: ['text', 'delay', 'step'],
-      data() {
-        return {
-          height:<number | null> null,
-          list:<any> []
-        }
-      },
-      methods: {
-    
-      },
-      computed: {
-        lists: function() {
-          const arr:any = []
-          const _texts = this.text.split('')
-          let current = 0
-    
-          for (let i = 0; i < _texts.length; i++) {
-            let flag = false
-            const text = _texts[i]
-            if (text !== ' ' && text !== '　') {
-              if(i !==0 ){
-                current = current + 1
-              }
-            } else {
-              flag = true
-            }
-            const obj = {
-              text,
-              flag,
-              delay: `transition-delay: ${current * Number(this.step) + Number(this.delay)}s`,
-            }
-            arr.push(obj)
+```markup
+<template>
+  <span><span v-for="list in lists" :class="!list.flag?'u-clipText':''" :style="list.delay" :data-text="list.text"><span>{{list.text}}</span></span></span>
+</template>
+
+<script lang="ts">
+import Vue from 'vue'
+export default Vue.extend({
+  props: ['text', 'delay', 'step'],
+  data() {
+    return {
+      height:<number | null> null,
+      list:<any> []
+    }
+  },
+  methods: {
+
+  },
+  computed: {
+    lists: function() {
+      const arr:any = []
+      const _texts = this.text.split('')
+      let current = 0
+
+      for (let i = 0; i < _texts.length; i++) {
+        let flag = false
+        const text = _texts[i]
+        if (text !== ' ' && text !== '　') {
+          if(i !==0 ){
+            current = current + 1
           }
-    
-          return arr
-        },
-      },
-      mounted() {
-        console.log('page-clip-text-mount')
-      },
-      beforeDestroy() {
-        console.log('page-clip-text-destroy')
+        } else {
+          flag = true
+        }
+        const obj = {
+          text,
+          flag,
+          delay: `transition-delay: ${current * Number(this.step) + Number(this.delay)}s`,
+        }
+        arr.push(obj)
       }
-    })
-    </script>
+
+      return arr
+    },
+  },
+  mounted() {
+    console.log('page-clip-text-mount')
+  },
+  beforeDestroy() {
+    console.log('page-clip-text-destroy')
+  }
+})
+</script>
 ```
 
 ## PHP
 
 ```php
-    function sepText($text, $count = 0)
-    {
-      $matches = preg_split("//u", $text, -1, PREG_SPLIT_NO_EMPTY);
-      $text = '';
-      foreach ($matches as $val) {
-        $count++;
-    //    $text .= '<span class="m-title__anim m-title__anim--'.$count.'">'.$val.'</span>';
-        if ($val === ' ' || $val === '　') {
-          $text .= $val;
-        } else {
-          $text .= '<span>' . $val . '</span>';
-        }
-      }
-      return $text;
+function sepText($text, $count = 0)
+{
+  $matches = preg_split("//u", $text, -1, PREG_SPLIT_NO_EMPTY);
+  $text = '';
+  foreach ($matches as $val) {
+    $count++;
+//    $text .= '<span class="m-title__anim m-title__anim--'.$count.'">'.$val.'</span>';
+    if ($val === ' ' || $val === '　') {
+      $text .= $val;
+    } else {
+      $text .= '<span>' . $val . '</span>';
     }
+  }
+  return $text;
+}
 ```

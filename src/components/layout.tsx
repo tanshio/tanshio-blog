@@ -15,29 +15,28 @@ import { GlobalStyles } from "../styles/GlobalStyle"
 import ArticleList from "./article-list"
 import AppState from "../store"
 import { Action, Dispatch } from "redux"
+import styled from "styled-components"
+import { colors, palette } from "../styles/vars/colors"
+//
+// const mapStateToProps = (state: AppState) => {
+//   return state
+// }
+//
+// const mapDispatchToProps = (dispatch: Dispatch<Action>) => {
+//   return { increment: () => dispatch({ type: `INCREMENT` }) }
+// }
 
-const mapStateToProps = (state: AppState) => {
-  return state
-}
+// const Counter = ({ count, increment }) => {
+//   console.log("counter")
+//   return (
+//     <div>
+//       <p>Count: {count}</p>
+//       <button onClick={increment}>Increment</button>
+//     </div>
+//   )
+// }
 
-const mapDispatchToProps = (dispatch: Dispatch<Action>) => {
-  return { increment: () => dispatch({ type: `INCREMENT` }) }
-}
-
-const Counter = ({ count, increment }) => {
-  console.log('counter')
-  return (
-    <div>
-      <p>Count: {count}</p>
-      <button onClick={increment}>Increment</button>
-    </div>
-  )
-}
-
-const ConnectedCounter = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Counter)
+// const ConnectedCounter = connect(mapStateToProps, mapDispatchToProps)(Counter)
 
 interface LayoutProps {
   location?: {
@@ -46,47 +45,30 @@ interface LayoutProps {
   children: ReactNode
 }
 
+const Sidebar = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100%;
+  overflow: auto;
+  border-right: 2px solid #1a1a1a;
+  background-color: ${palette.default.background};
+`
+
 const Layout = (props: LayoutProps) => {
   return (
-    <StaticQuery
-      query={graphql`
-        query SiteTitleQuery {
-          site {
-            siteMetadata {
-              title
-            }
-          }
-        }
-      `}
-      render={data => {
-        console.log(data, props)
-        return (
-          <>
-            <GlobalStyles />
-            <Header siteTitle={data.site.siteMetadata.title} />
-            {/*<p>This works {props.location.pathname}</p>*/}
-            <div
-              className={props.location.pathname}
-              style={{
-                margin: `0 auto`,
-                maxWidth: 960,
-                padding: `0px 1.0875rem 1.45rem`,
-                paddingTop: 0,
-              }}
-            >
-              <ArticleList location={props.location} />
-              <ConnectedCounter />
-              <main>{props.children}</main>
-              <footer>
-                © {new Date().getFullYear()}, Built with
-                {` `}
-                <a href="https://www.gatsbyjs.org">Gatsby</a>
-              </footer>
-            </div>
-          </>
-        )
-      }}
-    />
+    <>
+      <GlobalStyles></GlobalStyles>
+      <Sidebar>
+        <Header />
+        <ArticleList pathname={props.location.pathname} />
+      </Sidebar>
+      {/*<p>This works {props.location.pathname}</p>*/}
+      <div>
+        <main>{props.children}</main>
+      </div>
+    </>
   )
 }
 

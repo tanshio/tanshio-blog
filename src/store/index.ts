@@ -18,12 +18,28 @@
 // const index = () => reduxCreateStore(reducer, initialState)
 // export default index
 
-import { combineReducers } from "redux"
-import { counterReducer } from "./counter/reducer"
+// import { combineReducers } from "redux"
+// import { counterReducer } from "./counter/reducer"
+//
+// const rootReducer = combineReducers({
+//   counter: counterReducer,
+// })
+//
+// export type AppState = ReturnType<typeof rootReducer>
+// export default rootReducer
 
-const rootReducer = combineReducers({
-  counter: counterReducer,
-})
+import { createStore as reduxCreateStore } from "redux"
 
-export type AppState = ReturnType<typeof rootReducer>
-export default rootReducer
+const reducer = (state: any, action: any) => {
+  if (action.type === `INCREMENT`) {
+    return Object.assign({}, state, {
+      count: state.count + 1,
+    })
+  }
+  return state
+}
+
+const initialState = { count: 0 }
+
+const createStore = () => reduxCreateStore(reducer, initialState)
+export default createStore

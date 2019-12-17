@@ -15,13 +15,15 @@ excerpt: "WordBench Nagano vol.6 に参加するために長野に行ってき�
 <h2>セッションの内容</h2>
 
 <h3>実演！jQuery以外でデザイナーも触れておきたいフレームワーク</h3>
-長谷川 広武 （´°ム°`）さんの( [@h2ham](https://twitter.com/h2ham) )セッション
+長谷川 広武 （´°ム°`）さんの （ [@h2ham](https://twitter.com/h2ham) ）セッション
 
 わたしも贔屓にしているVueを用いてWP　REST APIとの連携デモを行っていました。
 Vueはやっぱ簡単だな〜と再認識。そういえば今年入ってからjQueryよりVue使ってるな〜
 
 <h3>What's New in Twenty Seventeen</h3>
-Kite さんのセッション [@ixkaito](https://twitter.com/ixkaito)
+Kite さんのセッション [@ixkaito](https://twitter.com/ixkaito) [Google][1] 
+
+[1]: http://google.co.jp/ "ぐーぐる"
 
 https://speakerdeck.com/ixkaito/whats-new-in-twenty-seventeen
 

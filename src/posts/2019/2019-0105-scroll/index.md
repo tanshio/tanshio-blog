@@ -27,4 +27,6 @@ excerpt: "CSSでスクロールできる天地中央寄せレイアウト"
 多分皆さんもうご存知だとは思いますが頻繁に使うので共有します。  
 ハンバーガーメニューみたいなモーダル型の内部が縦に長いやつに重宝します。
 
-<figure class="wp-block-embed is-type-rich is-provider-codepen"><div class="wp-block-embed__wrapper"> https://codepen.io/tanshio-the-scripter/pen/VqXBEM </div></figure>[Codepen](https://codepen.io/tanshio-the-scripter/pen/VqXBEM)特に変なことはしていなく、縦に並べてコンテンツのmarginをautoにして中央に揃えただけなのですが、いろいろな局面で使えます。
+<iframe height="500px" width="500px" scrolling="no" title=" Overflowing center layout" src="https://codepen.io/tanshio-the-scripter/embed/VqXBEM?height=265&theme-id=default&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">See the Pen <a href='https://codepen.io/tanshio-the-scripter/pen/VqXBEM'> Overflowing center layout</a> by Shota Tanno(<a href='https://codepen.io/tanshio-the-scripter'>@tanshio-the-scripter</a>) on <a href='https://codepen.io'>CodePen</a>.</iframe>
+
+特に変なことはしていなく、縦に並べてコンテンツのmarginをautoにして中央に揃えただけなのですが、いろいろな局面で使えます。

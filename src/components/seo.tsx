@@ -92,6 +92,14 @@ function Seo({ description, lang, meta, keywords, title, path }: SeoProps) {
         .concat(meta)}
     >
       <link rel="canonical" href={`${siteUrl}${path}`} />
+      <link
+        href="https://fonts.googleapis.com/css?family=Noto+Sans+JP|Public+Sans:400,700&display=swap&subset=japanese"
+        rel="stylesheet"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.3.1/dist/css/yakuhanjp.min.css"
+      />
     </Helmet>
   )
 }

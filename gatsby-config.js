@@ -3,7 +3,7 @@ module.exports = {
     title: `たんしおどっとねっと`,
     description: `なんでもやる感じです`,
     author: `@_tanshio`,
-    siteUrl: 'https://tanshio.net'
+    siteUrl: "https://tanshio.net",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -11,7 +11,14 @@ module.exports = {
     `gatsby-plugin-typescript`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    // `gatsby-plugin-layout`,
     "gatsby-remark-copy-linked-files",
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(`./src/components/layout.tsx`),
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -40,7 +47,8 @@ module.exports = {
         // Plugins configs
         plugins: [
           `gatsby-remark-autolink-headers`,
-          'gatsby-remark-code-titles',
+          `gatsby-remark-code-titles`,
+          `gatsby-remark-responsive-iframe`,
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
@@ -61,6 +69,13 @@ module.exports = {
               tracedSVG: { background: "#ece8e8", color: "#b35662" },
             },
           },
+          {
+            resolve: "gatsby-remark-embed-youtube",
+            options: {
+              width: 800,
+              height: 400
+            }
+          }
         ],
       },
     },
