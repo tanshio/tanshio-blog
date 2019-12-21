@@ -1,13 +1,13 @@
-import * as React from "react"
-import Link from "gatsby-link"
-import { graphql } from "gatsby"
-import Layout from "../components/layout"
+import * as React from 'react'
+import Link from 'gatsby-link'
+import { graphql } from 'gatsby'
+import Layout from '../components/layout'
 
 const Posts = ({ data, pageContext }: any) => {
-  console.log("---pageContext---")
+  console.log('---pageContext---')
   console.log(pageContext)
 
-  console.log("data")
+  console.log('data')
   console.log(data)
 
   if (!pageContext.posts) {

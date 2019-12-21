@@ -1,45 +1,33 @@
-// import { createStore as reduxCreateStore } from "redux"
-//
-// interface postState {
-//   count: 0
-// }
-//
-// const reducer = (state: postState, action: any) => {
-//   if (action.type === `INCREMENT`) {
-//     return Object.assign({}, state, {
-//       count: state.count + 1,
-//     })
-//   }
-//   return state
-// }
-//
-// const initialState: postState = { count: 0 }
-//
-// const index = () => reduxCreateStore(reducer, initialState)
-// export default index
+import { applyMiddleware, compose, createStore } from "redux"
+import rootReducers, { reducers } from "./root"
 
-// import { combineReducers } from "redux"
-// import { counterReducer } from "./counter/reducer"
-//
-// const rootReducer = combineReducers({
-//   counter: counterReducer,
-// })
-//
-// export type AppState = ReturnType<typeof rootReducer>
-// export default rootReducer
-
-import { createStore as reduxCreateStore } from "redux"
-
-const reducer = (state: any, action: any) => {
-  if (action.type === `INCREMENT`) {
-    return Object.assign({}, state, {
-      count: state.count + 1,
-    })
+declare global {
+  interface Window {
+    __REDUX_DEVTOOLS_EXTENSION_COMPOSE__?: typeof compose
   }
-  return state
 }
 
-const initialState = { count: 0 }
+export type State = {
+  [K in keyof typeof reducers]: ReturnType<typeof reducers[K]>
+}
 
-const createStore = () => reduxCreateStore(reducer, initialState)
-export default createStore
+console.log(process.env.NODE_ENV, "env")
+
+export const initStore = () => {
+  const composeEnhancers =
+    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+  const enhancer = composeEnhancers(applyMiddleware())
+
+  return createStore(
+    rootReducers,
+    {
+      // counter: {
+      //   count: 1,
+      // },
+      // todos: { todos: [{ title: 'test' }, { title: 'test2' }] },
+    },
+    enhancer
+  )
+}
+
+export default initStore

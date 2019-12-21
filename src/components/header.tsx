@@ -1,7 +1,7 @@
-import { graphql, Link, StaticQuery } from "gatsby"
-import * as React from "react"
-import styled from "styled-components"
-import { palette } from "../styles/vars/colors"
+import { graphql, Link, StaticQuery } from 'gatsby'
+import * as React from 'react'
+import styled from 'styled-components'
+import { palette } from '../styles/vars/colors'
 
 interface HeaderInterface {
   siteTitle: string
@@ -28,7 +28,7 @@ const Header = () => (
         }
       }
     `}
-    render={data => {
+    render={(data) => {
       return (
         <HeaderWrapper>
           <header>
@@ -37,8 +37,8 @@ const Header = () => (
                 <Link
                   to="/"
                   style={{
-                    textDecoration: "none",
-                    color: "#1a1a1a",
+                    textDecoration: 'none',
+                    color: '#1a1a1a',
                   }}
                 >
                   {data.site.siteMetadata.title}

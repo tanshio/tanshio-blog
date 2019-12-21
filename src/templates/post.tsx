@@ -1,8 +1,11 @@
-import * as React from "react"
-import { graphql } from "gatsby"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-import styled from "styled-components"
+import * as React from 'react'
+import { graphql } from 'gatsby'
+import Layout from '../components/layout'
+import Seo from '../components/seo'
+import styled from 'styled-components'
+import { useDispatch, useSelector } from 'react-redux'
+import { counterActionCreators } from '../store/counter/actions'
+import { State } from '../store'
 
 interface PostInterface {
   location: {
@@ -19,7 +22,7 @@ interface PostInterface {
         date: string
         path: string
         excerpt: string
-        type: "blog"
+        type: 'blog'
         categories: string[]
         tags: string[]
       }
@@ -84,6 +87,8 @@ const PostInner = styled.div`
   }
 `
 
+const counterSelector = (state: State) => state.counter.count
+
 const Post = (props: PostInterface) => {
   const { ...post } = props.data.markdownRemark
   console.log(post)
@@ -91,6 +96,9 @@ const Post = (props: PostInterface) => {
   const y = `${date.getFullYear()}`
   const m = `0${String(date.getMonth() + 1)}`.slice(-2)
   const d = `0${String(date.getDate())}`.slice(-2)
+  const dispatch = useDispatch()
+  const count = useSelector(counterSelector)
+  const increment = () => dispatch(counterActionCreators.increment(1))
   return (
     <>
       <Seo
@@ -102,8 +110,9 @@ const Post = (props: PostInterface) => {
       <PostWrapper>
         <PostInner>
           <header>
+            {count}
             <h1>{post.frontmatter.title}</h1>
-            <time>{y + "." + m + "." + d}</time>
+            <time>{y + '.' + m + '.' + d}</time>
           </header>
           <div dangerouslySetInnerHTML={{ __html: post.tableOfContents }} />
           <div dangerouslySetInnerHTML={{ __html: post.html }} />

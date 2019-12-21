@@ -1,7 +1,7 @@
-import React from "react"
-import { Provider } from "react-redux"
+import React from 'react'
+import { Provider } from 'react-redux'
 
-import AppState from "./src/store"
+import AppState from './src/store'
 
 // eslint-disable-next-line react/display-name,react/prop-types
 export default ({ element }) => {

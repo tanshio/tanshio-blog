@@ -1,9 +1,9 @@
-import * as React from "react"
-import { StaticQuery, Link, graphql } from "gatsby"
-import styled from "styled-components"
-import { useEffect, useMemo, useState } from "react"
-import { palette } from "../styles/vars/colors"
-import { DateString } from "../types"
+import * as React from 'react'
+import { StaticQuery, Link, graphql } from 'gatsby'
+import styled from 'styled-components'
+import { useEffect, useMemo, useState } from 'react'
+import { palette } from '../styles/vars/colors'
+import { DateString } from '../types'
 
 type ArticleListInterface = {
   date: DateString
@@ -30,9 +30,9 @@ const ArticleListWrapper = styled.div<ArticleListWrapperProps>`
   & a {
     display: block;
     padding: 2rem 1rem;
-    color: ${props =>
+    color: ${(props) =>
       props.current ? palette.text.reverse : palette.text.primary};
-    background-color: ${props => (props.current ? "#b35662" : "transparent")};
+    background-color: ${(props) => (props.current ? '#b35662' : 'transparent')};
     text-underline-position: under;
     &:hover {
       background-color: #b35662;
@@ -56,7 +56,7 @@ const ArticleListCategoryList = styled.ul`
   li {
     &:not(:last-of-type) {
       &:after {
-        content: ",";
+        content: ',';
         margin-left: 0.2rem;
         margin-right: 0.4rem;
       }
@@ -84,10 +84,10 @@ const ArticleList = (props: ArticleListProps) => {
   const pathname = props.pathname
   const [posts, setPosts] = useState<ArticleListInterface>([])
 
-  const [filterText, setFilterText] = useState("")
+  const [filterText, setFilterText] = useState('')
   const filterPosts = useMemo(() => {
     if (!filterText) return posts
-    return posts.filter(post => {
+    return posts.filter((post) => {
       const reg = new RegExp(filterText)
       return reg.test(post.title)
     })
@@ -95,7 +95,7 @@ const ArticleList = (props: ArticleListProps) => {
 
   useEffect(() => {
     const getJson = async () => {
-      const res = await fetch("/search.json")
+      const res = await fetch('/search.json')
       const json = await res.json()
       setPosts(json)
     }
@@ -110,8 +110,8 @@ const ArticleList = (props: ArticleListProps) => {
       <ArticleFilterInput
         type="text"
         value={filterText}
-        placeholder={"Search..."}
-        onChange={e => {
+        placeholder={'Search...'}
+        onChange={(e) => {
           setFilterText(e.target.value)
         }}
       />
@@ -127,8 +127,8 @@ const ArticleList = (props: ArticleListProps) => {
                 dateTime={`${date.getFullYear()}-${date.getMonth() +
                   1}-${date.getDate()}`}
               >{`${date.getFullYear()}.${(
-                "0" + String(date.getMonth() + 1)
-              ).slice(-2)}.${("0" + String(date.getDate())).slice(
+                '0' + String(date.getMonth() + 1)
+              ).slice(-2)}.${('0' + String(date.getDate())).slice(
                 -2
               )}`}</ArticleListTime>
 

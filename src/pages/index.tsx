@@ -1,17 +1,17 @@
-import * as React from "react"
-import { Link, graphql } from "gatsby"
-import { GlobalStyles } from "../styles/GlobalStyle"
-import styled, { createGlobalStyle } from "styled-components"
-import Layout from "../components/layout"
-import Helmet from "react-helmet"
+import * as React from 'react'
+import { Link, graphql } from 'gatsby'
+import { GlobalStyles } from '../styles/GlobalStyle'
+import styled, { createGlobalStyle } from 'styled-components'
+import Layout from '../components/layout'
+import Helmet from 'react-helmet'
 // const GlobalStyle = createGlobalStyle`
 //   body {
 //     color: red;
 //   }
 // `
 // import Layout from "../components/layout"
-import { Image } from "../components/image"
-import Seo from "../components/seo"
+import { Image } from '../components/image'
+import Seo from '../components/seo'
 // import SEO from "../components/seo"
 
 interface IndexPageInterface {
@@ -57,10 +57,10 @@ const PostInner = styled.div`
 const IndexPage = (props: IndexPageInterface) => (
   <>
     <Seo
-      title={"Gastbyサンプル"}
-      description={"たんしおどっとねっと"}
+      title={'Gastbyサンプル'}
+      description={'たんしおどっとねっと'}
       keywords={[`gatsby`, `application`, `react`]}
-      path={"/"}
+      path={'/'}
     />
     <PostWrapper>
       <PostInner>
