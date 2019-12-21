@@ -11,8 +11,8 @@ module.exports = {
     `gatsby-plugin-typescript`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    // `gatsby-plugin-layout`,
-    "gatsby-remark-copy-linked-files",
+    `gatsby-plugin-catch-links`,
+    `gatsby-remark-copy-linked-files`,
     {
       resolve: `gatsby-plugin-layout`,
       options: {

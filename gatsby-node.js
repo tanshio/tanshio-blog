@@ -7,6 +7,7 @@
 // You can delete this file if you're not using it
 
 const path = require(`path`)
+const fs = require(`fs`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 const createCategoryPages = (createPage, posts) => {
@@ -33,16 +34,16 @@ const createCategoryPages = (createPage, posts) => {
     },
   })
 
-  const postsTemplate = path.resolve('src/templates/posts.tsx')
-  categories.forEach((categoryName) => {
+  const postsTemplate = path.resolve("src/templates/posts.tsx")
+  categories.forEach(categoryName => {
     const posts = postsByCategories[categoryName]
     createPage({
       path: `/blog/category/${categoryName}`,
       component: postsTemplate,
       context: {
         posts,
-        categoryName
-      }
+        categoryName,
+      },
     })
   })
 }
@@ -87,11 +88,13 @@ exports.createPages = ({ graphql, actions }) => {
                     slug
                   }
                   frontmatter {
+                    date
                     title
                     path
                     type
                     categories
                     tags
+                    excerpt
                   }
                 }
               }
@@ -108,6 +111,29 @@ exports.createPages = ({ graphql, actions }) => {
 
         createCategoryPages(createPage, posts)
         createPosts(createPage, posts)
+        const searchJSON = posts.map(post => {
+          const postNode = post.node
+          const {
+            date,
+            title,
+            excerpt,
+            path,
+            categories,
+            tags,
+          } = postNode.frontmatter
+          return {
+            date,
+            title,
+            excerpt,
+            categories,
+            tags,
+            path,
+          }
+        })
+        fs.writeFileSync(
+          "./static/search.json",
+          JSON.stringify(searchJSON, null, 2)
+        )
       })
     )
   })

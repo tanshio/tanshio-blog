@@ -5,7 +5,7 @@ path: "/blog/2019/01/2018年頻繁に使ったnpmライブラリ3つ/"
 type: "blog"
 categories: ["Frontend"]
 tags: ["CSS", "JavaScript"]
-excerpt: "2018年頻繁に使ったnpmライブラリ3つ"
+excerpt: "2018年頻繁に使ったnpmライブラリ3つです"
 ---
 
 [https://github.com/willmcpo/body-scroll-lock](https://github.com/willmcpo/body-scroll-lock)

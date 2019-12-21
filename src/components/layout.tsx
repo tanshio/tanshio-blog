@@ -45,7 +45,11 @@ interface LayoutProps {
   children: ReactNode
 }
 
-const Sidebar = styled.div`
+type SidebarType = {
+  pathname: string
+}
+
+const Sidebar = styled.div<SidebarType>`
   position: fixed;
   top: 0;
   left: 0;
@@ -59,8 +63,8 @@ const Sidebar = styled.div`
 const Layout = (props: LayoutProps) => {
   return (
     <>
-      <GlobalStyles></GlobalStyles>
-      <Sidebar>
+      <GlobalStyles />
+      <Sidebar pathname={props.location.pathname}>
         <Header />
         <ArticleList pathname={props.location.pathname} />
       </Sidebar>

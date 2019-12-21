@@ -1,32 +1,18 @@
 import * as React from "react"
 import { StaticQuery, Link, graphql } from "gatsby"
 import styled from "styled-components"
-import { useMemo, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import { palette } from "../styles/vars/colors"
+import { DateString } from "../types"
 
-interface ArticleListInterface {
-  allMarkdownRemark: {
-    totalCount: number
-    edges: [
-      {
-        node: {
-          id: string
-          excerpt: string
-          fields: {
-            slug: string
-          }
-          frontmatter: {
-            title: string
-            date: string
-            path: string
-            categories: string[]
-            tags: string[]
-          }
-        }
-      }
-    ]
-  }
-}
+type ArticleListInterface = {
+  date: DateString
+  title: string
+  excerpt: string
+  categories: string[]
+  tags: string[]
+  path: string
+}[]
 
 type ArticleListProps = {
   pathname: string
@@ -96,93 +82,69 @@ const ArticleFilterInput = styled.input`
 
 const ArticleList = (props: ArticleListProps) => {
   const pathname = props.pathname
+  const [posts, setPosts] = useState<ArticleListInterface>([])
+
+  const [filterText, setFilterText] = useState("")
+  const filterPosts = useMemo(() => {
+    if (!filterText) return posts
+    return posts.filter(post => {
+      const reg = new RegExp(filterText)
+      return reg.test(post.title)
+    })
+  }, [posts, filterText])
+
+  useEffect(() => {
+    const getJson = async () => {
+      const res = await fetch("/search.json")
+      const json = await res.json()
+      setPosts(json)
+    }
+
+    getJson()
+
+    return () => {}
+  }, [])
+
   return (
-    <StaticQuery
-      query={query}
-      render={(props: ArticleListInterface) => {
-        const [posts, setPosts] = useState(props.allMarkdownRemark.edges)
-
-        const [filterText, setFilterText] = useState("")
-        const filterPosts = useMemo(() => {
-          if (!filterText) return posts
-          return posts.filter(post => {
-            const reg = new RegExp(filterText)
-            return reg.test(post.node.frontmatter.title)
-          })
-        }, [posts, filterText])
-
+    <>
+      <ArticleFilterInput
+        type="text"
+        value={filterText}
+        placeholder={"Search..."}
+        onChange={e => {
+          setFilterText(e.target.value)
+        }}
+      />
+      {filterPosts.map((post, i) => {
+        const date = new Date(post.date)
         return (
-          <>
-            <ArticleFilterInput
-              type="text"
-              value={filterText}
-              placeholder={"Search..."}
-              onChange={e => {
-                setFilterText(e.target.value)
-              }}
-            />
-            {filterPosts.map(({ node }, i) => {
-              const date = new Date(node.frontmatter.date)
-              return (
-                <ArticleListWrapper
-                  key={i}
-                  current={encodeURI(node.frontmatter.path) === pathname}
-                >
-                  <Link to={node.frontmatter.path} key={node.id}>
-                    <ArticleListTime
-                      dateTime={`${date.getFullYear()}-${date.getMonth() +
-                        1}-${date.getDate()}`}
-                    >{`${date.getFullYear()}.${(
-                      "0" + String(date.getMonth() + 1)
-                    ).slice(-2)}.${("0" + String(date.getDate())).slice(
-                      -2
-                    )}`}</ArticleListTime>
+          <ArticleListWrapper
+            key={i}
+            current={encodeURI(post.path) === pathname}
+          >
+            <Link to={post.path} key={i}>
+              <ArticleListTime
+                dateTime={`${date.getFullYear()}-${date.getMonth() +
+                  1}-${date.getDate()}`}
+              >{`${date.getFullYear()}.${(
+                "0" + String(date.getMonth() + 1)
+              ).slice(-2)}.${("0" + String(date.getDate())).slice(
+                -2
+              )}`}</ArticleListTime>
 
-                    <ArticleListCategoryList>
-                      {node.frontmatter.categories.map((cat, i) => (
-                        <li key={i}>{cat}</li>
-                      ))}
-                    </ArticleListCategoryList>
+              <ArticleListCategoryList>
+                {post.categories.map((cat, i) => (
+                  <li key={i}>{cat}</li>
+                ))}
+              </ArticleListCategoryList>
 
-                    <ArticleListTitle>
-                      {node.frontmatter.title}
-                    </ArticleListTitle>
-                  </Link>
-                </ArticleListWrapper>
-              )
-            })}
-          </>
+              <ArticleListTitle>{post.title}</ArticleListTitle>
+            </Link>
+          </ArticleListWrapper>
         )
-      }}
-    />
+      })}
+    </>
   )
 }
 
 export default ArticleList
-
-export const query = graphql`
-  query {
-    allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/posts/" } }
-      sort: { order: DESC, fields: [frontmatter___date] }
-    ) {
-      totalCount
-      edges {
-        node {
-          id
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            date(formatString: "DD MMMM, YYYY")
-            path
-            categories
-            tags
-          }
-        }
-      }
-    }
-  }
-`

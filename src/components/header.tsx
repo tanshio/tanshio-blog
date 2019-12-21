@@ -13,7 +13,7 @@ const HeaderLogo = styled.h1`
   margin: 0;
   font-size: 1rem;
   text-align: center;
-  border-bottom: 2px solid ${palette.text};
+  border-bottom: 2px solid ${palette.text.primary};
   padding: 1.5rem;
 `
 
