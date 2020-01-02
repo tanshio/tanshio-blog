@@ -14,11 +14,10 @@ import { GlobalStyles } from '../styles/GlobalStyle'
 import ArticleList from './article-list'
 import { State } from '../store'
 import styled from 'styled-components'
-import { palette } from '../styles/vars/colors'
-import { counterActionCreators } from '../store/counter/actions'
+import { mq } from '../styles/vars/mq'
 
 interface LayoutProps {
-  location?: {
+  location: {
     pathname: string
   }
   children: ReactNode
@@ -26,7 +25,11 @@ interface LayoutProps {
 
 type SidebarType = {
   pathname: string
-  isActive: boolean
+  isOpen: boolean
+}
+
+const isClearedSidebarPages = (pathname: string) => {
+  return ['/'].indexOf(pathname) > -1
 }
 
 const Sidebar = styled.div<SidebarType>`
@@ -36,27 +39,25 @@ const Sidebar = styled.div<SidebarType>`
   width: 300px;
   height: 100%;
   overflow: auto;
-  border-right: 2px solid #1a1a1a;
-  background-color: ${palette.default.background};
-  @media (max-width: 768px) {
-    display: ${(props) => (props.isActive ? 'block' : 'none')};
+  border-right: 2px solid var(--colorTextPrimary);
+  background-color: var(--colorBg);
+  display: ${(props) =>
+    props.isOpen || isClearedSidebarPages(props.pathname) ? 'block' : 'none'};
+  @media (${mq.sm}) {
+    display: block;
   }
 `
 
-const counterSelector = (state: State) => state.counter.count
+const isOpenSelector = (state: State) => state.nav.isOpen
 
 const Layout = (props: LayoutProps) => {
   const dispatch = useDispatch()
-  const count = useSelector(counterSelector)
-  const increment = () => dispatch(counterActionCreators.increment(1))
+  const isOpen = useSelector(isOpenSelector)
   return (
     <>
       <GlobalStyles />
-      <Sidebar pathname={props.location.pathname} isActive={true}>
+      <Sidebar pathname={props.location.pathname} isOpen={isOpen}>
         <Header />
-        {count}
-        <p>{props.location.pathname}</p>
-        <button onClick={increment}>加算</button>
         <ArticleList pathname={props.location.pathname} />
       </Sidebar>
       <div>

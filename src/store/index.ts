@@ -1,5 +1,5 @@
-import { applyMiddleware, compose, createStore } from "redux"
-import rootReducers, { reducers } from "./root"
+import { applyMiddleware, compose, createStore } from 'redux'
+import rootReducers, { reducers } from './root'
 
 declare global {
   interface Window {
@@ -11,11 +11,16 @@ export type State = {
   [K in keyof typeof reducers]: ReturnType<typeof reducers[K]>
 }
 
-console.log(process.env.NODE_ENV, "env")
+console.log(process.env.NODE_ENV, 'env')
 
 export const initStore = () => {
-  const composeEnhancers =
-    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+  let composeEnhancers: any
+  if (typeof window !== "undefined") {
+    composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+  } else {
+    composeEnhancers = compose
+  }
+
   const enhancer = composeEnhancers(applyMiddleware())
 
   return createStore(

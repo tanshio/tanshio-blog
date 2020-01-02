@@ -19,7 +19,7 @@ excerpt: "Google Apps Scriptでリコールbotをつくる"
 <!-- /wp:paragraph -->
 
 <!-- wp:heading -->
-<h2>解説</h2>
+## 解説
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
@@ -40,7 +40,7 @@ excerpt: "Google Apps Scriptでリコールbotをつくる"
 <!-- /wp:paragraph -->
 
 <!-- wp:heading -->
-<h2>ライブラリ</h2>
+## ライブラリ
 <!-- /wp:heading -->
 
 ![](image.png)
@@ -57,7 +57,7 @@ excerpt: "Google Apps Scriptでリコールbotをつくる"
 ![](87fe885a40d813bc9ee2a6b7921d3499.png)
 
 
-<h2>作ったアカウント</h2>
+## 作ったアカウント
 
 
 <div class="wp-block-embed__wrapper">

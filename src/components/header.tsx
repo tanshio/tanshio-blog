@@ -13,8 +13,11 @@ const HeaderLogo = styled.h1`
   margin: 0;
   font-size: 1rem;
   text-align: center;
-  border-bottom: 2px solid ${palette.text.primary};
+  border-bottom: 2px solid var(--colorTextPrimary);
   padding: 1.5rem;
+  a {
+    color: var(--colorTextPrimary);
+  }
 `
 
 const Header = () => (
@@ -38,7 +41,6 @@ const Header = () => (
                   to="/"
                   style={{
                     textDecoration: 'none',
-                    color: '#1a1a1a',
                   }}
                 >
                   {data.site.siteMetadata.title}

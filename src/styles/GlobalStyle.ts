@@ -1,42 +1,110 @@
-import { normalize } from "styled-normalize"
-import { createGlobalStyle } from "styled-components"
-import "prismjs/plugins/line-numbers/prism-line-numbers.css"
-import { PrismStyles } from "./Prism"
-import { colors, palette } from "./vars/colors"
+import { normalize } from 'styled-normalize'
+import { createGlobalStyle } from 'styled-components'
+import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
+import { PrismStyles } from './Prism'
+import { colors, palette } from './vars/colors'
+import { fontSizes } from './vars/fontSizes'
 export const GlobalStyles = createGlobalStyle`
+  @font-face {
+    font-family: "Original Yu Gothic";
+    src: local("Yu Gothic Medium");
+    font-weight: 100;
+  }
+  @font-face {
+    font-family: "Original Yu Gothic";
+    src: local("Yu Gothic Medium");
+    font-weight: 200;
+  }
+  @font-face {
+    font-family: "Original Yu Gothic";
+    src: local("Yu Gothic Medium");
+    font-weight: 300;
+  }
+  @font-face {
+    font-family: "Original Yu Gothic";
+    src: local("Yu Gothic Medium");
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: "Original Yu Gothic";
+    src: local("Yu Gothic Bold");
+    font-weight: bold;
+  }
+
+  // var
+ 
+  :root {
+    --fontFamilyBase: 'YakuHanJP','Public Sans','Original Yu Gothic', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+    
+    --fontSizePrimary: ${fontSizes.primary};
+    
+    --colorBg: #e8e8e8;
+    --colorBgDark: #b35662;
+    --colorTextPrimary: #1a1a1a;
+    --colorTextSelection: #fff;
+    --colorTextReverse: #fff;
+    --colorTextDecoration: #b35662;
+    @media (prefers-color-scheme: dark) {
+      --colorBg: #000;
+      --colorTextPrimary: #fff;
+    }
+  }
+  
+  
   ${normalize}
   // base.css
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
   html{
-    font-size: 1rem;
+    font-size: var(--fontSizePrimary);
     text-underline-position: under;
+    //scroll-behavior: smooth;
   }
   body {
     margin: 0;
     word-wrap: break-word;
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
-    font-family: 'YakuHanJP','Public Sans','Noto Sans JP', "Hiragino Sans", "Hiragino Kaku Gothic ProN",Meiryo,sans-serif;
-    background-color: ${palette.default.background};
+    font-family: var(--fontFamilyBase);
+    background-color: var(--colorBg);
     -webkit-font-smoothing: antialiased;
+    color: var(--colorTextPrimary);
   }
   
   ::selection {
-    background-color: ${palette.bg.dark};
-    color: #fff;
+    background-color: var(--colorBgDark);
+    color: var(--colorTextSelection);
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-feature-settings: "palt";
+    letter-spacing: 0.025em;
   }
   
   a {
-    cursor: pointer;
-
-    &:link,
-    &:visited {
-      text-decoration: none;
-    }
-
-    &:hover {
-      opacity: .9;
-      text-decoration: underline;
-    }
+  display: inline-block;
+  //  cursor: pointer;
+  //
+  //  &:link,
+  //  &:visited {
+  //    text-decoration: none;
+  //  }
+  //
+  }
+  
+  .gatsby-resp-image-wrapper {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
   
   ${PrismStyles}

@@ -3,7 +3,7 @@ module.exports = {
     title: `たんしおどっとねっと`,
     description: `なんでもやる感じです`,
     author: `@_tanshio`,
-    siteUrl: "https://tanshio.net",
+    siteUrl: 'https://tanshio.net',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -46,13 +46,18 @@ module.exports = {
         gfm: true,
         // Plugins configs
         plugins: [
+          {
+            resolve: 'gatsby-remark-code-titles',
+            options: {
+              className: 'your-custom-class-name',
+            },
+          }, // IMPORTANT: this must be ahead of other plugins that use code blocks
           `gatsby-remark-autolink-headers`,
-          `gatsby-remark-code-titles`,
           `gatsby-remark-responsive-iframe`,
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              classPrefix: "language-",
+              classPrefix: 'language-',
               inlineCodeMarker: null,
               aliases: {},
               showLineNumbers: true,
@@ -66,16 +71,16 @@ module.exports = {
               linkImagesToOriginal: false,
               quality: 65,
               withWebp: true,
-              tracedSVG: { background: "#ece8e8", color: "#b35662" },
+              tracedSVG: { background: '#ece8e8', color: '#b35662' },
             },
           },
           {
-            resolve: "gatsby-remark-embed-youtube",
+            resolve: 'gatsby-remark-embed-youtube',
             options: {
               width: 800,
-              height: 400
-            }
-          }
+              height: 400,
+            },
+          },
         ],
       },
     },

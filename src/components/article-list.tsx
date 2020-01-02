@@ -3,10 +3,11 @@ import { StaticQuery, Link, graphql } from 'gatsby'
 import styled from 'styled-components'
 import { useEffect, useMemo, useState } from 'react'
 import { palette } from '../styles/vars/colors'
-import { DateString } from '../types'
+import { DateISO8601 } from '../types'
+import { Time, TimeWrapper } from './atomic/atoms/Time'
 
 type ArticleListInterface = {
-  date: DateString
+  date: DateISO8601
   title: string
   excerpt: string
   categories: string[]
@@ -24,27 +25,31 @@ type ArticleListWrapperProps = {
 
 const ArticleListWrapper = styled.div<ArticleListWrapperProps>`
   & + & {
-    border-top: 2px solid #1a1a1a;
+    border-top: 2px solid var(--colorTextPrimary);
   }
 
   & a {
     display: block;
     padding: 2rem 1rem;
     color: ${(props) =>
-      props.current ? palette.text.reverse : palette.text.primary};
-    background-color: ${(props) => (props.current ? '#b35662' : 'transparent')};
+      props.current ? 'var(--colorTextReverse)' : 'var(--colorTextPrimary)'};
+    background-color: ${(props) =>
+      props.current ? 'var(--colorBgDark)' : 'transparent'};
     text-underline-position: under;
+    text-decoration: ${(props) =>
+  props.current ? 'underline' : 'none'};;
     &:hover {
-      background-color: #b35662;
-      color: #fff;
+      background-color: var(--colorBgDark);
+      color: var(--colorTextReverse);
+      text-decoration: underline;
     }
   }
-`
 
-const ArticleListTime = styled.time`
-  display: block;
-  margin-bottom: 0.5rem;
-  font-size: 0.75rem;
+  ${TimeWrapper} {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.75rem;
+  }
 `
 
 const ArticleListCategoryList = styled.ul`
@@ -76,7 +81,7 @@ const ArticleFilterInput = styled.input`
   width: 100%;
   background-color: transparent;
   padding: 1rem;
-  border-bottom: 2px solid #1a1a1a;
+  border-bottom: 2px solid var(--colorTextPrimary);
   font-size: 0.8rem;
 `
 
@@ -116,22 +121,13 @@ const ArticleList = (props: ArticleListProps) => {
         }}
       />
       {filterPosts.map((post, i) => {
-        const date = new Date(post.date)
         return (
           <ArticleListWrapper
             key={i}
             current={encodeURI(post.path) === pathname}
           >
             <Link to={post.path} key={i}>
-              <ArticleListTime
-                dateTime={`${date.getFullYear()}-${date.getMonth() +
-                  1}-${date.getDate()}`}
-              >{`${date.getFullYear()}.${(
-                '0' + String(date.getMonth() + 1)
-              ).slice(-2)}.${('0' + String(date.getDate())).slice(
-                -2
-              )}`}</ArticleListTime>
-
+              <Time date={post.date} />
               <ArticleListCategoryList>
                 {post.categories.map((cat, i) => (
                   <li key={i}>{cat}</li>

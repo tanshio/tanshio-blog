@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { configure, addDecorator, addParameters } from '@storybook/react'
-import { withScreenshot } from 'zisui'
+import { withScreenshot } from 'storycap'
 
 import { GlobalStyles } from '../src/styles/GlobalStyle'
 // import '../src/styles/global.css'
@@ -9,15 +9,19 @@ const req = require.context('../src/components', true, /\.stories\.tsx$/)
 
 addParameters({
   options: {
-    name: 'VARIABLE EDITOR',
+    name: 'TANSHIO BLOG',
   },
 })
 
-addDecorator(withScreenshot())
+addDecorator(
+  withScreenshot({
+    skip: true,
+  })
+)
 
-function loadStories() {
-  req.keys().forEach((filename) => req(filename))
-}
+// function loadStories() {
+//   req.keys().forEach((filename) => req(filename))
+// }
 
 addDecorator((story) => (
   <>

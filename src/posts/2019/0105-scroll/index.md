@@ -10,7 +10,7 @@ excerpt: "CSSでスクロールできる天地中央寄せレイアウト"
 
 通常の天地中央寄せのやつだと、
 
-```css
+```css:title=aaa.css
 .center {
     top: 50%;
     left: 50%;

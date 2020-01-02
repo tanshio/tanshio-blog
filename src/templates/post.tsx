@@ -6,6 +6,9 @@ import styled from 'styled-components'
 import { useDispatch, useSelector } from 'react-redux'
 import { counterActionCreators } from '../store/counter/actions'
 import { State } from '../store'
+import { useEffect, useRef } from 'react'
+import SinglePost from '../components/atomic/templates/Post'
+import { DateISO8601 } from '../types'
 
 interface PostInterface {
   location: {
@@ -35,7 +38,7 @@ const PostWrapper = styled.article`
 `
 
 const PostInner = styled.div`
-  padding: 0 3rem;
+  padding: 0 3rem 3rem;
   line-height: 1.8;
 
   p,
@@ -67,9 +70,9 @@ const PostInner = styled.div`
   }
 
   a {
-    color: #1a1a1a;
+    color: var(--colorPrimary);
     text-decoration: underline;
-    text-decoration-color: #b35662;
+    text-decoration-color: var(--colorTextDecoration);
     //text-decoration-thickness: 3px;
   }
 
@@ -90,12 +93,10 @@ const PostInner = styled.div`
 const counterSelector = (state: State) => state.counter.count
 
 const Post = (props: PostInterface) => {
-  const { ...post } = props.data.markdownRemark
-  console.log(post)
-  const date = new Date(props.data.markdownRemark.frontmatter.date)
-  const y = `${date.getFullYear()}`
-  const m = `0${String(date.getMonth() + 1)}`.slice(-2)
-  const d = `0${String(date.getDate())}`.slice(-2)
+  const { tableOfContents, ...post } = props.data.markdownRemark
+  const { title, excerpt } = props.data.markdownRemark.frontmatter
+  console.log(post, tableOfContents)
+  const date = props.data.markdownRemark.frontmatter.date as DateISO8601
   const dispatch = useDispatch()
   const count = useSelector(counterSelector)
   const increment = () => dispatch(counterActionCreators.increment(1))
@@ -107,17 +108,14 @@ const Post = (props: PostInterface) => {
         keywords={[`gatsby`, `application`, `react`]}
         path={post.frontmatter.path}
       />
-      <PostWrapper>
-        <PostInner>
-          <header>
-            {count}
-            <h1>{post.frontmatter.title}</h1>
-            <time>{y + '.' + m + '.' + d}</time>
-          </header>
-          <div dangerouslySetInnerHTML={{ __html: post.tableOfContents }} />
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        </PostInner>
-      </PostWrapper>
+      <SinglePost
+        date={date}
+        excerpt={excerpt}
+        html={post.html}
+        frontmatter={post.frontmatter}
+        tableOfContents={tableOfContents}
+        title={title}
+      />
     </>
   )
 }

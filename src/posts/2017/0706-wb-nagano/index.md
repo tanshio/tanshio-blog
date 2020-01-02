@@ -12,15 +12,15 @@ excerpt: "WordBench Nagano vol.6 に参加するために長野に行ってき�
 
 <p>仙台から新幹線と電車を乗り継いで大体4時間程度で長野に。</p>
 
-<h2>セッションの内容</h2>
+## セッションの内容
 
-<h3>実演！jQuery以外でデザイナーも触れておきたいフレームワーク</h3>
+### 実演！jQuery以外でデザイナーも触れておきたいフレームワーク
 長谷川 広武 （´°ム°`）さんの （ [@h2ham](https://twitter.com/h2ham) ）セッション
 
 わたしも贔屓にしているVueを用いてWP　REST APIとの連携デモを行っていました。
 Vueはやっぱ簡単だな〜と再認識。そういえば今年入ってからjQueryよりVue使ってるな〜
 
-<h3>What's New in Twenty Seventeen</h3>
+### What's New in Twenty Seventeen
 Kite さんのセッション [@ixkaito](https://twitter.com/ixkaito) [Google][1] 
 
 [1]: http://google.co.jp/ "ぐーぐる"
@@ -29,7 +29,7 @@ https://speakerdeck.com/ixkaito/whats-new-in-twenty-seventeen
 
 _sベースでWPのテーマを作成することがほとんどなので、あんまりWPのデフォルトテーマを使ったり追うということをしたりしてなかったのですが、テーマから最新のWPの情報を得られるということを知りました。テーマカスタマイザーを実務で使用することはなかったのですが、このセッションからユーザー側で変更する箇所に取り入れるのも有りだなと思ったので数件取り入れてみました。
 
-<h3>WordCamp US 2016 とWordPress 4.7から、これからのweb制作について考えてみた</h3>
+### WordCamp US 2016 とWordPress 4.7から、これからのweb制作について考えてみた
 
 岡本秀高さんのセッション [@motchi0214](https://twitter.com/motchi0214)
 
@@ -41,7 +41,7 @@ ShifterというWPを静的サイトに変換するサービスをこのセッ�
 また、WordCamp Kyotoでもそうだったのですが声 × APIは色々用途が増えそうだなと感じました。
 
 
-<h3>WordPressのコミュニティに関わって楽しかったりした話。</h3>
+### WordPressのコミュニティに関わって楽しかったりした話。
 
 ながとみちはるさんのセッション [@uchino__](https://twitter.com/luchino__)
 
@@ -53,7 +53,7 @@ WordPressって本当に幅広いユーザーがいますよね。
 普通のコミュニティって固まりがちなイメージなのですが、WPのコミュニティはいろんな環境に身を置く、様々な人とコミュニケーションが取れやすいというのが、WPのコミュニティのメリットだな〜と思いました。なんにせよたのしいのがいいですよね。
 
 
-<h3>フリーランスWebデザイナーのイマドキ WordPress 案件ワークフローとお見積り</h3>
+### フリーランスWebデザイナーのイマドキ WordPress 案件ワークフローとお見積り
 
 額賀順子さんのセッション[@nukaga](https://twitter.com/@nukaga)
 
@@ -64,7 +64,7 @@ https://speakerdeck.com/nukaga/huriransuwebdezainafalse-wordpress-an-jian-wakuhu
 見積もりの仕方など、色んなやりかたが聞けて勉強になりました。
 
 
-<h3>Get involved in WordPress !!</h3>
+### Get involved in WordPress !!
 
 Toro\_Unit さんのセッション[@Toro_Unit](https://twitter.com/@Toro_Unit)
 

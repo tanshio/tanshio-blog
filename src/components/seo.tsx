@@ -43,7 +43,7 @@ function Seo({ description, lang, meta, keywords, title, path }: SeoProps) {
   return (
     <Helmet
       htmlAttributes={{
-        lang,
+        lang: lang ? lang : 'ja',
       }}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       title={title}
@@ -89,11 +89,11 @@ function Seo({ description, lang, meta, keywords, title, path }: SeoProps) {
               }
             : []
         )
-        .concat(meta)}
+        .concat(meta ? meta : [])}
     >
       <link rel="canonical" href={`${siteUrl}${path}`} />
       <link
-        href="https://fonts.googleapis.com/css?family=Noto+Sans+JP|Public+Sans:400,700&display=swap&subset=japanese"
+        href="https://fonts.googleapis.com/css?family=Public+Sans:400,700&display=swap"
         rel="stylesheet"
       />
       <link

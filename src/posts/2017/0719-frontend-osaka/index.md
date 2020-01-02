@@ -74,33 +74,3 @@ https://speakerdeck.com/hideokamoto/iwayuru-hurontoendo-ganaishi-jie-nituitekao-
 ## おわりに
 
 懇親会などで様々な方とお話する機会があったのですが、関西の方のパワーがやばすぎてやばいという言葉しか出ませんでした。東北にもあのパワーがほしいなと切実に感じてしまうぐらいの圧倒的パワー。パワーがほしいと感じたFRONTEND CONFERENCE 2017でした。
-
-
-<h3>フリーランスWebデザイナーのイマドキ WordPress 案件ワークフローとお見積り</h3>
-
-額賀順子さんのセッション[@nukaga](https://twitter.com/@nukaga)
-
-https://speakerdeck.com/nukaga/huriransuwebdezainafalse-wordpress-an-jian-wakuhurotoojian-ji-ri-webyong-jian-yi-ban
-
-かなりぶっちゃけた話を聞けて非常に参考になりました。    
-クライアントによってツールが違うのが当たり前だと思うのですが、わたしの場合はチャットツール以外ほぼ自由なので(メールとかはありますが…)、もし相手からこれ使って〜って言われても大丈夫な用に覚悟しておける用になりました。なお、この後コードの履歴管理がgit じゃなくて SVNが来ててんやわんやでした…    
-見積もりの仕方など、色んなやりかたが聞けて勉強になりました。
-
-
-<h3>Get involved in WordPress !!</h3>
-
-Toro\_Unit さんのセッション[@Toro_Unit](https://twitter.com/@Toro_Unit)
-
-https://speakerdeck.com/torounit/get-involved-in-wordpress
-
-WPのプラグインを多数開発している方ならではのセッション。  
-WPのプラグインを公開してよかったことやコミュニティに参加してよかったことなどかなり具体的にお話されていました。
-
-コードを公開するからコミュニケーションができる、コミュニティに参加することで更にコミュニケーションが取れる(意訳)、これは当たり前かつ簡単なようで意外とできないことなので、積極的にアウトプットしたり参加したりしないとなと思いました。
-
----
-
-## おわりに
-
-セッションもそうなのですが、長野に行ったことでTwitterで一方的に知っていた方や様々な人とコミュニケーション取れたというのが一番の収穫でした。これはまた違う記事でまとめる予定です。
-長野に行った瞬間京都に参加することになるとは自分でも思っていませんでした…つづく

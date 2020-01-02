@@ -1,7 +1,7 @@
 ---
 title: "Karabiner-Elementsで複数キー設定やアプリごとにキーバインド設定をする"
-date: "2019-01-01"
-path: "/blog/2019/01/karabiner-elements2017/"
+date: "2017-08-15"
+path: "/blog/2017/08/karabiner-elements2017/"
 type: "blog"
 categories: ["環境構築"]
 tags: ["Vim", "構築化", "ツール"]
@@ -55,7 +55,7 @@ Importをクリックすると設定をインポートすることができま�
 
 上記設定だけでは心もとないので、設定ファイルを編集して自分の好きなようにカスタマイズしましょう。
 
-```json:~/.config/karabiner/karabiner.json
+```json:title=/.config/karabiner/karabiner.json
 {
     "global": {
         "check_for_updates_on_startup": true,
