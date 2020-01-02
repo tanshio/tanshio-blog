@@ -221,16 +221,6 @@
   },
   {
     "date": "2014-09-23",
-    "title": "ほんとうにあのサイトが小4の作ったものだったら",
-    "excerpt": "ほんとうにあのサイトが小4の作ったものだったら",
-    "categories": [
-      "日々のこと"
-    ],
-    "tags": [],
-    "path": "/blog/2014/11/if-the-site-made-by-10year-old-child/"
-  },
-  {
-    "date": "2014-09-23",
     "title": "iOS8でvwとvhが動かないし開発者ツールは動かないしで困った",
     "excerpt": "iOS8でvwとvhが動かないし開発者ツールは動かないしで困った",
     "categories": [
@@ -241,6 +231,16 @@
       "JavaScript"
     ],
     "path": "/blog/2014/09/vw-and-vh-cant-move-by-ios8/"
+  },
+  {
+    "date": "2014-09-23",
+    "title": "ほんとうにあのサイトが小4の作ったものだったら",
+    "excerpt": "ほんとうにあのサイトが小4の作ったものだったら",
+    "categories": [
+      "日々のこと"
+    ],
+    "tags": [],
+    "path": "/blog/2014/11/if-the-site-made-by-10year-old-child/"
   },
   {
     "date": "2014-09-15",
@@ -472,6 +472,19 @@
   },
   {
     "date": "2014-03-15",
+    "title": "wordmoveでローカルのWordPressを速攻デプロイ",
+    "excerpt": "wordmoveでローカルのWordPressを速攻デプロイ",
+    "categories": [
+      "環境構築"
+    ],
+    "tags": [
+      "効率化",
+      "WordPress"
+    ],
+    "path": "/blog/2014/03/wordmove/"
+  },
+  {
+    "date": "2014-03-15",
     "title": "黒歴史でやる気を出そう",
     "excerpt": "黒歴史でやる気を出そう",
     "categories": [
@@ -493,19 +506,6 @@
       "WordPress"
     ],
     "path": "/blog/2014/03/vvv-medium/"
-  },
-  {
-    "date": "2014-03-15",
-    "title": "wordmoveでローカルのWordPressを速攻デプロイ",
-    "excerpt": "wordmoveでローカルのWordPressを速攻デプロイ",
-    "categories": [
-      "環境構築"
-    ],
-    "tags": [
-      "効率化",
-      "WordPress"
-    ],
-    "path": "/blog/2014/03/wordmove/"
   },
   {
     "date": "2014-02-27",
@@ -547,16 +547,6 @@
   },
   {
     "date": "2014-02-18",
-    "title": "クリエイティブに生きる",
-    "excerpt": "クリエイティブに生きる",
-    "categories": [
-      "日々のこと"
-    ],
-    "tags": [],
-    "path": "/blog/2014/02/クリエイティブに生きる/"
-  },
-  {
-    "date": "2014-02-18",
     "title": "2014年ぼくのWordPressさいきょう高速開発ツール",
     "excerpt": "2014年ぼくのWordPressさいきょう高速開発ツール",
     "categories": [
@@ -566,6 +556,16 @@
       "WordPress"
     ],
     "path": "/blog/2014/02/2014年ぼくのwordpressさいきょう高速開発ツール/"
+  },
+  {
+    "date": "2014-02-18",
+    "title": "クリエイティブに生きる",
+    "excerpt": "クリエイティブに生きる",
+    "categories": [
+      "日々のこと"
+    ],
+    "tags": [],
+    "path": "/blog/2014/02/クリエイティブに生きる/"
   },
   {
     "date": "2014-02-16",
@@ -591,16 +591,6 @@
   },
   {
     "date": "2014-01-30",
-    "title": "WPでもRailsでもPhalcon PHPでもなんでもLivereload",
-    "excerpt": "WPでもRailsでもPhalcon PHPでもなんでもLivereload",
-    "categories": [
-      "環境構築"
-    ],
-    "tags": [],
-    "path": "/blog/2014/01/livereload-isnt-stressful/"
-  },
-  {
-    "date": "2014-01-30",
     "title": "Ghostの管理画面を再現したWordPressプラグイン「Gust」が凄い",
     "excerpt": "Ghostの管理画面を再現したWordPressプラグイン「Gust」が凄い",
     "categories": [
@@ -610,6 +600,16 @@
       "WordPress プラグイン"
     ],
     "path": "/blog/2014/01/gust-copied-ghost/"
+  },
+  {
+    "date": "2014-01-30",
+    "title": "WPでもRailsでもPhalcon PHPでもなんでもLivereload",
+    "excerpt": "WPでもRailsでもPhalcon PHPでもなんでもLivereload",
+    "categories": [
+      "環境構築"
+    ],
+    "tags": [],
+    "path": "/blog/2014/01/livereload-isnt-stressful/"
   },
   {
     "date": "2014-01-28",
@@ -673,6 +673,18 @@
   },
   {
     "date": "2014-01-03",
+    "title": "WordPress上でMarkdownならSplitdownがもうちょいという話",
+    "excerpt": "WordPress上でMarkdownならSplitdownがもうちょいという話",
+    "categories": [
+      "WordPress"
+    ],
+    "tags": [
+      "WordPress プラグイン"
+    ],
+    "path": "/blog/2014/01/wordpress上でmarkdownならsplitdown/"
+  },
+  {
+    "date": "2014-01-03",
     "title": "午年なのでCSS3でマキバオー作った",
     "excerpt": "午年なのでCSS3でマキバオー作った",
     "categories": [
@@ -683,18 +695,6 @@
       "HTML"
     ],
     "path": "/blog/2014/01/午年なのでcss3でマキバオー作った/"
-  },
-  {
-    "date": "2014-01-03",
-    "title": "WordPress上でMarkdownならSplitdownがもうちょいという話",
-    "excerpt": "WordPress上でMarkdownならSplitdownがもうちょいという話",
-    "categories": [
-      "WordPress"
-    ],
-    "tags": [
-      "WordPress プラグイン"
-    ],
-    "path": "/blog/2014/01/wordpress上でmarkdownならsplitdown/"
   },
   {
     "date": "2013-12-22",
@@ -724,19 +724,6 @@
   },
   {
     "date": "2013-12-17",
-    "title": "NginxでPHPを動かすために",
-    "excerpt": "NginxでPHPを動かすために",
-    "categories": [
-      "Programming",
-      "環境構築"
-    ],
-    "tags": [
-      "PHP"
-    ],
-    "path": "/blog/2013/12/nginxでphpを動かすために/"
-  },
-  {
-    "date": "2013-12-17",
     "title": "Vagrant1.4でCentOSのIPアドレスが固定できない",
     "excerpt": "Vagrant1.4でCentOSのIPアドレスが固定できない",
     "categories": [
@@ -760,17 +747,17 @@
     "path": "/blog/2013/12/phpでmysql→json出力/"
   },
   {
-    "date": "2013-12-15",
-    "title": "CentOS 6.4にNginxをインストール",
-    "excerpt": "CentOS 6.4にNginxをインストール",
+    "date": "2013-12-17",
+    "title": "NginxでPHPを動かすために",
+    "excerpt": "NginxでPHPを動かすために",
     "categories": [
+      "Programming",
       "環境構築"
     ],
     "tags": [
-      "Vagrant",
-      "CentOS"
+      "PHP"
     ],
-    "path": "/blog/2013/11/centos6-4-nginx/"
+    "path": "/blog/2013/12/nginxでphpを動かすために/"
   },
   {
     "date": "2013-12-15",
@@ -783,6 +770,19 @@
       "Vagrant"
     ],
     "path": "/blog/2013/11/vagrantでguestadditionsの自動更新をする/"
+  },
+  {
+    "date": "2013-12-15",
+    "title": "CentOS 6.4にNginxをインストール",
+    "excerpt": "CentOS 6.4にNginxをインストール",
+    "categories": [
+      "環境構築"
+    ],
+    "tags": [
+      "Vagrant",
+      "CentOS"
+    ],
+    "path": "/blog/2013/11/centos6-4-nginx/"
   },
   {
     "date": "2013-11-20",
@@ -811,18 +811,6 @@
   },
   {
     "date": "2013-11-06",
-    "title": "Google Spreadsheetを簡単にJSON化",
-    "excerpt": "google-spreadsheetを簡単にjson化",
-    "categories": [
-      "Programming"
-    ],
-    "tags": [
-      "Google Spread Sheet"
-    ],
-    "path": "/blog/2013/11/google-spreadsheetを簡単にjson化/"
-  },
-  {
-    "date": "2013-11-06",
     "title": "macで設定を忘れてしまいがちなファイル群",
     "excerpt": "macで設定を忘れてしまいがちなファイル群の一覧",
     "categories": [
@@ -832,6 +820,18 @@
       "mac"
     ],
     "path": "/blog/2013/11/macで設定を忘れてしまいがちなファイル群/"
+  },
+  {
+    "date": "2013-11-06",
+    "title": "Google Spreadsheetを簡単にJSON化",
+    "excerpt": "google-spreadsheetを簡単にjson化",
+    "categories": [
+      "Programming"
+    ],
+    "tags": [
+      "Google Spread Sheet"
+    ],
+    "path": "/blog/2013/11/google-spreadsheetを簡単にjson化/"
   },
   {
     "date": "2013-10-29",

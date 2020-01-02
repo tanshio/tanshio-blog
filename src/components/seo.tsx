@@ -8,6 +8,7 @@
 import * as React from 'react'
 import Helmet from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
+import { DOMAIN } from '../constants'
 
 interface SeoProps {
   description: string
@@ -19,9 +20,20 @@ interface SeoProps {
   keywords: string[]
   title: string
   path: string
+  type: 'website' | 'article'
+  ogp?: string
 }
 
-function Seo({ description, lang, meta, keywords, title, path }: SeoProps) {
+function Seo({
+  description,
+  lang,
+  meta,
+  keywords,
+  title,
+  path,
+  type,
+  ogp,
+}: SeoProps) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -62,11 +74,15 @@ function Seo({ description, lang, meta, keywords, title, path }: SeoProps) {
         },
         {
           property: `og:type`,
-          content: `website`,
+          content: type,
+        },
+        {
+          property: `og:image`,
+          content: ogp ? `${DOMAIN}${ogp}` : `${DOMAIN}static/ogp.png`,
         },
         {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image"`,
         },
         {
           name: `twitter:creator`,
@@ -80,16 +96,7 @@ function Seo({ description, lang, meta, keywords, title, path }: SeoProps) {
           name: `twitter:description`,
           content: metaDescription,
         },
-      ]
-        .concat(
-          keywords.length > 0
-            ? {
-                name: `keywords`,
-                content: keywords.join(`, `),
-              }
-            : []
-        )
-        .concat(meta ? meta : [])}
+      ].concat(meta ? meta : [])}
     >
       <link rel="canonical" href={`${siteUrl}${path}`} />
       <link

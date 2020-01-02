@@ -6,6 +6,7 @@ type: "blog"
 categories: ["Frontend"]
 tags: ["CSS", "JavaScript"]
 excerpt: "2018年頻繁に使ったnpmライブラリ3つです"
+ogp: "./ogp.png"
 ---
 
 [https://github.com/willmcpo/body-scroll-lock](https://github.com/willmcpo/body-scroll-lock)

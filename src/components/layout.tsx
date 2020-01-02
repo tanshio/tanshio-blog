@@ -67,4 +67,10 @@ const Layout = (props: LayoutProps) => {
   )
 }
 
+Layout.defaultProps = {
+  location: {
+    pathname: ''
+  }
+}
+
 export default Layout

@@ -28,6 +28,9 @@ interface PostInterface {
         type: 'blog'
         categories: string[]
         tags: string[]
+        ogp?: {
+          publicURL: string
+        }
       }
     }
   }
@@ -104,9 +107,10 @@ const Post = (props: PostInterface) => {
     <>
       <Seo
         title={post.frontmatter.title}
-        description={post.excerpt}
+        description={post.frontmatter.excerpt}
         keywords={[`gatsby`, `application`, `react`]}
         path={post.frontmatter.path}
+        type={'article'}
       />
       <SinglePost
         date={date}
@@ -142,6 +146,9 @@ export const pageQuery = graphql`
         excerpt
         categories
         tags
+        ogp {
+          publicURL
+        }
       }
     }
   }
