@@ -6,6 +6,7 @@ type: "blog"
 categories: ["Programming", "環境構築"]
 tags: ["PHP"]
 excerpt: "NginxでPHPを動かすために"
+ogp: "./ogp.png"
 ---
 
 Vagrantで動かしたCentOS6.4にNginxを入れ、いつもの様にPHPを動かそうと思ったら、Not Found.とか表示されたので解決策をメモ。

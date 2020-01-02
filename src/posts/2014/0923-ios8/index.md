@@ -6,6 +6,7 @@ type: "blog"
 categories: ["Frontend"]
 tags: ["CSS", "JavaScript"]
 excerpt: "iOS8でvwとvhが動かないし開発者ツールは動かないしで困った"
+ogp: "./ogp.png"
 ---
 
 実装中のやつで、vwとvhが使えるような案件だったので使ってみたところ、iOS6、iOS7は動くのにiOS8では動かなくて困りました。

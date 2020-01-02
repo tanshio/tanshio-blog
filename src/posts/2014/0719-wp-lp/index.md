@@ -6,6 +6,7 @@ type: "blog"
 categories: ["WordPress", "Programming"]
 tags: ["PHP"]
 excerpt: "WordPressの機能を使いつつLPを作る上でハマったこと"
+ogp: "./ogp.png"
 ---
 
 最近ランディングページ専門業者みたいになってるわたくしなのですが、先日WordPressの機能（Contactform7）を使いながらレスポンシブLPを作ったら壮大にハマったのでメモしておきます。

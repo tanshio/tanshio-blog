@@ -6,6 +6,7 @@ type: "blog"
 categories: ["Design"]
 tags: ["Photoshop"]
 excerpt: 簡単にPhotoshopでポリゴンスタイルっぽい画像を作る方法"
+ogp: "./ogp.png"
 ---
 
 bodyかhtmlに直接transitionかけてアニメーションさせることもあると思うのですが、IEではposition:fixedかけてあるものは除外されるようで困りました。

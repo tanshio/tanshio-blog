@@ -6,6 +6,7 @@ type: "blog"
 categories: ["環境構築"]
 tags: ["Vim", "構築化"]
 excerpt: "Universal Ctags を使って Vim でコードジャンプする"
+ogp: "./ogp.png"
 ---
 
 IntelliJ系IDEなどの統合開発環境にある便利機能に、コードジャンプという機能があります。  

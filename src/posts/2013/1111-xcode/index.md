@@ -6,6 +6,7 @@ type: "blog"
 categories: ["Programming"]
 tags: ["mac", "Xcode"] 
 excerpt: "Xcode5でローカライズ"
+ogp: "./ogp.png"
 ---
 
 Xcode5でローカライズしようと思ったけど、ローカライズできなくていろいろと悩んだのでメモ。  

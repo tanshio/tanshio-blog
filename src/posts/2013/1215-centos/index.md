@@ -6,6 +6,7 @@ type: "blog"
 categories: ["環境構築"]
 tags: ["Vagrant", "CentOS"]
 excerpt: "CentOS 6.4にNginxをインストール"
+ogp: "./ogp.png"
 ---
 
 vagrantで設定したのでメモ

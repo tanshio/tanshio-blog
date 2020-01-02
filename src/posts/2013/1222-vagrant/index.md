@@ -1,11 +1,12 @@
 ---
 title: "Vagrant環境でPHPによるアップロードが出来ない時の対処方法"
 date: "2013-12-22"
-path: "/blog/2013/12/vagrant1-4でcentosのipアドレスが固定できない/"
+path: "/blog/2013/12/Vagrant環境でPHPによるアップロードが出来ない時の対処方法/"
 type: "blog"
 categories: ["環境構築"]
 tags: ["Vagrant", "PHP"]
 excerpt: "Vagrant環境でPHPによるアップロードが出来ない時の対処方法"
+ogp: "./ogp.png"
 ---
 
 Vagrant環境でPHPによるアップロードが出来ない時の対処方法としてメモ

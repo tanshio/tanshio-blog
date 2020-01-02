@@ -6,6 +6,7 @@ type: "blog"
 categories: ["環境構築"]
 tags: ["Android"]
 excerpt: "Androidの実機検証・デバッグならRemote TestKit WEB版がオススメ"
+ogp: "./ogp.png"
 ---
 
 今まではIE6やらIE7やらにさんざん苦しめられていましたが、現在フロントエンドエンジニアなど、CSS・Javascriptを扱う人々を苦しめているのはAndroidではないでしょうか。アプリの開発でも苦しめられている人がいると思います。

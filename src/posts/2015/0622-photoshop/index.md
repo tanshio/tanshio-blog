@@ -6,6 +6,7 @@ type: "blog"
 categories: ["Design"]
 tags: ["Photoshop", "効率化"]
 excerpt: "Photoshop CC 2015 + GuideGuideでアートボードごとにガイドを引くと便利"
+ogp: "./ogp.png"
 ---
 
 ![](pasted_image_at_2015_06_19_06_05_pm.png)

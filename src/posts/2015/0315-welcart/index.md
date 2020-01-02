@@ -6,6 +6,7 @@ type: "blog"
 categories: ["WordPress"]
 tags: ["Welcart", "効率化"]
 excerpt: "WelcartでAdvanced Custom Fieldsを使うブックマークレットを作った"
+ogp: "./ogp.png"
 ---
 
 中小企業にとって、コストを抑えつつサイトを効率よく運営したいという要望を満たすCMSとして、良くも悪くもWordPressが最近では主流になってきていると実感しています。反面、それ本当にWordPressでやる必要ある？というものも数多く感じるようにもなってきました。でもやっぱりカスタマイズ前提な場合、すぐに実行に移せるWordPressのノウハウを捨てきることが出来ず、ずるずるWordPress頼みになってしまう現状です。

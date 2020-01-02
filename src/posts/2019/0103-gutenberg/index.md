@@ -6,6 +6,7 @@ type: "blog"
 categories: ["WordPress"]
 tags: []
 excerpt: "Gutenbergを使うなら、むやみにAPI内の要らないデータを削除するのはやめよう"
+ogp: "./ogp.png"
 ---
 
 <!-- wp:paragraph -->このブログを1年ぶりぐらいに更新しようとして、WPのバージョンアップをし、Gutenbergで投稿しようとしたら保存できなくてハマったのでメモします。

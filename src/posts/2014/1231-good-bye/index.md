@@ -6,6 +6,7 @@ type: "blog"
 categories: ["日々のこと"]
 tags: []
 excerpt: "さよなら2014年"
+ogp: "./ogp.png"
 ---
 
 2014年も今日で終わり。  

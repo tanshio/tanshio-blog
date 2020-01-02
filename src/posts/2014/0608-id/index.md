@@ -6,6 +6,7 @@ type: "blog"
 categories: ["Frontend"]
 tags: ["JavaScript"]
 excerpt: "id属性はjsでグローバル変数化されるけどIEではそうもいかないっぽい"
+ogp: "./ogp.png"
 ---
 
 最近のブラウザでは、HTMLのid属性が勝手にjavascriptのグローバル変数になってしまいます。  

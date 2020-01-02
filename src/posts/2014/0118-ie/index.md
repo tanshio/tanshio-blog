@@ -6,6 +6,7 @@ type: "blog"
 categories: ["Frontend"]
 tags: ["HTML", "CSS"]
 excerpt: "まだまだ終わらない？これからのIE6、7、8対策"
+ogp: "./ogp.png"
 ---
 
 よく、フロントエンド・エンジニアなどHTMLやCSS、javascriptをコーディングする人々から抹殺するべきと言われるIE軍団。2014年現在、普通の一般サイトのデータを提示して、残念ながらまだまだ終わらないということをアピールしておきます。

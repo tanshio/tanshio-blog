@@ -6,6 +6,7 @@ type: "blog"
 categories: ["Frontend", "Programming"]
 tags: ["JavaScript"]
 excerpt: "JSON.parseとJSON.stringifyでらくらく配列のディープコピー"
+ogp: "./ogp.png"
 ---
 
 現在午前4時なのですが、仙台ではセミが鳴いています。皆さん今日も元気にpushしておりますか。

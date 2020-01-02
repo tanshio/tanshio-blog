@@ -6,6 +6,7 @@ type: "blog"
 categories: ["環境構築"]
 tags: ["効率化", "WordPress"]
 excerpt: "wordmoveでローカルのWordPressを速攻デプロイ"
+ogp: "./ogp.png"
 ---
 
 {<1>}![](wordmove.png)

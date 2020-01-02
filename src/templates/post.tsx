@@ -36,63 +36,6 @@ interface PostInterface {
   }
 }
 
-const PostWrapper = styled.article`
-  padding-left: 300px;
-`
-
-const PostInner = styled.div`
-  padding: 0 3rem 3rem;
-  line-height: 1.8;
-
-  p,
-  ul,
-  ol {
-    line-height: 1.8;
-    & + p,
-    ul,
-    ol {
-      margin-top: 1.5rem;
-    }
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
-
-  h3 {
-    font-size: 1.75rem;
-  }
-
-  h2,
-  h3,
-  h4,
-  h5 {
-    margin-top: 5rem;
-    margin-bottom: 0;
-    line-height: 1.4;
-  }
-
-  a {
-    color: var(--colorPrimary);
-    text-decoration: underline;
-    text-decoration-color: var(--colorTextDecoration);
-    //text-decoration-thickness: 3px;
-  }
-
-  @media (min-width: 900px) {
-    .gatsby-resp-iframe-wrapper {
-      height: auto !important;
-      padding-bottom: 0 !important;
-      width: auto !important;
-      iframe {
-        position: static !important;
-        width: 800px !important;
-        height: 450px !important;
-      }
-    }
-  }
-`
-
 const counterSelector = (state: State) => state.counter.count
 
 const Post = (props: PostInterface) => {

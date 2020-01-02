@@ -6,6 +6,7 @@ import { Toc } from '../../molecules/Toc'
 import { mq } from '../../../../styles/vars/mq'
 
 const PostWrapper = styled.article`
+  min-height: 100vh;
   padding: 2rem;
 
   @media (${mq.sm}) {

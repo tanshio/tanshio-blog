@@ -6,6 +6,7 @@ type: "blog"
 categories: ["Frontend"]
 tags: ["効率化"]
 excerpt: "HTML・CSS初心者のための環境構築（Grunt編）"
+ogp: "./ogp.png"
 ---
 
 WEB制作会社以外、いわゆるインハウスでWEBスタッフを雇う場合、余程でない限りHTMLやCSSなどの基礎知識がない人がほとんどです。その場合どのような環境構築をしてあげるかでその人のスキルアップの速度、やる気の度合いが異なります。  

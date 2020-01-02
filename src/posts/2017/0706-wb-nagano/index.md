@@ -6,6 +6,7 @@ type: "blog"
 categories: ["WordPress", "Event"]
 tags: []
 excerpt: "WordBench Nagano vol.6 に参加するために長野に行ってきました"
+ogp: "./ogp.png"
 ---
 
 <p>2017年1月21日に開催された、<a href="https://wbnagano.connpass.com/event/44297/">WordBench Nagano vol.6 "WBNagano Special!!!"</a>に参加しに長野に行ってきました！</p>

@@ -6,6 +6,7 @@ type: "blog"
 categories: ["Marketing", "Frontend", "Programming", "Products"]
 tags: ["Analytics", "Node.js", "JavaScript"]
 excerpt: "Google AnalyticsでIPやCookieを判別できるようにする「PHPAnalyticsIP」を作った"
+ogp: "./ogp.png"
 ---
 
 **2014年12月5日に動かなかったプログラムを修正しました。**  

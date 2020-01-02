@@ -6,6 +6,7 @@ type: "blog"
 categories: ["日々のこと"]
 tags: []
 excerpt: "SVGとVueでアバター的なものを作る"
+ogp: "./ogp.png"
 ---
 
 <p>この記事は<a href="http://www.adventar.org/calendars/1428">SVG Advent Calendar 2016</a>の第11日目の参加記事です。</p>

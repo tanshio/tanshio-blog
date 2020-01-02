@@ -6,6 +6,7 @@ type: "blog"
 categories: ["Programming"]
 tags: ["PHP"]
 excerpt: "MySQLで>が出た時の対処方法"
+ogp: "./ogp.png"
 ---
 
 FullCalendar 用に書いていたスクリプトのメモ。allDay が面倒臭かったのと、FullCalendar 人ごとにまとめるやり方が分からなかったので投げた。

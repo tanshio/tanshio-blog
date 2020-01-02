@@ -6,6 +6,7 @@ type: "blog"
 categories: ["環境構築"]
 tags: ["mac"] 
 excerpt: "macで設定を忘れてしまいがちなファイル群の一覧"
+ogp: "./ogp.png"
 ---
 
 ## macの設定ファイルはたくさんある

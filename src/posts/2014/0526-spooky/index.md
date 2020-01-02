@@ -6,6 +6,7 @@ type: "blog"
 categories: ["Frontend", "Programming"]
 tags: ["Node.js", "JavaScript"]
 excerpt: "SpookyJSで楽々テスト&スクレイピング"
+ogp: "./ogp.png"
 ---
 
 最近はスマホとかマルチデバイスに対応するのが当たり前になってきて、javascriptやデザインのテストが面倒になってきました。全ページのブレークポイントに合わせたキャプチャを取りたい、ログイン→いろんな操作をした後のキャプチャを取りたいなどなど。そこで便利なのがSpookyJSです。

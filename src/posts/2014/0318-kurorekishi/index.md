@@ -6,6 +6,7 @@ type: "blog"
 categories: ["日々のこと"]
 tags: []
 excerpt: "黒歴史でやる気を出そう"
+ogp: "./ogp.png"
 ---
 
 人にはそれぞれ触れてはならない黒歴史があると思います。  

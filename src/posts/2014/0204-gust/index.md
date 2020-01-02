@@ -6,6 +6,7 @@ type: "blog"
 categories: ["WordPress"]
 tags: ["WordPress プラグイン"]
 excerpt: "Ghostの管理画面を再現したWordPressプラグイン「Gust」が凄い"
+ogp: "./ogp.png"
 ---
 
 ![](gust1.png)

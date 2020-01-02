@@ -6,6 +6,7 @@ type: "blog"
 categories: ["Programming"]
 tags: ["PHP"] 
 excerpt: "PHPでMySQL→JSON出力"
+ogp: "./ogp.png"
 ---
 
 FullCalendar用に書いていたスクリプトのメモ。allDayが面倒臭かったのと、FullCalendar人ごとにまとめるやり方が分からなかったので投げた。

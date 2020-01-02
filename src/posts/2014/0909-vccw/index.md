@@ -6,6 +6,7 @@ type: "blog"
 categories: ["Products", "WordPress"]
 tags: []
 excerpt: "VCCWにphpMyAdminとwordmoveを載っけたVCCW-pwを作った"
+ogp: "./ogp.png"
 ---
 
 <time>2014-09-10 02:24</time>  

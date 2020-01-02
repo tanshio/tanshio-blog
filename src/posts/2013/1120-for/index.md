@@ -6,6 +6,7 @@ type: "blog"
 categories: ["Programming"]
 tags: ["javaScript"]
 excerpt: "JavaScriptで連想配列のキーと値を取得する"
+ogp: "./ogp.png"
 ---
 
 良く忘れるのでメモ

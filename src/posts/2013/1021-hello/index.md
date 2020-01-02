@@ -6,6 +6,7 @@ type: "blog"
 categories: ["日記"]
 tags: [] 
 excerpt: "ブログを始めたきっかけ"
+ogp: "./ogp.png"
 ---
 ## きっかけ
 

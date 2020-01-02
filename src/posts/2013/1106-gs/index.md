@@ -6,6 +6,7 @@ type: "blog"
 categories: ["Programming"]
 tags: ["Google Spread Sheet"] 
 excerpt: "google-spreadsheetを簡単にjson化"
+ogp: "./ogp.png"
 ---
 
 どうにかこうにかgoogle spreadsheetをjson化できたのでメモ

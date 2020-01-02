@@ -6,6 +6,7 @@ type: "blog"
 categories: ["環境構築"]
 tags: ["Vagrant"]
 excerpt: "VagrantでGuestAdditionsの自動更新をする"
+ogp: "./ogp.png"
 ---
 
 ```

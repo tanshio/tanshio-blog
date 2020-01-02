@@ -6,6 +6,7 @@ type: "blog"
 categories: ["Frontend"]
 tags: ["CSS", "HTML"]
 excerpt: "午年なのでCSS3でマキバオー作った"
+ogp: "./ogp.png"
 ---
 
 ![CSS3でマキバオー](makibaoo.png)

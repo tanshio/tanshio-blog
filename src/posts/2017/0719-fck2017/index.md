@@ -6,6 +6,7 @@ type: "blog"
 categories: ["WordPress", "Event"]
 tags: []
 excerpt: "WordCamp Kyoto 2017に参加＆登壇してきました"
+ogp: "./ogp.png"
 ---
 
 WordCamp Kyoto 2017に参加してきました！  

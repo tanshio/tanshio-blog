@@ -1,6 +1,7 @@
 import * as fs from 'fs'
 import * as fsExtra from 'fs-extra'
 import rimraf from 'rimraf'
+import { POST_PATH } from './template'
 const IMAGES_PATH = './__screenshots__/Atoms/Ogp-posts/'
 const filenames = fs.readdirSync(IMAGES_PATH, { withFileTypes: true })
 
@@ -12,7 +13,9 @@ dirList.forEach((d) => {
   const filePath = `${IMAGES_PATH}${d.name}/${filename}`
   const offset = 5
   const dir = filename.substr(offset, filename.length - offset - 4)
-  console.log(filePath)
+  const year = filename.substr(0, 4)
+  const ogpPath = `${POST_PATH}/${year}/${dir}/ogp.png`
+  fsExtra.copyFileSync(filePath, ogpPath)
 })
 
 // rimraf(IMAGES_PATH, () => {})

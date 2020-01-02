@@ -6,6 +6,7 @@ type: "blog"
 categories: ["WordPress"]
 tags: ["WordPress プラグイン"]
 excerpt: "WordPress上でMarkdownならSplitdownがもうちょいという話"
+ogp: "./ogp.png"
 ---
 
 最近流行りのNode.jsで動くブログといえばGhost。Ghostのブログエディタは画像&Markdownを使う上で最強なので、WordPressでも取り入れてくんねーかなーと思って色々と探していたら、[Splitdown](https://github.com/Necrotex/Splitdown)というプラグインがあったので紹介。   

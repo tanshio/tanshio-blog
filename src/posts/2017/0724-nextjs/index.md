@@ -6,6 +6,7 @@ type: "blog"
 categories: ["Frontend", "Programming"]
 tags: ["JavaScript", "Node.js"]
 excerpt: "Next.jsとnetlifyでSSR対応のSPAを作る"
+ogp: "./ogp.png"
 ---
 
 SPA(シングルページアプリケーション)的なサイトを作るとき、それがクライアントのサイトやコンテンツファーストなサイトであればSEOを気にしないわけにはいかないと思います。  

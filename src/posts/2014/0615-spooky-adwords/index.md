@@ -6,6 +6,7 @@ type: "blog"
 categories: ["Marketing","Products", "Programming"]
 tags: ["JavaScript", "Adwords"]
 excerpt: "SpookyJSでadwordsとスポンサードサーチとYDNのレポートをダウンロード"
+ogp: "./ogp.png"
 ---
 
 GoogleもYahooも広告配信レポートを現在APIでダウンロードすることができません。Google AdwordsではAPIで簡易的にレポートを作成できますが、インプレッションシェアなどの指標を指定することが出来ず、中途半端です。

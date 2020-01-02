@@ -1,11 +1,12 @@
 ---
 title: "Vagrantで「Code CO_E_SERVER_EXEC_FAILURE」が出る場合の対処法"
 date: "2013-12-17"
-path: "/blog/2013/12/vagrant1-4でcentosのipアドレスが固定できない/"
+path: "/blog/2013/12/Vagrantで「Code CO_E_SERVER_EXEC_FAILURE」が出る場合の対処法/"
 type: "blog"
 categories: ["環境構築"]
 tags: ["Vagrant", "PHP"]
 excerpt: "Vagrantで「Code CO_E_SERVER_EXEC_FAILURE」が出る場合の対処法"
+ogp: "./ogp.png"
 ---
 
 Vagrant環境でPHPによるアップロードが出来ない時の対処方法としてメモ

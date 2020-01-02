@@ -6,6 +6,7 @@ type: "blog"
 categories: ["環境構築", "Products"]
 tags: ["Vagrant", "WordPress"]
 excerpt: "VagrantでWordPressを効率よく開発するためのVVV-smallを作りました"
+ogp: "./ogp.png"
 ---
 
 **2014年9月1日、動かなかったのを修正しました。**

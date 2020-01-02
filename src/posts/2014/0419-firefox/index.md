@@ -6,6 +6,7 @@ type: "blog"
 categories: ["環境構築"]
 tags: ["ブラウザ", "Firefox"]
 excerpt: "なぜ私はFirefoxを使うのか"
+ogp: "./ogp.png"
 ---
 
 いまどきのWEB制作者の大半はChromeを使っていると思うのですが、私はメインブラウザとしてFirefoxを使っています。Firefoxのシェアが徐々に落ち始めているっぽいのでFirefoxの利点をご紹介したいと思います。

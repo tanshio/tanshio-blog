@@ -6,6 +6,7 @@ type: "blog"
 categories: ["Frontend"]
 tags: ["CSS", "SVG"]
 excerpt: "SVGスプライト(symbol)でposition:absoluteを使うとIEでずれる"
+ogp: "./ogp.png"
 ---
 
 これはSVG Advent Calendar 2014の参加記事です。

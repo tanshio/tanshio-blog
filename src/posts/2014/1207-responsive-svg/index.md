@@ -6,6 +6,7 @@ type: "blog"
 categories: ["Frontend"]
 tags: ["CSS", "SVG"]
 excerpt: "IEにも対応したレスポンシブSVGの作り方"
+ogp: "./ogp.png"
 ---
 
 これは<a href="http://www.adventar.org/calendars/366" target="_blank">SVG Advent Calendar 2014</a>の参加記事です。

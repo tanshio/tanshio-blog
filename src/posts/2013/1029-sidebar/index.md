@@ -6,6 +6,7 @@ type: "blog"
 categories: ["環境構築"]
 tags: ["Firefox"] 
 excerpt: "All in One Sidebarでダウンロードマネージャをサイドバーに表示する方法"
+ogp: "./ogp.png"
 ---
 
 いつだかからFirefoxでダウンロードマネージャが新しくなり、なんでもかんでもAll in One Sidebarにぶち込んでる俺といたしましては、サイドバーに表示しようと思っても別ウィンドウで出てきやがったりするのでとてつもなく不便でございました。しかし解決策があったのでメモ。

@@ -6,6 +6,7 @@ type: "blog"
 categories: ["WordPress"]
 tags: ["WordPress プラグイン", "バグ"]
 excerpt: "WordPress3.9でTypePad 絵文字 for TinyMCEが動かない場合の解決策"
+ogp: "./ogp.png"
 ---
 
 WordPressを用いてクライアント側でブログなどを更新してもらう場合、賑やか感を出すためにTypePad 絵文字 for TinyMCEというプラグインを導入しています。

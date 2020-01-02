@@ -6,6 +6,7 @@ type: "blog"
 categories: ["環境構築"]
 tags: []
 excerpt: "WPでもRailsでもPhalcon PHPでもなんでもLivereload"
+ogp: "./ogp.png"
 ---
 
 もはや、WPでもなんでもかんでもLivereloadなしじゃ生きられない体になってしまいました。ほんとうに有難いので共有します。

@@ -6,6 +6,7 @@ type: "blog"
 categories: ["Frontend"]
 tags: ["アクセシビリティ"]
 excerpt: "WordPressクラックプラグインに注意！そしてセキュリティ対策"
+ogp: "./ogp.png"
 ---
 
 最近、cssのoutlineを消去しているサイトが多いようです。 cssのoutlineとは一体どのようなものなのでしょうか？

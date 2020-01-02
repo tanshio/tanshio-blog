@@ -6,6 +6,7 @@ type: "blog"
 categories: ["環境構築"]
 tags: ["Ruby"]
 excerpt: "Xcode5.1にしたらgem installとpip installが動かない"
+ogp: "./ogp.png"
 ---
 
 最近新しいGemやらインストールするということも少なくなってきたんだけど、ドキュメント・スニペットアプリの<a href="http://kapeli.com/dash" target="_blank">Dash</a>で自分のチートシートをつくろうと思い、gem install cheatsetと打ったらコケました。

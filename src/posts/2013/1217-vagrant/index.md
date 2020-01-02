@@ -6,6 +6,7 @@ type: "blog"
 categories: ["環境構築"]
 tags: ["Vagrant"]
 excerpt: "Vagrant1.4でCentOSのIPアドレスが固定できない"
+ogp: "./ogp.png"
 ---
 
 Vagrant1.4で、UbuntuではIPアドレスが固定できるのに、CentOSではIPアドレスが固定できなかった。 どうやらこれはVagrantのバグだったらしいので、解決策をメモ。

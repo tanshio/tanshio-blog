@@ -6,6 +6,7 @@ type: "blog"
 categories: ["Programming"]
 tags: ["WordPress", "サーバー"] 
 excerpt: "CoreServerでWordPressが「すでにインストールされています」と表示され動かない場合の解決方法"
+ogp: "./ogp.png"
 ---
 ## wordpressが動かない
 

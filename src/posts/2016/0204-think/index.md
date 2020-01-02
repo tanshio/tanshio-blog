@@ -6,6 +6,7 @@ type: "blog"
 categories: ["日々のこと"]
 tags: []
 excerpt: "探してもわからないということ"
+ogp: "./ogp.png"
 ---
 
 2015年も終わり、2016年もはや1ヶ月が過ぎてしまいました。  

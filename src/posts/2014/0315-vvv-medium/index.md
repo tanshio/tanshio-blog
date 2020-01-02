@@ -6,6 +6,7 @@ type: "blog"
 categories: ["Products", "環境構築"]
 tags: ["効率化", "WordPress"]
 excerpt: "VagrantでWordPressを速攻デプロイできるVVV-mediumを作りました"
+ogp: "./ogp.png"
 ---
 
 **2014年9月1日wordmoveを用いるときに使うrubyがおかしかったのを修正**  

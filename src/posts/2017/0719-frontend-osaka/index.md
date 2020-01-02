@@ -6,6 +6,7 @@ type: "blog"
 categories: ["Frontend", "Event"]
 tags: []
 excerpt: "FRONTEND CONFERENCE 2017 に参加するために大阪に行ってきました"
+ogp: "./ogp.png"
 ---
 
 2017年3月18日に行われたFRONTEND CONFERENCE 2017に参加するために大阪に行ってきました！  

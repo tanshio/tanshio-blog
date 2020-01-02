@@ -6,6 +6,7 @@ type: "blog"
 categories: ["Frontend", "Programming"]
 tags: ["JavaScript", "CSS"]
 excerpt: "IEではposition:fixedかかったものは直でtransitionかけてあげる必要がある"
+ogp: "./ogp.png"
 ---
 
 bodyかhtmlに直接transitionかけてアニメーションさせることもあると思うのですが、IEではposition:fixedかけてあるものは除外されるようで困りました。

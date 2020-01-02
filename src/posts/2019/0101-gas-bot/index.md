@@ -6,6 +6,7 @@ type: "blog"
 categories: ["環境構築"]
 tags: ["Vim", "構築化", "ツール"]
 excerpt: "Google Apps Scriptでリコールbotをつくる"
+ogp: "./ogp.png"
 ---
 
 <!-- wp:paragraph -->

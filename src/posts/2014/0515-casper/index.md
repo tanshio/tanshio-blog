@@ -6,6 +6,7 @@ type: "blog"
 categories: ["Marketing", "Programming"]
 tags: ["Adwords", "Node.js", "JavaScript"]
 excerpt: "CasperJSでAdwordsのレポートを自動ダウンロード（仮）"
+ogp: "./ogp.png"
 ---
 
 Adwordsのレポートはメールでcsvが送られてきません。csvさえメールで送られてくれれば何も言うことはないのですが、送られてこないのはどうしようもないので自分でやるしかないです。

@@ -6,6 +6,7 @@ type: "blog"
 categories: ["Programming", "Frontend"]
 tags: ["PHP", "Vue"]
 excerpt: "1文字ずつspanで囲むVue ComponentとPHP"
+ogp: "./ogp.png"
 ---
 
 <!-- wp:paragraph -->アニメーションで使うと便利なものの一つに、文字を1文字ずつ分解してspanで囲むというものがよくあると思います。  

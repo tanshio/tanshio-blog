@@ -6,6 +6,7 @@ type: "blog"
 categories: ["Frontend", "Programming", "Products"]
 tags: ["JavaScript", "CSS"]
 excerpt: "ページ遷移でフェードかけるだけのJavaScript作った"
+ogp: "./ogp.png"
 ---
 
 絶賛脱jQueryで墓穴を掘っている感ある今日このごろです。

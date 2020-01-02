@@ -6,6 +6,7 @@ type: "blog"
 categories: ["Frontend"]
 tags: ["CSS", "HTML"]
 excerpt: "CSSでスクロールできる天地中央寄せレイアウト"
+ogp: "./ogp.png"
 ---
 
 通常の天地中央寄せのやつだと、

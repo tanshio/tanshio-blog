@@ -6,6 +6,7 @@ type: "blog"
 categories: ["Marketing"]
 tags: ["google", "Adwords"]
 excerpt: "Adwords認定試験に挑戦してみた"
+ogp: "./ogp.png"
 ---
 
 Adwordsの認定試験が無料になったので、とりあえず力試しとして受けてみました。

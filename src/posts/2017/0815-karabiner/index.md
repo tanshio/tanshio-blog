@@ -6,6 +6,7 @@ type: "blog"
 categories: ["環境構築"]
 tags: ["Vim", "構築化", "ツール"]
 excerpt: "Karabiner-Elementsで複数キー設定やアプリごとにキーバインド設定をする"
+ogp: "./ogp.png"
 ---
 
 ## Karabiner-Elementsとは

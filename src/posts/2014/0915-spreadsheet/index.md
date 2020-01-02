@@ -6,6 +6,7 @@ type: "blog"
 categories: ["Design", "日々のこと"]
 tags: ["Google Spreadsheet", "Google"]
 excerpt: "写真素材をGoogle Spreadsheetでらくらく共有"
+ogp: "./ogp.png"
 ---
 
 ![Google Spread Sheetで共有しやすい素材管理](google-spread-sheet.jpg)

@@ -6,6 +6,7 @@ type: "blog"
 categories: ["Design"]
 tags: ["web design"]
 excerpt: "週刊少年ジャンプ公式サイトがロングシャドウデザインな件"
+ogp: "./ogp.png"
 ---
 
 [週刊少年ジャンプの公式サイト](http://www.shonenjump.com/j/)を眺めていたら、ロングシャドウデザインが採用されていました。

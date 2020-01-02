@@ -6,6 +6,7 @@ type: "blog"
 categories: ["環境"]
 tags: ["mac", "OS"] 
 excerpt: "OS X Mavericksを入れてみた感想"
+ogp: "./ogp.png"
 ---
 
 無料でダウンロード可能な最新OS、Mavericksを、MacBook Air Mid 2012に入れてみました。 メモリが4Gしかないので辛いかなと思ったのですが、いまの所キビキビ動いてくれます。最初はspotlightが動いていたのでファインダーが止まりまくりましたが、放置プレイで治りました。
