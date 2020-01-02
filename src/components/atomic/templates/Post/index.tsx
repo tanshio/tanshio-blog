@@ -135,7 +135,7 @@ export const Post = (props: PostProps) => {
     return () => {}
   }, [])
   return (
-    <PostWrapper tabIndex={1} ref={focusEl}>
+    <PostWrapper tabIndex={0} ref={focusEl}>
       <PostHeader>
         <h1>{props.title}</h1>
         <Time date={props.date} />
