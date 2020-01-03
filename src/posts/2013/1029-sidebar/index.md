@@ -1,7 +1,7 @@
 ---
 title: "All in One Sidebarでダウンロードマネージャをサイドバーに表示する"
 date: "2013-10-29"
-path: "/blog/2013/10/all-in-one-sidebarでダウンロードマネージャをサイドバーに表/"
+path: "/blog/2013/10/all-in-one-sidebar/"
 type: "blog"
 categories: ["環境構築"]
 tags: ["Firefox"] 

@@ -482,19 +482,6 @@
   },
   {
     "date": "2014-03-15",
-    "title": "wordmoveでローカルのWordPressを速攻デプロイ",
-    "excerpt": "wordmoveでローカルのWordPressを速攻デプロイ",
-    "categories": [
-      "環境構築"
-    ],
-    "tags": [
-      "効率化",
-      "WordPress"
-    ],
-    "path": "/blog/2014/03/wordmove/"
-  },
-  {
-    "date": "2014-03-15",
     "title": "VagrantでWordPressを速攻デプロイできるVVV-mediumを作りました",
     "excerpt": "VagrantでWordPressを速攻デプロイできるVVV-mediumを作りました",
     "categories": [
@@ -506,6 +493,19 @@
       "WordPress"
     ],
     "path": "/blog/2014/03/vvv-medium/"
+  },
+  {
+    "date": "2014-03-15",
+    "title": "wordmoveでローカルのWordPressを速攻デプロイ",
+    "excerpt": "wordmoveでローカルのWordPressを速攻デプロイ",
+    "categories": [
+      "環境構築"
+    ],
+    "tags": [
+      "効率化",
+      "WordPress"
+    ],
+    "path": "/blog/2014/03/wordmove/"
   },
   {
     "date": "2014-02-27",
@@ -591,6 +591,16 @@
   },
   {
     "date": "2014-01-30",
+    "title": "WPでもRailsでもPhalcon PHPでもなんでもLivereload",
+    "excerpt": "WPでもRailsでもPhalcon PHPでもなんでもLivereload",
+    "categories": [
+      "環境構築"
+    ],
+    "tags": [],
+    "path": "/blog/2014/01/livereload-isnt-stressful/"
+  },
+  {
+    "date": "2014-01-30",
     "title": "Ghostの管理画面を再現したWordPressプラグイン「Gust」が凄い",
     "excerpt": "Ghostの管理画面を再現したWordPressプラグイン「Gust」が凄い",
     "categories": [
@@ -600,16 +610,6 @@
       "WordPress プラグイン"
     ],
     "path": "/blog/2014/01/gust-copied-ghost/"
-  },
-  {
-    "date": "2014-01-30",
-    "title": "WPでもRailsでもPhalcon PHPでもなんでもLivereload",
-    "excerpt": "WPでもRailsでもPhalcon PHPでもなんでもLivereload",
-    "categories": [
-      "環境構築"
-    ],
-    "tags": [],
-    "path": "/blog/2014/01/livereload-isnt-stressful/"
   },
   {
     "date": "2014-01-28",
@@ -855,7 +855,7 @@
     "tags": [
       "Firefox"
     ],
-    "path": "/blog/2013/10/all-in-one-sidebarでダウンロードマネージャをサイドバーに表/"
+    "path": "/blog/2013/10/all-in-one-sidebar/"
   },
   {
     "date": "2013-10-23",
@@ -868,7 +868,7 @@
       "mac",
       "OS"
     ],
-    "path": "/blog/2013/10/早速os-x-mavericksを入れてみた/"
+    "path": "/blog/2013/10/mavericks/"
   },
   {
     "date": "2013-10-22",
@@ -881,7 +881,7 @@
       "WordPress",
       "サーバー"
     ],
-    "path": "/blog/2013/10/coreserverでwordpressが「すでにインストールされています」と/"
+    "path": "/blog/2013/10/coreserver/"
   },
   {
     "date": "2013-10-20",

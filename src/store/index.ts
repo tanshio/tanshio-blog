@@ -14,12 +14,10 @@ export type State = {
 console.log(process.env.NODE_ENV, 'env')
 
 export const initStore = () => {
-  let composeEnhancers: any
-  if (typeof window !== "undefined") {
-    composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
-  } else {
-    composeEnhancers = compose
-  }
+  const composeEnhancers =
+    (process.env.NODE_ENV === 'development'
+      ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+      : null) || compose
 
   const enhancer = composeEnhancers(applyMiddleware())
 

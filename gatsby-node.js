@@ -14,7 +14,7 @@ const createCategoryPages = (createPage, posts) => {
   const TaxsTemplate = path.resolve(`./src/templates/taxonomies.tsx`)
   const postsByCategories = {}
   posts.forEach(({ node }) => {
-    console.log(node.frontmatter)
+    // console.log(node.frontmatter)
     if (node.frontmatter.categories) {
       node.frontmatter.categories.forEach(category => {
         if (!postsByCategories[category]) {

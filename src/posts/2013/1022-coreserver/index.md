@@ -1,7 +1,7 @@
 ---
 title: "CoreServerでWordPressが「すでにインストールされています」と表示され動かない場合"
 date: "2013-10-22"
-path: "/blog/2013/10/coreserverでwordpressが「すでにインストールされています」と/"
+path: "/blog/2013/10/coreserver/"
 type: "blog"
 categories: ["Programming"]
 tags: ["WordPress", "サーバー"] 
