@@ -1,7 +1,7 @@
 ---
 title: "Ghostの管理画面を再現したWordPressプラグイン「Gust」が凄い"
-date: "2014-01-30"
-path: "/blog/2014/01/gust-copied-ghost/"
+date: "2014-02-04"
+path: "/blog/2014/02/gust-copied-ghost/"
 type: "blog"
 categories: ["WordPress"]
 tags: ["WordPress プラグイン"]

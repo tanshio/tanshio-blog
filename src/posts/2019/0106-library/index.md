@@ -1,7 +1,7 @@
 ---
 title: "2018年頻繁に使ったnpmライブラリ3つ"
 date: "2019-01-06"
-path: "/blog/2019/01/2018年頻繁に使ったnpmライブラリ3つ/"
+path: "/blog/2019/01/2018-npm/"
 type: "blog"
 categories: ["Frontend"]
 tags: ["CSS", "JavaScript"]

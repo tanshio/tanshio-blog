@@ -1,7 +1,7 @@
 ---
 title: "VagrantでGuestAdditionsの自動更新をする"
 date: "2013-12-15"
-path: "/blog/2013/11/vagrantでguestadditionsの自動更新をする/"
+path: "/blog/2013/12/vagrant-guestadditions/"
 type: "blog"
 categories: ["環境構築"]
 tags: ["Vagrant"]

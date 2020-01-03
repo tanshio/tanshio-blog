@@ -1,7 +1,7 @@
 ---
 title: "CentOS 6.4にNginxをインストール"
 date: "2013-12-15"
-path: "/blog/2013/11/centos6-4-nginx/"
+path: "/blog/2013/12/centos6-4-nginx/"
 type: "blog"
 categories: ["環境構築"]
 tags: ["Vagrant", "CentOS"]

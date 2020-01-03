@@ -1,7 +1,7 @@
 ---
 title: "これがないと仕事にならない有料wordpressプラグイン3選"
 date: "2014-01-12"
-path: "/blog/2014/01/これがないと仕事にならない有料wordpressプラグイン3選/"
+path: "/blog/2014/01/paid-wordpress-plugin/"
 type: "blog"
 categories: ["WordPress"]
 tags: ["WordPress プラグイン"]

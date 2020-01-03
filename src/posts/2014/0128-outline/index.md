@@ -1,7 +1,7 @@
 ---
 title: "WordPressクラックプラグインに注意！そしてセキュリティ対策"
 date: "2014-01-28"
-path: "/blog/2014/01/outlineを消す弊害について考えよう/"
+path: "/blog/2014/01/outline/"
 type: "blog"
 categories: ["Frontend"]
 tags: ["アクセシビリティ"]

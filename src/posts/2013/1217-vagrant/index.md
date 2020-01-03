@@ -1,7 +1,7 @@
 ---
 title: "Vagrant1.4でCentOSのIPアドレスが固定できない"
 date: "2013-12-17"
-path: "/blog/2013/12/vagrant1-4でcentosのipアドレスが固定できない/"
+path: "/blog/2013/12/vagrant-centos-ip/"
 type: "blog"
 categories: ["環境構築"]
 tags: ["Vagrant"]

@@ -1,7 +1,7 @@
 ---
 title: "Next.jsとnetlifyでSSR対応のSPAを作る"
 date: "2017-07-24"
-path: "/blog/2017/07/next-jsとnetlifyでssr対応のspaを作る/"
+path: "/blog/2017/07/next-js-netlify/"
 type: "blog"
 categories: ["Frontend", "Programming"]
 tags: ["JavaScript", "Node.js"]

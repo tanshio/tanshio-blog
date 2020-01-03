@@ -1,7 +1,7 @@
 ---
 title: "Gutenbergを使うなら、むやみにAPI内の要らないデータを削除するのはやめよう"
 date: "2019-01-03"
-path: "/blog/2019/01/gutenbergを使うなら、むやみに要らないデータを削除す/"
+path: "/blog/2019/01/dont-delete-meta-deta/"
 type: "blog"
 categories: ["WordPress"]
 tags: []

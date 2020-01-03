@@ -1,7 +1,7 @@
 ---
 title: "2014年ぼくのWordPressさいきょう高速開発ツール"
 date: "2014-02-18"
-path: "/blog/2014/02/2014年ぼくのwordpressさいきょう高速開発ツール/"
+path: "/blog/2014/02/2014-wordpress/"
 type: "blog"
 categories: ["環境構築"]
 tags: ["WordPress"]

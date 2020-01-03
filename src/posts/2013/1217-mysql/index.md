@@ -1,7 +1,7 @@
 ---
 title: "MySQLで>が出た時の対処方法"
 date: "2013-12-17"
-path: "/blog/2013/12/phpでmysql→json出力/"
+path: "/blog/2013/12/php-arrow/"
 type: "blog"
 categories: ["Programming"]
 tags: ["PHP"]

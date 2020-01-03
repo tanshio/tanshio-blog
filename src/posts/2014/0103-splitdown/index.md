@@ -1,7 +1,7 @@
 ---
 title: "WordPress上でMarkdownならSplitdownがもうちょいという話"
 date: "2014-01-03"
-path: "/blog/2014/01/wordpress上でmarkdownならsplitdown/"
+path: "/blog/2014/01/wordpress-markdown-splitdown/"
 type: "blog"
 categories: ["WordPress"]
 tags: ["WordPress プラグイン"]

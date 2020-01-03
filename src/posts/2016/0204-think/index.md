@@ -1,7 +1,7 @@
 ---
 title: "探してもわからないということ"
 date: "2016-02-04"
-path: "/blog/2016/02/探してもわからないということ/"
+path: "/blog/2016/02/not-found/"
 type: "blog"
 categories: ["日々のこと"]
 tags: []

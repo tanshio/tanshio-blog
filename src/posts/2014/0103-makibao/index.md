@@ -1,7 +1,7 @@
 ---
 title: "午年なのでCSS3でマキバオー作った"
 date: "2014-01-03"
-path: "/blog/2014/01/午年なのでcss3でマキバオー作った/"
+path: "/blog/2014/01/makibaoo/"
 type: "blog"
 categories: ["Frontend"]
 tags: ["CSS", "HTML"]

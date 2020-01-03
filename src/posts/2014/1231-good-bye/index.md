@@ -1,7 +1,7 @@
 ---
 title: "さよなら2014年"
 date: "2014-12-31"
-path: "/blog/2014/12/さよなら2014年/"
+path: "/blog/2014/12/goodbye-2014/"
 type: "blog"
 categories: ["日々のこと"]
 tags: []

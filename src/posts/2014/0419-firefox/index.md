@@ -1,7 +1,7 @@
 ---
 title: "なぜ私はFirefoxを使うのか"
 date: "2014-04-19"
-path: "/blog/2014/04/なぜ私はfirefoxを使うのか/"
+path: "/blog/2014/04/use-firefox/"
 type: "blog"
 categories: ["環境構築"]
 tags: ["ブラウザ", "Firefox"]

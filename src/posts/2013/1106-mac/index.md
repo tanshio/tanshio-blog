@@ -1,7 +1,7 @@
 ---
 title: "macで設定を忘れてしまいがちなファイル群"
 date: "2013-11-06"
-path: "/blog/2013/11/macで設定を忘れてしまいがちなファイル群/"
+path: "/blog/2013/11/mac-settings/"
 type: "blog"
 categories: ["環境構築"]
 tags: ["mac"] 

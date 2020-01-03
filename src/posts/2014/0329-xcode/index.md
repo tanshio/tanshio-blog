@@ -1,7 +1,7 @@
 ---
 title: "Xcode5.1にしたらgem installとpip installが動かない"
 date: "2014-03-29"
-path: "/blog/2014/03/wordmove/"
+path: "/blog/2014/03/xcode5-1-doesnt-use-gem/"
 type: "blog"
 categories: ["環境構築"]
 tags: ["Ruby"]

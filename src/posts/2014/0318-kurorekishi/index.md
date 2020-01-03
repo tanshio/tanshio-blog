@@ -1,7 +1,7 @@
 ---
 title: "黒歴史でやる気を出そう"
 date: "2014-03-15"
-path: "/blog/2014/03/黒歴史でやる気を出そう/"
+path: "/blog/2014/03/kurorekishi/"
 type: "blog"
 categories: ["日々のこと"]
 tags: []

@@ -10,7 +10,7 @@
       "CSS",
       "JavaScript"
     ],
-    "path": "/blog/2019/01/2018年頻繁に使ったnpmライブラリ3つ/"
+    "path": "/blog/2019/01/2018-npm/"
   },
   {
     "date": "2019-01-05",
@@ -23,7 +23,17 @@
       "CSS",
       "HTML"
     ],
-    "path": "/blog/2019/01/cssでスクロールできる天地中央寄せレイアウト/"
+    "path": "/blog/2019/01/scroll-center/"
+  },
+  {
+    "date": "2019-01-03",
+    "title": "Gutenbergを使うなら、むやみにAPI内の要らないデータを削除するのはやめよう",
+    "excerpt": "Gutenbergを使うなら、むやみにAPI内の要らないデータを削除するのはやめよう",
+    "categories": [
+      "WordPress"
+    ],
+    "tags": [],
+    "path": "/blog/2019/01/dont-delete-meta-deta/"
   },
   {
     "date": "2019-01-03",
@@ -37,17 +47,7 @@
       "PHP",
       "Vue"
     ],
-    "path": "/blog/2019/01/1文字ずつspanで囲むvuecomponentとphp/"
-  },
-  {
-    "date": "2019-01-03",
-    "title": "Gutenbergを使うなら、むやみにAPI内の要らないデータを削除するのはやめよう",
-    "excerpt": "Gutenbergを使うなら、むやみにAPI内の要らないデータを削除するのはやめよう",
-    "categories": [
-      "WordPress"
-    ],
-    "tags": [],
-    "path": "/blog/2019/01/gutenbergを使うなら、むやみに要らないデータを削除す/"
+    "path": "/blog/2019/01/surround-vue-and-php/"
   },
   {
     "date": "2019-01-01",
@@ -102,7 +102,7 @@
       "JavaScript",
       "Node.js"
     ],
-    "path": "/blog/2017/07/next-jsとnetlifyでssr対応のspaを作る/"
+    "path": "/blog/2017/07/next-js-netlify/"
   },
   {
     "date": "2017-07-19",
@@ -145,7 +145,7 @@
       "日々のこと"
     ],
     "tags": [],
-    "path": "/blog/2016/02/svg-vue/"
+    "path": "/blog/2016/12/svg-vue/"
   },
   {
     "date": "2016-02-04",
@@ -155,7 +155,7 @@
       "日々のこと"
     ],
     "tags": [],
-    "path": "/blog/2016/02/探してもわからないということ/"
+    "path": "/blog/2016/02/not-found/"
   },
   {
     "date": "2015-06-22",
@@ -191,7 +191,7 @@
       "日々のこと"
     ],
     "tags": [],
-    "path": "/blog/2014/12/さよなら2014年/"
+    "path": "/blog/2014/12/goodbye-2014/"
   },
   {
     "date": "2014-12-07",
@@ -431,7 +431,7 @@
       "ブラウザ",
       "Firefox"
     ],
-    "path": "/blog/2014/04/なぜ私はfirefoxを使うのか/"
+    "path": "/blog/2014/04/use-firefox/"
   },
   {
     "date": "2014-04-17",
@@ -468,17 +468,7 @@
     "tags": [
       "Ruby"
     ],
-    "path": "/blog/2014/03/wordmove/"
-  },
-  {
-    "date": "2014-03-15",
-    "title": "黒歴史でやる気を出そう",
-    "excerpt": "黒歴史でやる気を出そう",
-    "categories": [
-      "日々のこと"
-    ],
-    "tags": [],
-    "path": "/blog/2014/03/黒歴史でやる気を出そう/"
+    "path": "/blog/2014/03/xcode5-1-doesnt-use-gem/"
   },
   {
     "date": "2014-03-15",
@@ -508,18 +498,14 @@
     "path": "/blog/2014/03/wordmove/"
   },
   {
-    "date": "2014-02-27",
-    "title": "VagrantでWordPressを効率よく開発するためのVVV-smallを作りました",
-    "excerpt": "VagrantでWordPressを効率よく開発するためのVVV-smallを作りました",
+    "date": "2014-03-15",
+    "title": "黒歴史でやる気を出そう",
+    "excerpt": "黒歴史でやる気を出そう",
     "categories": [
-      "環境構築",
-      "Products"
+      "日々のこと"
     ],
-    "tags": [
-      "Vagrant",
-      "WordPress"
-    ],
-    "path": "/blog/2014/02/nihongo-user-should-die/"
+    "tags": [],
+    "path": "/blog/2014/03/kurorekishi/"
   },
   {
     "date": "2014-02-27",
@@ -532,6 +518,20 @@
       "Vagrant"
     ],
     "path": "/blog/2014/02/nihongo-user-should-die/"
+  },
+  {
+    "date": "2014-02-27",
+    "title": "VagrantでWordPressを効率よく開発するためのVVV-smallを作りました",
+    "excerpt": "VagrantでWordPressを効率よく開発するためのVVV-smallを作りました",
+    "categories": [
+      "環境構築",
+      "Products"
+    ],
+    "tags": [
+      "Vagrant",
+      "WordPress"
+    ],
+    "path": "/blog/2014/03/vvv-small/"
   },
   {
     "date": "2014-02-21",
@@ -553,7 +553,7 @@
       "日々のこと"
     ],
     "tags": [],
-    "path": "/blog/2014/02/クリエイティブに生きる/"
+    "path": "/blog/2014/02/live-creatively/"
   },
   {
     "date": "2014-02-18",
@@ -565,7 +565,7 @@
     "tags": [
       "WordPress"
     ],
-    "path": "/blog/2014/02/2014年ぼくのwordpressさいきょう高速開発ツール/"
+    "path": "/blog/2014/02/2014-wordpress/"
   },
   {
     "date": "2014-02-16",
@@ -587,7 +587,19 @@
       "日々のこと"
     ],
     "tags": [],
-    "path": "/blog/2014/02/lets-become-a-half‐finished-full-stack-engineer/"
+    "path": "/blog/2014/02/lets-become-a-half-finished-full-stack-engineer/"
+  },
+  {
+    "date": "2014-02-04",
+    "title": "Ghostの管理画面を再現したWordPressプラグイン「Gust」が凄い",
+    "excerpt": "Ghostの管理画面を再現したWordPressプラグイン「Gust」が凄い",
+    "categories": [
+      "WordPress"
+    ],
+    "tags": [
+      "WordPress プラグイン"
+    ],
+    "path": "/blog/2014/02/gust-copied-ghost/"
   },
   {
     "date": "2014-01-30",
@@ -600,18 +612,6 @@
     "path": "/blog/2014/01/livereload-isnt-stressful/"
   },
   {
-    "date": "2014-01-30",
-    "title": "Ghostの管理画面を再現したWordPressプラグイン「Gust」が凄い",
-    "excerpt": "Ghostの管理画面を再現したWordPressプラグイン「Gust」が凄い",
-    "categories": [
-      "WordPress"
-    ],
-    "tags": [
-      "WordPress プラグイン"
-    ],
-    "path": "/blog/2014/01/gust-copied-ghost/"
-  },
-  {
     "date": "2014-01-28",
     "title": "WordPressクラックプラグインに注意！そしてセキュリティ対策",
     "excerpt": "WordPressクラックプラグインに注意！そしてセキュリティ対策",
@@ -621,7 +621,7 @@
     "tags": [
       "アクセシビリティ"
     ],
-    "path": "/blog/2014/01/outlineを消す弊害について考えよう/"
+    "path": "/blog/2014/01/outline/"
   },
   {
     "date": "2014-01-18",
@@ -657,7 +657,7 @@
     "tags": [
       "WordPress プラグイン"
     ],
-    "path": "/blog/2014/01/これがないと仕事にならない有料wordpressプラグイン3選/"
+    "path": "/blog/2014/01/paid-wordpress-plugin/"
   },
   {
     "date": "2014-01-07",
@@ -669,7 +669,7 @@
     "tags": [
       "web design"
     ],
-    "path": "/blog/2014/01/週刊少年ジャンプ公式サイトがロングシャドウデ/"
+    "path": "/blog/2014/01/jump-long-shadow/"
   },
   {
     "date": "2014-01-03",
@@ -681,7 +681,7 @@
     "tags": [
       "WordPress プラグイン"
     ],
-    "path": "/blog/2014/01/wordpress上でmarkdownならsplitdown/"
+    "path": "/blog/2014/01/wordpress-markdown-splitdown/"
   },
   {
     "date": "2014-01-03",
@@ -694,7 +694,7 @@
       "CSS",
       "HTML"
     ],
-    "path": "/blog/2014/01/午年なのでcss3でマキバオー作った/"
+    "path": "/blog/2014/01/makibaoo/"
   },
   {
     "date": "2013-12-22",
@@ -707,20 +707,19 @@
       "Vagrant",
       "PHP"
     ],
-    "path": "/blog/2013/12/Vagrant環境でPHPによるアップロードが出来ない時の対処方法/"
+    "path": "/blog/2013/12/vagrant-php-upload/"
   },
   {
     "date": "2013-12-17",
-    "title": "Vagrantで「Code CO_E_SERVER_EXEC_FAILURE」が出る場合の対処法",
-    "excerpt": "Vagrantで「Code CO_E_SERVER_EXEC_FAILURE」が出る場合の対処法",
+    "title": "MySQLで>が出た時の対処方法",
+    "excerpt": "MySQLで>が出た時の対処方法",
     "categories": [
-      "環境構築"
+      "Programming"
     ],
     "tags": [
-      "Vagrant",
       "PHP"
     ],
-    "path": "/blog/2013/12/Vagrantで「Code CO_E_SERVER_EXEC_FAILURE」が出る場合の対処法/"
+    "path": "/blog/2013/12/php-arrow/"
   },
   {
     "date": "2013-12-17",
@@ -732,7 +731,7 @@
     "tags": [
       "Vagrant"
     ],
-    "path": "/blog/2013/12/vagrant1-4でcentosのipアドレスが固定できない/"
+    "path": "/blog/2013/12/vagrant-centos-ip/"
   },
   {
     "date": "2013-12-17",
@@ -745,19 +744,20 @@
     "tags": [
       "PHP"
     ],
-    "path": "/blog/2013/12/nginxでphpを動かすために/"
+    "path": "/blog/2013/12/nginx-php/"
   },
   {
     "date": "2013-12-17",
-    "title": "MySQLで>が出た時の対処方法",
-    "excerpt": "MySQLで>が出た時の対処方法",
+    "title": "Vagrantで「Code CO_E_SERVER_EXEC_FAILURE」が出る場合の対処法",
+    "excerpt": "Vagrantで「Code CO_E_SERVER_EXEC_FAILURE」が出る場合の対処法",
     "categories": [
-      "Programming"
+      "環境構築"
     ],
     "tags": [
+      "Vagrant",
       "PHP"
     ],
-    "path": "/blog/2013/12/phpでmysql→json出力/"
+    "path": "/blog/2013/12/vagrant-error/"
   },
   {
     "date": "2013-12-15",
@@ -769,7 +769,7 @@
     "tags": [
       "Vagrant"
     ],
-    "path": "/blog/2013/11/vagrantでguestadditionsの自動更新をする/"
+    "path": "/blog/2013/12/vagrant-guestadditions/"
   },
   {
     "date": "2013-12-15",
@@ -782,7 +782,7 @@
       "Vagrant",
       "CentOS"
     ],
-    "path": "/blog/2013/11/centos6-4-nginx/"
+    "path": "/blog/2013/12/centos6-4-nginx/"
   },
   {
     "date": "2013-11-20",
@@ -794,7 +794,7 @@
     "tags": [
       "javaScript"
     ],
-    "path": "/blog/2013/11/javascriptで連想配列のキーと値を取得する/"
+    "path": "/blog/2013/11/javascript-for/"
   },
   {
     "date": "2013-11-11",
@@ -811,18 +811,6 @@
   },
   {
     "date": "2013-11-06",
-    "title": "macで設定を忘れてしまいがちなファイル群",
-    "excerpt": "macで設定を忘れてしまいがちなファイル群の一覧",
-    "categories": [
-      "環境構築"
-    ],
-    "tags": [
-      "mac"
-    ],
-    "path": "/blog/2013/11/macで設定を忘れてしまいがちなファイル群/"
-  },
-  {
-    "date": "2013-11-06",
     "title": "Google Spreadsheetを簡単にJSON化",
     "excerpt": "google-spreadsheetを簡単にjson化",
     "categories": [
@@ -831,7 +819,19 @@
     "tags": [
       "Google Spread Sheet"
     ],
-    "path": "/blog/2013/11/google-spreadsheetを簡単にjson化/"
+    "path": "/blog/2013/11/google-spreadsheet/"
+  },
+  {
+    "date": "2013-11-06",
+    "title": "macで設定を忘れてしまいがちなファイル群",
+    "excerpt": "macで設定を忘れてしまいがちなファイル群の一覧",
+    "categories": [
+      "環境構築"
+    ],
+    "tags": [
+      "mac"
+    ],
+    "path": "/blog/2013/11/mac-settings/"
   },
   {
     "date": "2013-10-29",

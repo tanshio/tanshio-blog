@@ -1,7 +1,7 @@
 ---
 title: "NginxでPHPを動かすために"
 date: "2013-12-17"
-path: "/blog/2013/12/nginxでphpを動かすために/"
+path: "/blog/2013/12/nginx-php/"
 type: "blog"
 categories: ["Programming", "環境構築"]
 tags: ["PHP"]

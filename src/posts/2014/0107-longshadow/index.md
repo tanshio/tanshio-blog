@@ -1,7 +1,7 @@
 ---
 title: "週刊少年ジャンプ公式サイトがロングシャドウデザインな件"
 date: "2014-01-07"
-path: "/blog/2014/01/週刊少年ジャンプ公式サイトがロングシャドウデ/"
+path: "/blog/2014/01/jump-long-shadow/"
 type: "blog"
 categories: ["Design"]
 tags: ["web design"]

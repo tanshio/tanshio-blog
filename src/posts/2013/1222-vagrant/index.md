@@ -1,7 +1,7 @@
 ---
 title: "Vagrant環境でPHPによるアップロードが出来ない時の対処方法"
 date: "2013-12-22"
-path: "/blog/2013/12/Vagrant環境でPHPによるアップロードが出来ない時の対処方法/"
+path: "/blog/2013/12/vagrant-php-upload/"
 type: "blog"
 categories: ["環境構築"]
 tags: ["Vagrant", "PHP"]

@@ -1,7 +1,7 @@
 ---
 title: "VagrantでWordPressを効率よく開発するためのVVV-smallを作りました"
 date: "2014-02-27"
-path: "/blog/2014/02/nihongo-user-should-die/"
+path: "/blog/2014/03/vvv-small/"
 type: "blog"
 categories: ["環境構築", "Products"]
 tags: ["Vagrant", "WordPress"]

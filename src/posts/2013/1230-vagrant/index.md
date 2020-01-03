@@ -1,7 +1,7 @@
 ---
 title: "Vagrantで「Code CO_E_SERVER_EXEC_FAILURE」が出る場合の対処法"
 date: "2013-12-17"
-path: "/blog/2013/12/Vagrantで「Code CO_E_SERVER_EXEC_FAILURE」が出る場合の対処法/"
+path: "/blog/2013/12/vagrant-error/"
 type: "blog"
 categories: ["環境構築"]
 tags: ["Vagrant", "PHP"]

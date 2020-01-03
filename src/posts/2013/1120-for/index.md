@@ -1,7 +1,7 @@
 ---
 title: "JavaScriptで連想配列のキーと値を取得する"
 date: "2013-11-20"
-path: "/blog/2013/11/javascriptで連想配列のキーと値を取得する/"
+path: "/blog/2013/11/javascript-for/"
 type: "blog"
 categories: ["Programming"]
 tags: ["javaScript"]

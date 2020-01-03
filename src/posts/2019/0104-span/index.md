@@ -1,7 +1,7 @@
 ---
 title: "1文字ずつspanで囲むVue ComponentとPHP"
 date: "2019-01-03"
-path: "/blog/2019/01/1文字ずつspanで囲むvuecomponentとphp/"
+path: "/blog/2019/01/surround-vue-and-php/"
 type: "blog"
 categories: ["Programming", "Frontend"]
 tags: ["PHP", "Vue"]

@@ -1,7 +1,7 @@
 ---
 title: "CSSでスクロールできる天地中央寄せレイアウト"
 date: "2019-01-05"
-path: "/blog/2019/01/cssでスクロールできる天地中央寄せレイアウト/"
+path: "/blog/2019/01/scroll-center/"
 type: "blog"
 categories: ["Frontend"]
 tags: ["CSS", "HTML"]

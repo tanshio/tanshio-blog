@@ -1,7 +1,7 @@
 ---
 title: "Google Spreadsheetを簡単にJSON化"
 date: "2013-11-06"
-path: "/blog/2013/11/google-spreadsheetを簡単にjson化/"
+path: "/blog/2013/11/google-spreadsheet/"
 type: "blog"
 categories: ["Programming"]
 tags: ["Google Spread Sheet"] 

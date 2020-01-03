@@ -1,7 +1,7 @@
 ---
 title: "SVGとVueでアバター的なものを作る"
 date: "2016-12-12"
-path: "/blog/2016/02/svg-vue/"
+path: "/blog/2016/12/svg-vue/"
 type: "blog"
 categories: ["日々のこと"]
 tags: []

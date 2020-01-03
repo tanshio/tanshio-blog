@@ -1,7 +1,7 @@
 ---
 title: "クリエイティブに生きる"
 date: "2014-02-18"
-path: "/blog/2014/02/クリエイティブに生きる/"
+path: "/blog/2014/02/live-creatively/"
 type: "blog"
 categories: ["日々のこと"]
 tags: []

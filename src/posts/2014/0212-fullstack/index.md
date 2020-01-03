@@ -1,7 +1,7 @@
 ---
 title: "中途半端なフルスタックエンジニアそしてグロースハッカーになろう"
 date: "2014-02-12"
-path: "/blog/2014/02/lets-become-a-half‐finished-full-stack-engineer/"
+path: "/blog/2014/02/lets-become-a-half-finished-full-stack-engineer/"
 type: "blog"
 categories: ["日々のこと"]
 tags: []
