@@ -4,12 +4,6 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 
 const Posts = ({ data, pageContext }: any) => {
-  console.log('---pageContext---')
-  console.log(pageContext)
-
-  console.log('data')
-  console.log(data)
-
   if (!pageContext.posts) {
     return <div className="content">ページがありません</div>
   }

@@ -41,7 +41,6 @@ const counterSelector = (state: State) => state.counter.count
 const Post = (props: PostInterface) => {
   const { tableOfContents, ...post } = props.data.markdownRemark
   const { title, excerpt } = props.data.markdownRemark.frontmatter
-  console.log(post, tableOfContents)
   const date = props.data.markdownRemark.frontmatter.date as DateISO8601
   const dispatch = useDispatch()
   const count = useSelector(counterSelector)

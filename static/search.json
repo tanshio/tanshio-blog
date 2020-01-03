@@ -27,16 +27,6 @@
   },
   {
     "date": "2019-01-03",
-    "title": "Gutenbergを使うなら、むやみにAPI内の要らないデータを削除するのはやめよう",
-    "excerpt": "Gutenbergを使うなら、むやみにAPI内の要らないデータを削除するのはやめよう",
-    "categories": [
-      "WordPress"
-    ],
-    "tags": [],
-    "path": "/blog/2019/01/dont-delete-meta-deta/"
-  },
-  {
-    "date": "2019-01-03",
     "title": "1文字ずつspanで囲むVue ComponentとPHP",
     "excerpt": "1文字ずつspanで囲むVue ComponentとPHP",
     "categories": [
@@ -48,6 +38,16 @@
       "Vue"
     ],
     "path": "/blog/2019/01/surround-vue-and-php/"
+  },
+  {
+    "date": "2019-01-03",
+    "title": "Gutenbergを使うなら、むやみにAPI内の要らないデータを削除するのはやめよう",
+    "excerpt": "Gutenbergを使うなら、むやみにAPI内の要らないデータを削除するのはやめよう",
+    "categories": [
+      "WordPress"
+    ],
+    "tags": [],
+    "path": "/blog/2019/01/dont-delete-meta-deta/"
   },
   {
     "date": "2019-01-01",
@@ -117,17 +117,6 @@
   },
   {
     "date": "2017-07-06",
-    "title": "WordCamp Kyoto 2017に参加＆登壇してきました",
-    "excerpt": "WordCamp Kyoto 2017に参加＆登壇してきました",
-    "categories": [
-      "WordPress",
-      "Event"
-    ],
-    "tags": [],
-    "path": "/blog/2017/07/wordcamp-kyoto-2017に参加＆登壇してきました/"
-  },
-  {
-    "date": "2017-07-06",
     "title": "WordBench Nagano vol.6 に参加するために長野に行ってきました",
     "excerpt": "WordBench Nagano vol.6 に参加するために長野に行ってきました",
     "categories": [
@@ -136,6 +125,17 @@
     ],
     "tags": [],
     "path": "/blog/2017/07/wbn2017/"
+  },
+  {
+    "date": "2017-07-06",
+    "title": "WordCamp Kyoto 2017に参加＆登壇してきました",
+    "excerpt": "WordCamp Kyoto 2017に参加＆登壇してきました",
+    "categories": [
+      "WordPress",
+      "Event"
+    ],
+    "tags": [],
+    "path": "/blog/2017/07/wordcamp-kyoto-2017に参加＆登壇してきました/"
   },
   {
     "date": "2016-12-12",
@@ -281,20 +281,6 @@
   },
   {
     "date": "2014-08-16",
-    "title": "IEではposition:fixedかかったものは直でtransitionかけてあげる必要がある",
-    "excerpt": "IEではposition:fixedかかったものは直でtransitionかけてあげる必要がある",
-    "categories": [
-      "Frontend",
-      "Programming"
-    ],
-    "tags": [
-      "JavaScript",
-      "CSS"
-    ],
-    "path": "/blog/2014/08/ie-position-fixed-transition/"
-  },
-  {
-    "date": "2014-08-16",
     "title": "ページ遷移でフェードかけるだけのJavaScript作った",
     "excerpt": "ページ遷移でフェードかけるだけのJavaScript作った",
     "categories": [
@@ -307,6 +293,20 @@
       "CSS"
     ],
     "path": "/blog/2014/08/fade-page-dont-use-jqery/"
+  },
+  {
+    "date": "2014-08-16",
+    "title": "IEではposition:fixedかかったものは直でtransitionかけてあげる必要がある",
+    "excerpt": "IEではposition:fixedかかったものは直でtransitionかけてあげる必要がある",
+    "categories": [
+      "Frontend",
+      "Programming"
+    ],
+    "tags": [
+      "JavaScript",
+      "CSS"
+    ],
+    "path": "/blog/2014/08/ie-position-fixed-transition/"
   },
   {
     "date": "2014-07-19",
@@ -472,17 +472,13 @@
   },
   {
     "date": "2014-03-15",
-    "title": "VagrantでWordPressを速攻デプロイできるVVV-mediumを作りました",
-    "excerpt": "VagrantでWordPressを速攻デプロイできるVVV-mediumを作りました",
+    "title": "黒歴史でやる気を出そう",
+    "excerpt": "黒歴史でやる気を出そう",
     "categories": [
-      "Products",
-      "環境構築"
+      "日々のこと"
     ],
-    "tags": [
-      "効率化",
-      "WordPress"
-    ],
-    "path": "/blog/2014/03/vvv-medium/"
+    "tags": [],
+    "path": "/blog/2014/03/kurorekishi/"
   },
   {
     "date": "2014-03-15",
@@ -499,25 +495,17 @@
   },
   {
     "date": "2014-03-15",
-    "title": "黒歴史でやる気を出そう",
-    "excerpt": "黒歴史でやる気を出そう",
+    "title": "VagrantでWordPressを速攻デプロイできるVVV-mediumを作りました",
+    "excerpt": "VagrantでWordPressを速攻デプロイできるVVV-mediumを作りました",
     "categories": [
-      "日々のこと"
-    ],
-    "tags": [],
-    "path": "/blog/2014/03/kurorekishi/"
-  },
-  {
-    "date": "2014-02-27",
-    "title": "日本語ユーザー名でVagrant upできない場合",
-    "excerpt": "日本語ユーザー名でVagrant upできない場合",
-    "categories": [
+      "Products",
       "環境構築"
     ],
     "tags": [
-      "Vagrant"
+      "効率化",
+      "WordPress"
     ],
-    "path": "/blog/2014/02/nihongo-user-should-die/"
+    "path": "/blog/2014/03/vvv-medium/"
   },
   {
     "date": "2014-02-27",
@@ -532,6 +520,18 @@
       "WordPress"
     ],
     "path": "/blog/2014/03/vvv-small/"
+  },
+  {
+    "date": "2014-02-27",
+    "title": "日本語ユーザー名でVagrant upできない場合",
+    "excerpt": "日本語ユーザー名でVagrant upできない場合",
+    "categories": [
+      "環境構築"
+    ],
+    "tags": [
+      "Vagrant"
+    ],
+    "path": "/blog/2014/02/nihongo-user-should-die/"
   },
   {
     "date": "2014-02-21",
@@ -711,15 +711,16 @@
   },
   {
     "date": "2013-12-17",
-    "title": "MySQLで>が出た時の対処方法",
-    "excerpt": "MySQLで>が出た時の対処方法",
+    "title": "Vagrantで「Code CO_E_SERVER_EXEC_FAILURE」が出る場合の対処法",
+    "excerpt": "Vagrantで「Code CO_E_SERVER_EXEC_FAILURE」が出る場合の対処法",
     "categories": [
-      "Programming"
+      "環境構築"
     ],
     "tags": [
+      "Vagrant",
       "PHP"
     ],
-    "path": "/blog/2013/12/php-arrow/"
+    "path": "/blog/2013/12/vagrant-error/"
   },
   {
     "date": "2013-12-17",
@@ -735,6 +736,18 @@
   },
   {
     "date": "2013-12-17",
+    "title": "MySQLで>が出た時の対処方法",
+    "excerpt": "MySQLで>が出た時の対処方法",
+    "categories": [
+      "Programming"
+    ],
+    "tags": [
+      "PHP"
+    ],
+    "path": "/blog/2013/12/php-arrow/"
+  },
+  {
+    "date": "2013-12-17",
     "title": "NginxでPHPを動かすために",
     "excerpt": "NginxでPHPを動かすために",
     "categories": [
@@ -745,19 +758,6 @@
       "PHP"
     ],
     "path": "/blog/2013/12/nginx-php/"
-  },
-  {
-    "date": "2013-12-17",
-    "title": "Vagrantで「Code CO_E_SERVER_EXEC_FAILURE」が出る場合の対処法",
-    "excerpt": "Vagrantで「Code CO_E_SERVER_EXEC_FAILURE」が出る場合の対処法",
-    "categories": [
-      "環境構築"
-    ],
-    "tags": [
-      "Vagrant",
-      "PHP"
-    ],
-    "path": "/blog/2013/12/vagrant-error/"
   },
   {
     "date": "2013-12-15",
@@ -811,18 +811,6 @@
   },
   {
     "date": "2013-11-06",
-    "title": "Google Spreadsheetを簡単にJSON化",
-    "excerpt": "google-spreadsheetを簡単にjson化",
-    "categories": [
-      "Programming"
-    ],
-    "tags": [
-      "Google Spread Sheet"
-    ],
-    "path": "/blog/2013/11/google-spreadsheet/"
-  },
-  {
-    "date": "2013-11-06",
     "title": "macで設定を忘れてしまいがちなファイル群",
     "excerpt": "macで設定を忘れてしまいがちなファイル群の一覧",
     "categories": [
@@ -834,16 +822,16 @@
     "path": "/blog/2013/11/mac-settings/"
   },
   {
-    "date": "2013-10-29",
-    "title": "PHPでMySQL→JSON出力",
-    "excerpt": "PHPでMySQL→JSON出力",
+    "date": "2013-11-06",
+    "title": "Google Spreadsheetを簡単にJSON化",
+    "excerpt": "google-spreadsheetを簡単にjson化",
     "categories": [
       "Programming"
     ],
     "tags": [
-      "PHP"
+      "Google Spread Sheet"
     ],
-    "path": "/blog/2013/10/phpでmysql→json出力/"
+    "path": "/blog/2013/11/google-spreadsheet/"
   },
   {
     "date": "2013-10-29",
@@ -856,6 +844,18 @@
       "Firefox"
     ],
     "path": "/blog/2013/10/all-in-one-sidebar/"
+  },
+  {
+    "date": "2013-10-29",
+    "title": "PHPでMySQL→JSON出力",
+    "excerpt": "PHPでMySQL→JSON出力",
+    "categories": [
+      "Programming"
+    ],
+    "tags": [
+      "PHP"
+    ],
+    "path": "/blog/2013/10/phpでmysql→json出力/"
   },
   {
     "date": "2013-10-23",

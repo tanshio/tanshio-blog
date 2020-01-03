@@ -16,7 +16,7 @@ const createCategoryPages = (createPage, posts) => {
   posts.forEach(({ node }) => {
     // console.log(node.frontmatter)
     if (node.frontmatter.categories) {
-      node.frontmatter.categories.forEach(category => {
+      node.frontmatter.categories.forEach((category) => {
         if (!postsByCategories[category]) {
           postsByCategories[category] = []
         }
@@ -34,8 +34,8 @@ const createCategoryPages = (createPage, posts) => {
     },
   })
 
-  const postsTemplate = path.resolve("src/templates/posts.tsx")
-  categories.forEach(categoryName => {
+  const postsTemplate = path.resolve('src/templates/posts.tsx')
+  categories.forEach((categoryName) => {
     const posts = postsByCategories[categoryName]
     createPage({
       path: `/blog/category/${categoryName}`,
@@ -101,9 +101,9 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         `
-      ).then(result => {
+      ).then((result) => {
         if (result.errors) {
-          console.log(result.errors)
+          console.log('error', result.errors)
           reject(result.errors)
         }
 
@@ -111,7 +111,7 @@ exports.createPages = ({ graphql, actions }) => {
 
         createCategoryPages(createPage, posts)
         createPosts(createPage, posts)
-        const searchJSON = posts.map(post => {
+        const searchJSON = posts.map((post) => {
           const postNode = post.node
           const {
             date,
@@ -131,7 +131,7 @@ exports.createPages = ({ graphql, actions }) => {
           }
         })
         fs.writeFileSync(
-          "./static/search.json",
+          './static/search.json',
           JSON.stringify(searchJSON, null, 2)
         )
       })
