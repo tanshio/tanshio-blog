@@ -9,6 +9,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-typescript`,
+    `gatsby-plugin-remove-console`,
     `gatsby-plugin-sitemap`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -19,8 +20,14 @@ module.exports = {
       options: {
         host: 'https://tanshio.net',
         sitemap: 'https://tanshio.net/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '/' }]
-      }
+        policy: [{ userAgent: '*', allow: '/' }],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'UA-8982785-5',
+      },
     },
     {
       resolve: `gatsby-plugin-layout`,

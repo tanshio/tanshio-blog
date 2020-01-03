@@ -58,10 +58,11 @@ const SocialList = styled.ul`
 const IndexPage = (props: IndexPageInterface) => (
   <>
     <Seo
-      title={'Gastbyサンプル'}
+      title={'たんしおどっとねっと'}
       description={'たんしおどっとねっと'}
       keywords={[`gatsby`, `application`, `react`]}
       path={'/'}
+      type={'website'}
     />
     <PostWrapper>
       <PostInner>
