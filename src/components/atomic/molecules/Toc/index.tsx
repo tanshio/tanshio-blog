@@ -12,7 +12,7 @@ const TocWrapper = styled.nav`
     //top: 0;
     //padding-right: 2rem;
     //z-index: 99;
-    max-width: 300px;
+    //max-width: 300px;
     font-size: 0.85rem;
     a {
       display: inline;

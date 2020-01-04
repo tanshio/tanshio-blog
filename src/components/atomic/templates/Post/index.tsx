@@ -1,25 +1,13 @@
-import React, { memo, useEffect, useRef } from 'react'
+import React, { memo, useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
+import Mikan from 'mikanjs'
 import { DateISO8601 } from '../../../../types'
 import { Time } from '../../atoms/Time'
 import { Toc } from '../../molecules/Toc'
 import { mq } from '../../../../styles/vars/mq'
+import { Container } from '../../atoms/Container'
 
-const PostWrapper = styled.article`
-  min-height: 100vh;
-  padding: 2rem;
-
-  @media (${mq.sm}) {
-    padding: 3rem 3rem 3rem calc(300px + 3rem);
-  }
-
-  @media (${mq.md}) {
-    padding: 3rem 3rem 3rem calc(300px + 3rem);
-  }
-
-  @media (${mq.lg}) {
-    padding: 3rem 3rem 3rem calc(800px + 3rem);
-  }
+const PostWrapper = styled.div`
   a {
     color: var(--colorPrimary);
     text-decoration: underline;
@@ -42,6 +30,7 @@ const PostWrapper = styled.article`
 const PostHeader = styled.header`
   h1 {
     margin: 0;
+    font-size: var(--fontSizeHeading1);
   }
 
   @media (${mq.lg}) {
@@ -115,6 +104,8 @@ export type PostProps = {
   tableOfContents: string
   excerpt: string
   html: string
+  isNavOpen?: boolean
+  onEnter: () => void
   frontmatter: {
     title: string
     date: string
@@ -129,24 +120,44 @@ export type PostProps = {
 export const Post = (props: PostProps) => {
   const focusEl = useRef<HTMLElement>(null)
   useEffect(() => {
+    props.onEnter()
     if (focusEl.current) {
       focusEl.current.focus()
     }
     return () => {}
   }, [])
+
+  useEffect(() => {
+    if (props.isNavOpen) {
+      if (focusEl.current) {
+        focusEl.current.blur()
+      }
+    } else {
+      if (focusEl.current) {
+        focusEl.current.focus()
+      }
+    }
+    return () => {}
+  }, [props.isNavOpen])
   return (
-    <PostWrapper tabIndex={0} ref={focusEl}>
-      <PostHeader>
-        <h1>{props.title}</h1>
-        <Time date={props.date} />
-        {props.tableOfContents && (
-          <Toc tableOfContents={props.tableOfContents} />
-        )}
-      </PostHeader>
-      <PostInner>
-        <div dangerouslySetInnerHTML={{ __html: props.html }} />
-      </PostInner>
-    </PostWrapper>
+    <Container tabIndex={props.isNavOpen ? -1 : 0} as={'article'} ref={focusEl}>
+      <PostWrapper>
+        <PostHeader>
+          <h1
+            dangerouslySetInnerHTML={{
+              __html: Mikan(props.title),
+            }}
+          />
+          <Time date={props.date} />
+          {props.tableOfContents && (
+            <Toc tableOfContents={props.tableOfContents} />
+          )}
+        </PostHeader>
+        <PostInner>
+          <div dangerouslySetInnerHTML={{ __html: props.html }} />
+        </PostInner>
+      </PostWrapper>
+    </Container>
   )
 }
 

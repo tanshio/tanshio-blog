@@ -36,8 +36,6 @@ export const GlobalStyles = createGlobalStyle`
   :root {
     --fontFamilyBase: 'YakuHanJP','Public Sans','Original Yu Gothic', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
     
-    --fontSizePrimary: ${fontSizes.primary};
-    
     --colorBg: #e8e8e8;
     --colorBgDark: #b35662;
     --colorTextPrimary: #1a1a1a;
@@ -45,9 +43,29 @@ export const GlobalStyles = createGlobalStyle`
     --colorTextReverse: #fff;
     --colorTextDecoration: #b35662;
     @media (prefers-color-scheme: dark) {
-      --colorBg: #000;
+      --colorBg: #1a1a1a;
       --colorTextPrimary: #fff;
     }
+    
+    --rhythm: 8;
+    --spaceUnit: calc(var(--rhythm) * 1px);
+    --spaceXs: var(--spaceUnit);
+    
+    // https://standard.shiftbrain.com/blog/music-math-typography
+    --fontSizeRoot: 16px;
+    --fontSizeUnit: 1rem;
+    --fontSizeXs: calc(var(--fontSizeUnit) * var(--rhythm) / 10);
+    --fontSizeSm: calc(var(--fontSizeUnit) * var(--rhythm) / 9);
+    --fontSizePrimary: calc(var(--fontSizeUnit) * var(--rhythm) / 8);
+    --fontSizeMd: calc(var(--fontSizeUnit) * var(--rhythm) / 7);
+    --fontSizeLg: calc(var(--fontSizeUnit) * var(--rhythm) / 6);
+    --fontSizeXl: calc(var(--fontSizeUnit) * var(--rhythm) / 5);
+    
+    --fontSizeHeadingOther: calc(var(--fontSizeUnit) * var(--rhythm) / 6);
+    --fontSizeHeading3: var(--fontSizeMd);
+    --fontSizeHeading2: var(--fontSizeXl);
+    --fontSizeHeading1: calc(var(--fontSizeUnit) * var(--rhythm) / 4);
+    
   }
   
   
@@ -61,7 +79,7 @@ export const GlobalStyles = createGlobalStyle`
   }
   
   html{
-    font-size: var(--fontSizePrimary);
+    font-size: var(--fontSizeRoot);
     text-underline-position: under;
     //scroll-behavior: smooth;
   }

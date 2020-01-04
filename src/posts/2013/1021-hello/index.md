@@ -3,7 +3,7 @@ title: "心に余裕を"
 date: "2013-10-20"
 path: "/blog/2013/10/ハローワールド/"
 type: "blog"
-categories: ["日記"]
+categories: ["日々のこと"]
 tags: [] 
 excerpt: "ブログを始めたきっかけ"
 ogp: "./ogp.png"

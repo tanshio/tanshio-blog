@@ -9,6 +9,7 @@ import { State } from '../store'
 import { useEffect, useRef } from 'react'
 import SinglePost from '../components/atomic/templates/Post'
 import { DateISO8601 } from '../types'
+import { navActionCreators } from '../store/nav/actions'
 
 interface PostInterface {
   location: {
@@ -36,15 +37,14 @@ interface PostInterface {
   }
 }
 
-const counterSelector = (state: State) => state.counter.count
+const isOpenSelector = (state: State) => state.nav.isOpen
 
 const Post = (props: PostInterface) => {
+  const dispatch = useDispatch()
   const { tableOfContents, ...post } = props.data.markdownRemark
   const { title, excerpt } = props.data.markdownRemark.frontmatter
   const date = props.data.markdownRemark.frontmatter.date as DateISO8601
-  const dispatch = useDispatch()
-  const count = useSelector(counterSelector)
-  const increment = () => dispatch(counterActionCreators.increment(1))
+  const isOpen = useSelector(isOpenSelector)
   return (
     <>
       <Seo
@@ -55,6 +55,10 @@ const Post = (props: PostInterface) => {
         type={'article'}
       />
       <SinglePost
+        isNavOpen={isOpen}
+        onEnter={() => {
+          // dispatch(navActionCreators.close())
+        }}
         date={date}
         excerpt={excerpt}
         html={post.html}

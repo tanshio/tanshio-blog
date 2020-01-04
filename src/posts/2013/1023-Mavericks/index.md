@@ -3,7 +3,7 @@ title: "早速OS X Mavericksを入れてみた"
 date: "2013-10-23"
 path: "/blog/2013/10/mavericks/"
 type: "blog"
-categories: ["環境"]
+categories: ["環境構築"]
 tags: ["mac", "OS"] 
 excerpt: "OS X Mavericksを入れてみた感想"
 ogp: "./ogp.png"

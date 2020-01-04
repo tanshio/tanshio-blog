@@ -17,6 +17,7 @@ type ArticleListInterface = {
 
 type ArticleListProps = {
   pathname: string
+  onLinkClick: () => void
 }
 
 type ArticleListWrapperProps = {
@@ -36,8 +37,7 @@ const ArticleListWrapper = styled.div<ArticleListWrapperProps>`
     background-color: ${(props) =>
       props.current ? 'var(--colorBgDark)' : 'transparent'};
     text-underline-position: under;
-    text-decoration: ${(props) =>
-  props.current ? 'underline' : 'none'};;
+    text-decoration: ${(props) => (props.current ? 'underline' : 'none')};
     &:hover {
       background-color: var(--colorBgDark);
       color: var(--colorTextReverse);
@@ -83,6 +83,8 @@ const ArticleFilterInput = styled.input`
   padding: 1rem;
   border-bottom: 2px solid var(--colorTextPrimary);
   font-size: 0.8rem;
+  color: var(--colorTextPrimary);
+  border-radius: 0;
 `
 
 const ArticleList = (props: ArticleListProps) => {
@@ -126,7 +128,13 @@ const ArticleList = (props: ArticleListProps) => {
             key={i}
             current={encodeURI(post.path) === pathname}
           >
-            <Link to={post.path} key={i}>
+            <Link
+              to={post.path}
+              key={i}
+              onClick={() => {
+                props.onLinkClick()
+              }}
+            >
               <Time date={post.date} />
               <ArticleListCategoryList>
                 {post.categories.map((cat, i) => (

@@ -4,7 +4,7 @@ date: "2013-11-06"
 path: "/blog/2013/11/google-spreadsheet/"
 type: "blog"
 categories: ["Programming"]
-tags: ["Google Spread Sheet"] 
+tags: ["Google Spreadsheet"] 
 excerpt: "google-spreadsheetを簡単にjson化"
 ogp: "./ogp.png"
 ---

@@ -78,7 +78,7 @@ function Seo({
         },
         {
           property: `og:image`,
-          content: ogp ? `${DOMAIN}${ogp}` : `${DOMAIN}static/ogp.png`,
+          content: ogp ? `${DOMAIN}${ogp}` : `${DOMAIN}ogp.png`,
         },
         {
           name: `twitter:card`,
@@ -115,7 +115,7 @@ Seo.defaultProps = {
   lang: `ja`,
   meta: [],
   keywords: [],
-  description: ``,
+  description: `仙台で働いている、何でもやる感じのタイプの人間です`,
 }
 
 export default Seo

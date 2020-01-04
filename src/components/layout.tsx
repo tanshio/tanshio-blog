@@ -15,6 +15,8 @@ import ArticleList from './article-list'
 import { State } from '../store'
 import styled from 'styled-components'
 import { mq } from '../styles/vars/mq'
+import { navActionCreators } from '../store/nav/actions'
+import { useRef } from 'react'
 
 interface LayoutProps {
   location: {
@@ -36,16 +38,51 @@ const Sidebar = styled.div<SidebarType>`
   position: fixed;
   top: 0;
   left: 0;
-  width: 300px;
+  width: 100%;
   height: 100%;
   overflow: auto;
   border-right: 2px solid var(--colorTextPrimary);
   background-color: var(--colorBg);
-  display: ${(props) =>
-    props.isOpen || isClearedSidebarPages(props.pathname) ? 'block' : 'none'};
+  visibility: ${(props) =>
+    props.isOpen || isClearedSidebarPages(props.pathname)
+      ? 'visible'
+      : 'hidden'};
+  z-index: 1;
   @media (${mq.sm}) {
-    display: block;
+    width: 300px;
+    visibility: visible;
   }
+`
+
+type MenuButtonType = {
+  pathname: string
+  isOpen: boolean
+}
+
+const MenuButton = styled.button<MenuButtonType>`
+  position: fixed;
+  appearance: none;
+  padding: 8px 4px;
+  width: 2rem;
+  border: 0;
+  background-color: transparent;
+  left: 0;
+  top: 0;
+  cursor: pointer;
+  z-index: 3;
+  span {
+    display: block;
+    height: 1px;
+    background-color: var(--colorTextPrimary);
+    & + span {
+      margin-top: 3px;
+    }
+  }
+  @media (${mq.sm}) {
+    display: none;
+  }
+
+  ${(props) => props.pathname === '/' && 'display: none'}
 `
 
 const isOpenSelector = (state: State) => state.nav.isOpen
@@ -53,14 +90,52 @@ const isOpenSelector = (state: State) => state.nav.isOpen
 const Layout = (props: LayoutProps) => {
   const dispatch = useDispatch()
   const isOpen = useSelector(isOpenSelector)
+  const menuRef = useRef<HTMLDivElement>(null)
+  const menuButtonRef = useRef<HTMLButtonElement>(null)
   return (
     <>
       <GlobalStyles />
-      <Sidebar pathname={props.location.pathname} isOpen={isOpen}>
+      <Sidebar
+        tabIndex={0}
+        pathname={props.location.pathname}
+        isOpen={isOpen}
+        ref={menuRef}
+      >
         <Header />
-        <ArticleList pathname={props.location.pathname} />
+        <ArticleList
+          pathname={props.location.pathname}
+          onLinkClick={() => {
+            dispatch(navActionCreators.close())
+          }}
+        />
       </Sidebar>
       <div>
+        <MenuButton
+          pathname={props.location.pathname}
+          isOpen={isOpen}
+          type={'button'}
+          aria-label={'MENU'}
+          aria-expanded={isOpen}
+          ref={menuButtonRef}
+          onClick={(e) => {
+            e.preventDefault()
+            if (isOpen) {
+              dispatch(navActionCreators.close())
+            } else {
+              dispatch(navActionCreators.open())
+
+              setTimeout(() => {
+                if (menuRef.current) {
+                  menuRef.current.focus()
+                }
+              }, 150)
+            }
+          }}
+        >
+          <span />
+          <span />
+          <span />
+        </MenuButton>
         <main>{props.children}</main>
       </div>
     </>
@@ -69,8 +144,8 @@ const Layout = (props: LayoutProps) => {
 
 Layout.defaultProps = {
   location: {
-    pathname: ''
-  }
+    pathname: '',
+  },
 }
 
 export default Layout

@@ -16,9 +16,10 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "gen:component": "npx hygen component new",
     "gen:state": "npx hygen state new",
+    "gen:post": "npx hygen post new",
     "gen:ogp-component": "ts-node tools/ogp/generateComponent.ts",
     "gen:ogp-image": "ts-node tools/ogp/generateOgpImages.ts",
-    "gen:ogp": "npm run gen:ogp-component && npm run storycap"
+    "gen:ogp": "npm run gen:ogp-component && npm run storycap && npm run gen:ogp-image"
   },
   "dependencies": {
     "@weknow/gatsby-remark-codepen": "^0.1.0",
