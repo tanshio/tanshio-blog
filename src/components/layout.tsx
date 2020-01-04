@@ -84,6 +84,22 @@ const MenuButton = styled.button<MenuButtonType>`
     display: none;
   }
 
+  &.isOpen {
+    span {
+      &:nth-of-type(1) {
+        transform: translateY(4px) rotate(45deg);
+      }
+
+      &:nth-of-type(3) {
+        transform: translateY(-4px) rotate(-45deg);
+      }
+
+      &:nth-of-type(2) {
+        opacity: 0;
+      }
+    }
+  }
+
   ${(props) => props.pathname === '/' && 'display: none'}
 `
 
@@ -116,7 +132,7 @@ const Layout = (props: LayoutProps) => {
         <ArticleList
           pathname={props.location.pathname}
           onLinkClick={() => {
-            dispatch(navActionCreators.close())
+            // dispatch(navActionCreators.close())
           }}
         />
       </Sidebar>
@@ -128,6 +144,7 @@ const Layout = (props: LayoutProps) => {
           aria-label={'MENU'}
           aria-expanded={isOpen}
           ref={menuButtonRef}
+          className={isOpen ? 'isOpen' : ''}
           onClick={(e) => {
             e.preventDefault()
             if (isOpen) {
