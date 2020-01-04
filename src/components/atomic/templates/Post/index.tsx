@@ -99,25 +99,6 @@ const PostInner = styled.div`
   }
 `
 
-export type PostProps = {
-  title: string
-  date: DateISO8601
-  tableOfContents: string
-  excerpt: string
-  html: string
-  isNavOpen?: boolean
-  onEnter: () => void
-  frontmatter: {
-    title: string
-    date: string
-    path: string
-    excerpt: string
-    type: string
-    categories: string[]
-    tags: string[]
-  }
-}
-
 const Share = styled.button`
   position: fixed;
   bottom: 0;
@@ -140,8 +121,11 @@ const Share = styled.button`
     background-color: var(--colorBg);
   }
 
-  .hasShare {
+  &.hasShare {
     display: flex;
+    @media (${mq.lg}) {
+      padding-left: 300px;
+    }
   }
 
   svg {
@@ -151,6 +135,25 @@ const Share = styled.button`
     margin-right: var(--spaceXs);
   }
 `
+
+export type PostProps = {
+  title: string
+  date: DateISO8601
+  tableOfContents: string
+  excerpt: string
+  html: string
+  isNavOpen?: boolean
+  onEnter: () => void
+  frontmatter: {
+    title: string
+    date: string
+    path: string
+    excerpt: string
+    type: string
+    categories: string[]
+    tags: string[]
+  }
+}
 
 export const Post = (props: PostProps) => {
   const focusEl = useRef<HTMLElement>(null)
