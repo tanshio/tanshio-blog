@@ -96,9 +96,7 @@ const ArticleFilterInput = styled.input`
 const ArticleList = (props: ArticleListProps) => {
   const pathname = props.pathname
   const [posts, setPosts] = useState<ArticleListInterface>([])
-  const [isTouch, setIsTouch] = useState(
-    /iPhone|iPad|Android/.test(navigator.userAgent)
-  )
+  const [isTouch, setIsTouch] = useState(false)
 
   const [filterText, setFilterText] = useState('')
   const filterPosts = useMemo(() => {
@@ -110,6 +108,10 @@ const ArticleList = (props: ArticleListProps) => {
   }, [posts, filterText])
 
   useEffect(() => {
+    if (navigator) {
+      ;/iPhone|iPad|Android/.test(navigator.userAgent)
+    }
+
     const getJson = async () => {
       const res = await fetch('/search.json')
       const json = await res.json()

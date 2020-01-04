@@ -27,6 +27,16 @@
   },
   {
     "date": "2019-01-03",
+    "title": "Gutenbergを使うなら、むやみにAPI内の要らないデータを削除するのはやめよう",
+    "excerpt": "Gutenbergを使うなら、むやみにAPI内の要らないデータを削除するのはやめよう",
+    "categories": [
+      "WordPress"
+    ],
+    "tags": [],
+    "path": "/blog/2019/01/dont-delete-meta-deta/"
+  },
+  {
+    "date": "2019-01-03",
     "title": "1文字ずつspanで囲むVue ComponentとPHP",
     "excerpt": "1文字ずつspanで囲むVue ComponentとPHP",
     "categories": [
@@ -38,16 +48,6 @@
       "Vue"
     ],
     "path": "/blog/2019/01/surround-vue-and-php/"
-  },
-  {
-    "date": "2019-01-03",
-    "title": "Gutenbergを使うなら、むやみにAPI内の要らないデータを削除するのはやめよう",
-    "excerpt": "Gutenbergを使うなら、むやみにAPI内の要らないデータを削除するのはやめよう",
-    "categories": [
-      "WordPress"
-    ],
-    "tags": [],
-    "path": "/blog/2019/01/dont-delete-meta-deta/"
   },
   {
     "date": "2019-01-01",
@@ -65,19 +65,6 @@
   },
   {
     "date": "2017-08-15",
-    "title": "Universal Ctags を使って Vim でコードジャンプする",
-    "excerpt": "Universal Ctags を使って Vim でコードジャンプする",
-    "categories": [
-      "環境構築"
-    ],
-    "tags": [
-      "Vim",
-      "構築化"
-    ],
-    "path": "/blog/2017/08/use-ctags-for-vim/"
-  },
-  {
-    "date": "2017-08-15",
     "title": "Karabiner-Elementsで複数キー設定やアプリごとにキーバインド設定をする",
     "excerpt": "Karabiner-Elementsで複数キー設定やアプリごとにキーバインド設定をする",
     "categories": [
@@ -89,6 +76,19 @@
       "ツール"
     ],
     "path": "/blog/2017/08/karabiner-elements2017/"
+  },
+  {
+    "date": "2017-08-15",
+    "title": "Universal Ctags を使って Vim でコードジャンプする",
+    "excerpt": "Universal Ctags を使って Vim でコードジャンプする",
+    "categories": [
+      "環境構築"
+    ],
+    "tags": [
+      "Vim",
+      "構築化"
+    ],
+    "path": "/blog/2017/08/use-ctags-for-vim/"
   },
   {
     "date": "2017-07-24",
@@ -547,6 +547,16 @@
   },
   {
     "date": "2014-02-18",
+    "title": "クリエイティブに生きる",
+    "excerpt": "クリエイティブに生きる",
+    "categories": [
+      "日々のこと"
+    ],
+    "tags": [],
+    "path": "/blog/2014/02/live-creatively/"
+  },
+  {
+    "date": "2014-02-18",
     "title": "2014年ぼくのWordPressさいきょう高速開発ツール",
     "excerpt": "2014年ぼくのWordPressさいきょう高速開発ツール",
     "categories": [
@@ -556,16 +566,6 @@
       "WordPress"
     ],
     "path": "/blog/2014/02/2014-wordpress/"
-  },
-  {
-    "date": "2014-02-18",
-    "title": "クリエイティブに生きる",
-    "excerpt": "クリエイティブに生きる",
-    "categories": [
-      "日々のこと"
-    ],
-    "tags": [],
-    "path": "/blog/2014/02/live-creatively/"
   },
   {
     "date": "2014-02-16",
@@ -711,19 +711,6 @@
   },
   {
     "date": "2013-12-17",
-    "title": "NginxでPHPを動かすために",
-    "excerpt": "NginxでPHPを動かすために",
-    "categories": [
-      "Programming",
-      "環境構築"
-    ],
-    "tags": [
-      "PHP"
-    ],
-    "path": "/blog/2013/12/nginx-php/"
-  },
-  {
-    "date": "2013-12-17",
     "title": "Vagrantで「Code CO_E_SERVER_EXEC_FAILURE」が出る場合の対処法",
     "excerpt": "Vagrantで「Code CO_E_SERVER_EXEC_FAILURE」が出る場合の対処法",
     "categories": [
@@ -734,18 +721,6 @@
       "PHP"
     ],
     "path": "/blog/2013/12/vagrant-error/"
-  },
-  {
-    "date": "2013-12-17",
-    "title": "MySQLで>が出た時の対処方法",
-    "excerpt": "MySQLで>が出た時の対処方法",
-    "categories": [
-      "Programming"
-    ],
-    "tags": [
-      "PHP"
-    ],
-    "path": "/blog/2013/12/php-arrow/"
   },
   {
     "date": "2013-12-17",
@@ -760,17 +735,29 @@
     "path": "/blog/2013/12/vagrant-centos-ip/"
   },
   {
-    "date": "2013-12-15",
-    "title": "CentOS 6.4にNginxをインストール",
-    "excerpt": "CentOS 6.4にNginxをインストール",
+    "date": "2013-12-17",
+    "title": "NginxでPHPを動かすために",
+    "excerpt": "NginxでPHPを動かすために",
     "categories": [
+      "Programming",
       "環境構築"
     ],
     "tags": [
-      "Vagrant",
-      "CentOS"
+      "PHP"
     ],
-    "path": "/blog/2013/12/centos6-4-nginx/"
+    "path": "/blog/2013/12/nginx-php/"
+  },
+  {
+    "date": "2013-12-17",
+    "title": "MySQLで>が出た時の対処方法",
+    "excerpt": "MySQLで>が出た時の対処方法",
+    "categories": [
+      "Programming"
+    ],
+    "tags": [
+      "PHP"
+    ],
+    "path": "/blog/2013/12/php-arrow/"
   },
   {
     "date": "2013-12-15",
@@ -783,6 +770,19 @@
       "Vagrant"
     ],
     "path": "/blog/2013/12/vagrant-guestadditions/"
+  },
+  {
+    "date": "2013-12-15",
+    "title": "CentOS 6.4にNginxをインストール",
+    "excerpt": "CentOS 6.4にNginxをインストール",
+    "categories": [
+      "環境構築"
+    ],
+    "tags": [
+      "Vagrant",
+      "CentOS"
+    ],
+    "path": "/blog/2013/12/centos6-4-nginx/"
   },
   {
     "date": "2013-11-20",
@@ -811,18 +811,6 @@
   },
   {
     "date": "2013-11-06",
-    "title": "Google Spreadsheetを簡単にJSON化",
-    "excerpt": "google-spreadsheetを簡単にjson化",
-    "categories": [
-      "Programming"
-    ],
-    "tags": [
-      "Google Spreadsheet"
-    ],
-    "path": "/blog/2013/11/google-spreadsheet/"
-  },
-  {
-    "date": "2013-11-06",
     "title": "macで設定を忘れてしまいがちなファイル群",
     "excerpt": "macで設定を忘れてしまいがちなファイル群の一覧",
     "categories": [
@@ -832,6 +820,18 @@
       "mac"
     ],
     "path": "/blog/2013/11/mac-settings/"
+  },
+  {
+    "date": "2013-11-06",
+    "title": "Google Spreadsheetを簡単にJSON化",
+    "excerpt": "google-spreadsheetを簡単にjson化",
+    "categories": [
+      "Programming"
+    ],
+    "tags": [
+      "Google Spreadsheet"
+    ],
+    "path": "/blog/2013/11/google-spreadsheet/"
   },
   {
     "date": "2013-10-29",
