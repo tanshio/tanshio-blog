@@ -57,7 +57,7 @@ function Seo({
       htmlAttributes={{
         lang: lang ? lang : 'ja',
       }}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={path === '/' ? '' : `%s | ${site.siteMetadata.title}`}
       title={title}
       meta={[
         {

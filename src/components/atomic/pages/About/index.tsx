@@ -1,14 +1,23 @@
 import React, { memo, useCallback, useEffect, useState, useMemo } from 'react'
 import styled from 'styled-components'
 import { Icon } from '../../atoms/Icon'
+import { mq } from '../../../../styles/vars/mq'
 
 const AboutWrapper = styled.article`
-  padding-left: 300px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media (${mq.sm}) {
+    padding-left: 300px;
+  }
 `
 
 const AboutInner = styled.div`
   padding: 0 3rem;
   h1 {
+    margin-top: 0;
     span {
       display: block;
     }

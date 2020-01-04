@@ -18,6 +18,7 @@ import { mq } from '../styles/vars/mq'
 import { navActionCreators } from '../store/nav/actions'
 import { useRef } from 'react'
 import { navigate } from '@reach/router'
+import { Link } from 'gatsby'
 
 interface LayoutProps {
   location: {
@@ -103,6 +104,25 @@ const MenuButton = styled.button<MenuButtonType>`
   ${(props) => props.pathname === '/' && 'display: none'}
 `
 
+const SmpNav = styled.ul`
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 2px solid var(--colorTextPrimary);
+  a {
+    color: var(--colorTextPrimary);
+    text-decoration: none;
+    display: block;
+    padding: 1rem;
+    font-size: var(--fontSizeSm);
+    line-height: 1;
+  }
+  
+  @media (${mq.sm}) {
+    display: none;
+  }
+`
+
 const isOpenSelector = (state: State) => state.nav.isOpen
 
 const Layout = (props: LayoutProps) => {
@@ -129,6 +149,11 @@ const Layout = (props: LayoutProps) => {
         ref={menuRef}
       >
         <Header />
+        <SmpNav>
+          <li>
+            <Link to={'/about/'}>About</Link>
+          </li>
+        </SmpNav>
         <ArticleList
           pathname={props.location.pathname}
           onLinkClick={() => {

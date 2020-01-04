@@ -12,6 +12,7 @@ import Layout from '../components/layout'
 import { Image } from '../components/image'
 import Seo from '../components/seo'
 import About from '../components/atomic/pages/About'
+import { Container } from '../components/atomic/atoms/Container'
 import { mq } from '../styles/vars/mq'
 // import SEO from "../components/seo"
 
@@ -41,7 +42,9 @@ const AboutPage = (props: IndexPageInterface) => (
       path={'/about/'}
       type={'article'}
     />
-    <About />
+    <PostWrapper>
+      <h1>ページが見つかりませんでした</h1>
+    </PostWrapper>
   </>
 )
 
