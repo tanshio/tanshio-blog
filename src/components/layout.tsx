@@ -9,7 +9,7 @@ import * as React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 import Header from './Header'
-import { ReactNode } from 'react'
+import { ReactNode, useEffect } from 'react'
 import { GlobalStyles } from '../styles/GlobalStyle'
 import ArticleList from './article-list'
 import { State } from '../store'
@@ -17,10 +17,12 @@ import styled from 'styled-components'
 import { mq } from '../styles/vars/mq'
 import { navActionCreators } from '../store/nav/actions'
 import { useRef } from 'react'
+import { navigate } from '@reach/router'
 
 interface LayoutProps {
   location: {
     pathname: string
+    search: string
   }
   children: ReactNode
 }
@@ -92,6 +94,15 @@ const Layout = (props: LayoutProps) => {
   const isOpen = useSelector(isOpenSelector)
   const menuRef = useRef<HTMLDivElement>(null)
   const menuButtonRef = useRef<HTMLButtonElement>(null)
+  useEffect(() => {
+    if (/open/.test(props.location.search)) {
+      dispatch(navActionCreators.open())
+    }
+
+    if (!/open/.test(props.location.search) && isOpen) {
+      dispatch(navActionCreators.close())
+    }
+  }, [props.location.search])
   return (
     <>
       <GlobalStyles />
@@ -120,10 +131,10 @@ const Layout = (props: LayoutProps) => {
           onClick={(e) => {
             e.preventDefault()
             if (isOpen) {
+              navigate('./')
               dispatch(navActionCreators.close())
             } else {
-              dispatch(navActionCreators.open())
-
+              navigate('?open')
               setTimeout(() => {
                 if (menuRef.current) {
                   menuRef.current.focus()
