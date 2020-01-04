@@ -27,16 +27,6 @@
   },
   {
     "date": "2019-01-03",
-    "title": "Gutenbergを使うなら、むやみにAPI内の要らないデータを削除するのはやめよう",
-    "excerpt": "Gutenbergを使うなら、むやみにAPI内の要らないデータを削除するのはやめよう",
-    "categories": [
-      "WordPress"
-    ],
-    "tags": [],
-    "path": "/blog/2019/01/dont-delete-meta-deta/"
-  },
-  {
-    "date": "2019-01-03",
     "title": "1文字ずつspanで囲むVue ComponentとPHP",
     "excerpt": "1文字ずつspanで囲むVue ComponentとPHP",
     "categories": [
@@ -48,6 +38,16 @@
       "Vue"
     ],
     "path": "/blog/2019/01/surround-vue-and-php/"
+  },
+  {
+    "date": "2019-01-03",
+    "title": "Gutenbergを使うなら、むやみにAPI内の要らないデータを削除するのはやめよう",
+    "excerpt": "Gutenbergを使うなら、むやみにAPI内の要らないデータを削除するのはやめよう",
+    "categories": [
+      "WordPress"
+    ],
+    "tags": [],
+    "path": "/blog/2019/01/dont-delete-meta-deta/"
   },
   {
     "date": "2019-01-01",

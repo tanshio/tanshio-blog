@@ -54,7 +54,7 @@ const ArticleListWrapper = styled.div<ArticleListWrapperProps>`
   ${TimeWrapper} {
     display: block;
     margin-bottom: 0.5rem;
-    font-size: 0.75rem;
+    font-size: var(--fontSizeSm3);
   }
 `
 
@@ -63,7 +63,7 @@ const ArticleListCategoryList = styled.ul`
   padding: 0;
   list-style-type: none;
   display: flex;
-  font-size: 0.7rem;
+  font-size: var(--fontSizeSm3);
   li {
     &:not(:last-of-type) {
       &:after {
@@ -76,7 +76,7 @@ const ArticleListCategoryList = styled.ul`
 `
 
 const ArticleListTitle = styled.div`
-  font-size: 0.85rem;
+  font-size: var(--fontSizeSm2);
   line-height: 1.6;
   margin-top: 0.5rem;
 `

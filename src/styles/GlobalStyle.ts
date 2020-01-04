@@ -50,12 +50,17 @@ export const GlobalStyles = createGlobalStyle`
     --rhythm: 8;
     --spaceUnit: calc(var(--rhythm) * 1px);
     --spaceXs: var(--spaceUnit);
+    --spaceSm: calc(var(--spaceUnit) * 2);
+    --spaceMd: calc(var(--spaceUnit) * 3);
+    --spaceLg: calc(var(--spaceUnit) * 4);
+    --spaceXl: calc(var(--spaceUnit) * 5);
     
     // https://standard.shiftbrain.com/blog/music-math-typography
     --fontSizeRoot: 16px;
     --fontSizeUnit: 1rem;
-    --fontSizeXs: calc(var(--fontSizeUnit) * var(--rhythm) / 10);
-    --fontSizeSm: calc(var(--fontSizeUnit) * var(--rhythm) / 9);
+    --fontSizeSm3: calc(var(--fontSizeUnit) * var(--rhythm) / 11);
+    --fontSizeSm2: calc(var(--fontSizeUnit) * var(--rhythm) / 10);
+    --fontSizeSm1: calc(var(--fontSizeUnit) * var(--rhythm) / 9);
     --fontSizePrimary: calc(var(--fontSizeUnit) * var(--rhythm) / 8);
     --fontSizeMd: calc(var(--fontSizeUnit) * var(--rhythm) / 7);
     --fontSizeLg: calc(var(--fontSizeUnit) * var(--rhythm) / 6);
