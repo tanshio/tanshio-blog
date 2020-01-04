@@ -22,6 +22,7 @@ type ArticleListProps = {
 
 type ArticleListWrapperProps = {
   current: boolean
+  isTouch: boolean
 }
 
 const ArticleListWrapper = styled.div<ArticleListWrapperProps>`
@@ -38,10 +39,15 @@ const ArticleListWrapper = styled.div<ArticleListWrapperProps>`
       props.current ? 'var(--colorBgDark)' : 'transparent'};
     text-underline-position: under;
     text-decoration: ${(props) => (props.current ? 'underline' : 'none')};
-    &:hover {
-      background-color: var(--colorBgDark);
-      color: var(--colorTextReverse);
-      text-decoration: underline;
+  }
+
+  &:not(.isTouch) {
+    a {
+      &:hover {
+        background-color: var(--colorBgDark);
+        color: var(--colorTextReverse);
+        text-decoration: underline;
+      }
     }
   }
 
@@ -90,6 +96,9 @@ const ArticleFilterInput = styled.input`
 const ArticleList = (props: ArticleListProps) => {
   const pathname = props.pathname
   const [posts, setPosts] = useState<ArticleListInterface>([])
+  const [isTouch, setIsTouch] = useState(
+    /iPhone|iPad|Android/.test(navigator.userAgent)
+  )
 
   const [filterText, setFilterText] = useState('')
   const filterPosts = useMemo(() => {
@@ -127,6 +136,8 @@ const ArticleList = (props: ArticleListProps) => {
           <ArticleListWrapper
             key={i}
             current={encodeURI(post.path) === pathname}
+            isTouch={isTouch}
+            className={isTouch ? 'isTouch' : ''}
           >
             <Link
               to={post.path}
