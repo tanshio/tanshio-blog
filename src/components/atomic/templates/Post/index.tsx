@@ -104,43 +104,6 @@ const PostInner = styled.div`
   }
 `
 
-const Share = styled.button`
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  height: 60px;
-  width: 100%;
-  appearance: none;
-  border-radius: 0;
-  border: 0;
-  background-color: var(--colorBgDark);
-  padding: 0;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-  display: none;
-  @media (prefers-color-scheme: dark) {
-    border-top: 2px solid var(--colorTextPrimary);
-    background-color: var(--colorBg);
-  }
-
-  &.hasShare {
-    display: flex;
-    @media (${mq.lg}) {
-      padding-left: 300px;
-    }
-  }
-
-  svg {
-    fill: #fff;
-    width: 27px;
-    height: 24px;
-    margin-right: var(--spaceXs);
-  }
-`
-
 export type PostProps = {
   url: string
   title: string
@@ -149,6 +112,7 @@ export type PostProps = {
   excerpt: string
   html: string
   isNavOpen?: boolean
+  hasSHare?: boolean
   onEnter: () => void
   frontmatter: {
     title: string
@@ -163,16 +127,10 @@ export type PostProps = {
 
 export const Post = (props: PostProps) => {
   const focusEl = useRef<HTMLElement>(null)
-  const [hasShare, setHasShare] = useState(false)
-  console.log(props.frontmatter.path)
   useEffect(() => {
     props.onEnter()
     if (focusEl.current) {
       focusEl.current.focus()
-    }
-    let n = window.navigator as any
-    if (n.share) {
-      setHasShare(true)
     }
     return () => {}
   }, [])
@@ -200,7 +158,11 @@ export const Post = (props: PostProps) => {
           />
           <Time date={props.date} />
 
-          <Social title={props.title} url={props.url} />
+          <Social
+            hasShare={props.hasSHare}
+            title={props.title}
+            url={props.url}
+          />
 
           {props.tableOfContents && (
             <Toc tableOfContents={props.tableOfContents} />
@@ -208,43 +170,12 @@ export const Post = (props: PostProps) => {
         </PostHeader>
         <PostInner>
           <div dangerouslySetInnerHTML={{ __html: props.html }} />
-          <Social title={props.title} url={props.url} />
+          <Social
+            hasShare={props.hasSHare}
+            title={props.title}
+            url={props.url}
+          />
         </PostInner>
-        <Share
-          className={hasShare ? 'hasShare' : ''}
-          onClick={(e) => {
-            e.preventDefault()
-            let n = window.navigator as any
-            if (n.share) {
-              n.share({
-                title: props.title,
-                text: props.title,
-                url: location.href,
-              })
-            }
-          }}
-        >
-          <svg
-            aria-hidden="true"
-            focusable="false"
-            role="img"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 576 512"
-          >
-            <g className="fa-group">
-              <path
-                className="fa-secondary"
-                d="M567.69 226.16l-176 152C376.3 391.44 352 380.69 352 360v-15.83l108.61-93.79a56 56 0 0 0 0-84.76L352 71.83V56c0-20.66 24.28-31.46 39.69-18.16l176 152a24 24 0 0 1 0 36.32z"
-                opacity="0.4"
-              />
-              <path
-                className="fa-primary"
-                d="M439.69 226.16l-176 152C248.3 391.44 224 380.69 224 360v-84.19c-108.67 12.53-151.1 58.85-112.59 182 5 16.09-14.42 28.56-28.08 18.63C39.58 444.63 0 383.77 0 322.33 0 191 94.82 149 224 138.78V56c0-20.66 24.28-31.46 39.69-18.16l176 152a24 24 0 0 1 0 36.32z"
-              />
-            </g>
-          </svg>
-          Share
-        </Share>
       </PostWrapper>
     </Container>
   )

@@ -1,15 +1,10 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
-import Layout from '../components/layout'
 import Seo from '../components/seo'
-import styled from 'styled-components'
 import { useDispatch, useSelector } from 'react-redux'
-import { counterActionCreators } from '../store/counter/actions'
 import { State } from '../store'
-import { useEffect, useRef } from 'react'
 import SinglePost from '../components/atomic/templates/Post'
 import { DateISO8601 } from '../types'
-import { navActionCreators } from '../store/nav/actions'
 
 interface PostInterface {
   location: {
@@ -39,6 +34,7 @@ interface PostInterface {
 }
 
 const isOpenSelector = (state: State) => state.nav.isOpen
+const hasShareSelector = (state: State) => state.share.hasShare
 
 const Post = (props: PostInterface) => {
   const dispatch = useDispatch()
@@ -46,6 +42,7 @@ const Post = (props: PostInterface) => {
   const { title, excerpt } = props.data.markdownRemark.frontmatter
   const date = props.data.markdownRemark.frontmatter.date as DateISO8601
   const isOpen = useSelector(isOpenSelector)
+  const hasShare = useSelector(hasShareSelector)
   return (
     <>
       <Seo
@@ -57,6 +54,7 @@ const Post = (props: PostInterface) => {
       />
       <SinglePost
         isNavOpen={isOpen}
+        hasSHare={hasShare}
         onEnter={() => {
           // dispatch(navActionCreators.close())
         }}

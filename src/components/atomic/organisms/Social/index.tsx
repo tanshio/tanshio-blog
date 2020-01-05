@@ -43,7 +43,32 @@ const SocialWrapper = styled.div`
   }
 `
 
+const ShareButton = styled.button`
+  appearance: none;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  position: relative;
+  display: none;
+  cursor: pointer;
+  &.hasShare {
+    display: inline-block;
+  }
+  .icon-share {
+    position: absolute;
+    top: calc(50% - 12px);
+    left: calc(50% - 13px);
+    width: 27px;
+    height: 24px;
+    transform: scale(0.9);
+    path {
+      fill: #fff;
+    }
+  }
+`
+
 export type SocialProps = {
+  hasShare?: boolean
   url: string
   title: string
 }
@@ -71,6 +96,45 @@ export const Social = (props: SocialProps) => {
       >
         <PocketIcon size={40} round />
       </PocketShareButton>
+      <ShareButton
+        className={props.hasShare ? 'hasShare' : ''}
+        type={'button'}
+        onClick={(e) => {
+          e.preventDefault()
+          let n = window.navigator as any
+          if (n.share) {
+            n.share({
+              title: props.title,
+              text: props.title,
+              url: location.href,
+            })
+          }
+        }}
+      >
+        <svg viewBox="0 0 64 64" width="40" height="40">
+          <circle cx="32" cy="32" r="31" fill="#00aced"></circle>
+        </svg>
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 576 512"
+          className={'icon-share'}
+        >
+          <g className="fa-group">
+            <path
+              className="fa-secondary"
+              d="M567.69 226.16l-176 152C376.3 391.44 352 380.69 352 360v-15.83l108.61-93.79a56 56 0 0 0 0-84.76L352 71.83V56c0-20.66 24.28-31.46 39.69-18.16l176 152a24 24 0 0 1 0 36.32z"
+              opacity="0.4"
+            />
+            <path
+              className="fa-primary"
+              d="M439.69 226.16l-176 152C248.3 391.44 224 380.69 224 360v-84.19c-108.67 12.53-151.1 58.85-112.59 182 5 16.09-14.42 28.56-28.08 18.63C39.58 444.63 0 383.77 0 322.33 0 191 94.82 149 224 138.78V56c0-20.66 24.28-31.46 39.69-18.16l176 152a24 24 0 0 1 0 36.32z"
+            />
+          </g>
+        </svg>
+      </ShareButton>
     </SocialWrapper>
   )
 }

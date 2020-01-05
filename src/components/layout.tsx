@@ -19,6 +19,7 @@ import { navActionCreators } from '../store/nav/actions'
 import { useRef } from 'react'
 import { navigate } from '@reach/router'
 import { Link } from 'gatsby'
+import { shareActionCreators } from '../store/share/actions'
 
 interface LayoutProps {
   location: {
@@ -117,7 +118,7 @@ const SmpNav = styled.ul`
     font-size: var(--fontSizeSm);
     line-height: 1;
   }
-  
+
   @media (${mq.sm}) {
     display: none;
   }
@@ -130,6 +131,15 @@ const Layout = (props: LayoutProps) => {
   const isOpen = useSelector(isOpenSelector)
   const menuRef = useRef<HTMLDivElement>(null)
   const menuButtonRef = useRef<HTMLButtonElement>(null)
+
+  useEffect(() => {
+    let n = window.navigator as any
+    if (n.share) {
+      dispatch(shareActionCreators.success())
+    }
+    return () => {}
+  }, [])
+
   useEffect(() => {
     if (/open/.test(props.location.search)) {
       dispatch(navActionCreators.open())

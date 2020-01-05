@@ -20,5 +20,21 @@ export default {
 }
 
 export const Primary = () => {
-  return <Social title={'たんしおどっとねっと'} url={'https://tanshio.net'} />
+  return (
+    <Social
+      hasShare={false}
+      title={'たんしおどっとねっと'}
+      url={'https://tanshio.net'}
+    />
+  )
+}
+
+export const HasShare = () => {
+  return (
+    <Social
+      hasShare
+      title={'たんしおどっとねっと'}
+      url={'https://tanshio.net'}
+    />
+  )
 }
