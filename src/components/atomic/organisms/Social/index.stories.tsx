@@ -20,5 +20,5 @@ export default {
 }
 
 export const Primary = () => {
-  return <Social url={'https://tanshio.net'} />
+  return <Social title={'たんしおどっとねっと'} url={'https://tanshio.net'} />
 }

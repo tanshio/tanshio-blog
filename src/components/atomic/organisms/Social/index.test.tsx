@@ -21,7 +21,7 @@ describe('Social', () => {
   // })
   it('matches to the snapshot', () => {
     const { getByText, getByTestId, container, asFragment } = render(
-      <Social url={'https://tanshio.net'} />
+      <Social title={'たんしおどっとねっと'} url={'https://tanshio.net'} />
     )
     expect(asFragment()).toMatchSnapshot()
   })

@@ -28,12 +28,14 @@ ogp: "./ogp.png"
 <!-- /wp:paragraph -->
 
 <!-- wp:code -->
-<pre class="wp-block-code"><code>  var twitterKeys= {
+```js
+var twitterKeys= {
     TWITTER_CONSUMER_KEY: "TWITTER_CONSUMER_KEY",
     TWITTER_CONSUMER_SECRET: "TWITTER_CONSUMER_SECRET",
     TWITTER_ACCESS_TOKEN: "TWITTER_ACCESS_TOKEN",
     TWITTER_ACCESS_SECRET: "TWITTER_ACCESS_SECRET"    
-  };</code></pre>
+  }
+```
 <!-- /wp:code -->
 
 <!-- wp:paragraph -->

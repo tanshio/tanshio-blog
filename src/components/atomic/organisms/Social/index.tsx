@@ -45,6 +45,7 @@ const SocialWrapper = styled.div`
 
 export type SocialProps = {
   url: string
+  title: string
 }
 
 export const Social = (props: SocialProps) => {
@@ -53,13 +54,21 @@ export const Social = (props: SocialProps) => {
       <FacebookShareButton url={props.url}>
         <FacebookIcon size={40} round />
       </FacebookShareButton>
-      <TwitterShareButton url={props.url}>
+      <TwitterShareButton title={props.title} url={props.url}>
         <TwitterIcon size={40} round />
       </TwitterShareButton>
-      <LineShareButton url={props.url} className={'icon-line'}>
+      <LineShareButton
+        title={props.title}
+        url={props.url}
+        className={'icon-line'}
+      >
         <LineIcon size={40} round />
       </LineShareButton>
-      <PocketShareButton url={props.url} className={'icon-pocket'}>
+      <PocketShareButton
+        title={props.title}
+        url={props.url}
+        className={'icon-pocket'}
+      >
         <PocketIcon size={40} round />
       </PocketShareButton>
     </SocialWrapper>

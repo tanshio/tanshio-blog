@@ -7,16 +7,6 @@ import { Toc } from '../../molecules/Toc'
 import { mq } from '../../../../styles/vars/mq'
 import { Container } from '../../atoms/Container'
 
-import {
-  FacebookShareButton,
-  FacebookIcon,
-  TwitterShareButton,
-  TwitterIcon,
-  LineShareButton,
-  LineIcon,
-  PocketShareButton,
-  PocketIcon,
-} from 'react-share'
 import { Social } from '../../organisms/Social'
 
 const PostWrapper = styled.div`
@@ -58,6 +48,10 @@ const PostHeader = styled.header`
 
 const PostInner = styled.div`
   line-height: 1.8;
+
+  a {
+    word-break: break-all;
+  }
 
   p,
   ul,
@@ -206,7 +200,7 @@ export const Post = (props: PostProps) => {
           />
           <Time date={props.date} />
 
-          <Social url={props.url} />
+          <Social title={props.title} url={props.url} />
 
           {props.tableOfContents && (
             <Toc tableOfContents={props.tableOfContents} />
@@ -214,7 +208,7 @@ export const Post = (props: PostProps) => {
         </PostHeader>
         <PostInner>
           <div dangerouslySetInnerHTML={{ __html: props.html }} />
-          <Social url={props.url} />
+          <Social title={props.title} url={props.url} />
         </PostInner>
         <Share
           className={hasShare ? 'hasShare' : ''}
