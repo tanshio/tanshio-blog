@@ -6,7 +6,18 @@ import { Time } from '../../atoms/Time'
 import { Toc } from '../../molecules/Toc'
 import { mq } from '../../../../styles/vars/mq'
 import { Container } from '../../atoms/Container'
-import { DOMAIN } from '../../../../constants'
+
+import {
+  FacebookShareButton,
+  FacebookIcon,
+  TwitterShareButton,
+  TwitterIcon,
+  LineShareButton,
+  LineIcon,
+  PocketShareButton,
+  PocketIcon,
+} from 'react-share'
+import { Social } from '../../organisms/Social'
 
 const PostWrapper = styled.div`
   a {
@@ -103,7 +114,7 @@ const Share = styled.button`
   position: fixed;
   bottom: 0;
   left: 0;
-  height: 50px;
+  height: 60px;
   width: 100%;
   appearance: none;
   border-radius: 0;
@@ -137,6 +148,7 @@ const Share = styled.button`
 `
 
 export type PostProps = {
+  url: string
   title: string
   date: DateISO8601
   tableOfContents: string
@@ -193,12 +205,16 @@ export const Post = (props: PostProps) => {
             }}
           />
           <Time date={props.date} />
+
+          <Social url={props.url} />
+
           {props.tableOfContents && (
             <Toc tableOfContents={props.tableOfContents} />
           )}
         </PostHeader>
         <PostInner>
           <div dangerouslySetInnerHTML={{ __html: props.html }} />
+          <Social url={props.url} />
         </PostInner>
         <Share
           className={hasShare ? 'hasShare' : ''}

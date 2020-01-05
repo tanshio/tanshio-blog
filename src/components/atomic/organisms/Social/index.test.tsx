@@ -1,14 +1,14 @@
 import React from 'react'
 import { render, fireEvent, cleanup } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
-import { Ogp } from './'
+import { Social } from './'
 
 afterEach(cleanup)
 
-describe('Ogp', () => {
+describe('Social', () => {
   // it('click', () => {
   //   const { getByText, getByTestId, container, asFragment } = render(
-  //     <Ogp
+  //     <Social
   //       isLoading={false}
   //       isSubmitted={false}
   //       onEnter={() => {}}
@@ -16,12 +16,12 @@ describe('Ogp', () => {
   //       onClick={() => {}}
   //     />
   //   )
-  //   fireEvent.click(getByText(/ogp/i))
-  //   expect(getByText(/ogp/i)).toHaveTextContent('3')
+  //   fireEvent.click(getByText(/social/i))
+  //   expect(getByText(/social/i)).toHaveTextContent('3')
   // })
   it('matches to the snapshot', () => {
     const { getByText, getByTestId, container, asFragment } = render(
-      <Ogp title={''} />
+      <Social url={'https://tanshio.net'} />
     )
     expect(asFragment()).toMatchSnapshot()
   })

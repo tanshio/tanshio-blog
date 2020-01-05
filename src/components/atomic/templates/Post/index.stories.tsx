@@ -3,6 +3,7 @@ import { action } from '@storybook/addon-actions'
 import { withKnobs } from '@storybook/addon-knobs'
 import { Post } from './'
 import { withA11y } from '@storybook/addon-a11y'
+import { DateISO8601 } from '../../../../types'
 
 export default {
   title: 'Templates/Post',
@@ -22,35 +23,23 @@ export default {
 export const Primary = () => {
   return (
     <Post
-      isLoading={false}
-      isSubmitted={false}
-      onEnter={action('onEnter')}
-      onLeave={action('onLeave')}
-      onClick={action('onIncrement')}
-    />
-  )
-}
-
-export const Loading = () => {
-  return (
-    <Post
-      isLoading={true}
-      isSubmitted={false}
-      onEnter={action('onEnter')}
-      onLeave={action('onLeave')}
-      onClick={action('onIncrement')}
-    />
-  )
-}
-
-export const Submitted = () => {
-  return (
-    <Post
-      isLoading={false}
-      isSubmitted={true}
-      onEnter={action('onEnter')}
-      onLeave={action('onLeave')}
-      onClick={action('onIncrement')}
+      onEnter={() => {}}
+      title={'test'}
+      tableOfContents={''}
+      frontmatter={{
+        path: '',
+        categories: [],
+        date: '2018-01-01' as DateISO8601,
+        excerpt: '',
+        tags: [],
+        title: '',
+        type: 'blog',
+      }}
+      html={''}
+      excerpt={''}
+      date={'2018-01-01' as DateISO8601}
+      url={''}
+      isNavOpen={false}
     />
   )
 }

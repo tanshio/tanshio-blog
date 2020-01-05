@@ -27,6 +27,16 @@
   },
   {
     "date": "2019-01-03",
+    "title": "Gutenbergを使うなら、むやみにAPI内の要らないデータを削除するのはやめよう",
+    "excerpt": "Gutenbergを使うなら、むやみにAPI内の要らないデータを削除するのはやめよう",
+    "categories": [
+      "WordPress"
+    ],
+    "tags": [],
+    "path": "/blog/2019/01/dont-delete-meta-deta/"
+  },
+  {
+    "date": "2019-01-03",
     "title": "1文字ずつspanで囲むVue ComponentとPHP",
     "excerpt": "1文字ずつspanで囲むVue ComponentとPHP",
     "categories": [
@@ -38,16 +48,6 @@
       "Vue"
     ],
     "path": "/blog/2019/01/surround-vue-and-php/"
-  },
-  {
-    "date": "2019-01-03",
-    "title": "Gutenbergを使うなら、むやみにAPI内の要らないデータを削除するのはやめよう",
-    "excerpt": "Gutenbergを使うなら、むやみにAPI内の要らないデータを削除するのはやめよう",
-    "categories": [
-      "WordPress"
-    ],
-    "tags": [],
-    "path": "/blog/2019/01/dont-delete-meta-deta/"
   },
   {
     "date": "2019-01-01",
@@ -65,19 +65,6 @@
   },
   {
     "date": "2017-08-15",
-    "title": "Universal Ctags を使って Vim でコードジャンプする",
-    "excerpt": "Universal Ctags を使って Vim でコードジャンプする",
-    "categories": [
-      "環境構築"
-    ],
-    "tags": [
-      "Vim",
-      "構築化"
-    ],
-    "path": "/blog/2017/08/use-ctags-for-vim/"
-  },
-  {
-    "date": "2017-08-15",
     "title": "Karabiner-Elementsで複数キー設定やアプリごとにキーバインド設定をする",
     "excerpt": "Karabiner-Elementsで複数キー設定やアプリごとにキーバインド設定をする",
     "categories": [
@@ -89,6 +76,19 @@
       "ツール"
     ],
     "path": "/blog/2017/08/karabiner-elements2017/"
+  },
+  {
+    "date": "2017-08-15",
+    "title": "Universal Ctags を使って Vim でコードジャンプする",
+    "excerpt": "Universal Ctags を使って Vim でコードジャンプする",
+    "categories": [
+      "環境構築"
+    ],
+    "tags": [
+      "Vim",
+      "構築化"
+    ],
+    "path": "/blog/2017/08/use-ctags-for-vim/"
   },
   {
     "date": "2017-07-24",
@@ -472,16 +472,6 @@
   },
   {
     "date": "2014-03-15",
-    "title": "黒歴史でやる気を出そう",
-    "excerpt": "黒歴史でやる気を出そう",
-    "categories": [
-      "日々のこと"
-    ],
-    "tags": [],
-    "path": "/blog/2014/03/kurorekishi/"
-  },
-  {
-    "date": "2014-03-15",
     "title": "wordmoveでローカルのWordPressを速攻デプロイ",
     "excerpt": "wordmoveでローカルのWordPressを速攻デプロイ",
     "categories": [
@@ -492,6 +482,16 @@
       "WordPress"
     ],
     "path": "/blog/2014/03/wordmove/"
+  },
+  {
+    "date": "2014-03-15",
+    "title": "黒歴史でやる気を出そう",
+    "excerpt": "黒歴史でやる気を出そう",
+    "categories": [
+      "日々のこと"
+    ],
+    "tags": [],
+    "path": "/blog/2014/03/kurorekishi/"
   },
   {
     "date": "2014-03-15",
@@ -835,18 +835,6 @@
   },
   {
     "date": "2013-10-29",
-    "title": "PHPでMySQL→JSON出力",
-    "excerpt": "PHPでMySQL→JSON出力",
-    "categories": [
-      "Programming"
-    ],
-    "tags": [
-      "PHP"
-    ],
-    "path": "/blog/2013/10/phpでmysql→json出力/"
-  },
-  {
-    "date": "2013-10-29",
     "title": "All in One Sidebarでダウンロードマネージャをサイドバーに表示する",
     "excerpt": "All in One Sidebarでダウンロードマネージャをサイドバーに表示する方法",
     "categories": [
@@ -856,6 +844,18 @@
       "Firefox"
     ],
     "path": "/blog/2013/10/all-in-one-sidebar/"
+  },
+  {
+    "date": "2013-10-29",
+    "title": "PHPでMySQL→JSON出力",
+    "excerpt": "PHPでMySQL→JSON出力",
+    "categories": [
+      "Programming"
+    ],
+    "tags": [
+      "PHP"
+    ],
+    "path": "/blog/2013/10/phpでmysql→json出力/"
   },
   {
     "date": "2013-10-23",

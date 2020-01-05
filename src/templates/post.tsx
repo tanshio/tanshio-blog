@@ -14,6 +14,7 @@ import { navActionCreators } from '../store/nav/actions'
 interface PostInterface {
   location: {
     pathname: string
+    href: string
   }
   data: {
     markdownRemark: {
@@ -59,6 +60,7 @@ const Post = (props: PostInterface) => {
         onEnter={() => {
           // dispatch(navActionCreators.close())
         }}
+        url={location.href}
         date={date}
         excerpt={excerpt}
         html={post.html}
