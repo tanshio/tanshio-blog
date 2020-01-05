@@ -60,7 +60,7 @@ const Post = (props: PostInterface) => {
         onEnter={() => {
           // dispatch(navActionCreators.close())
         }}
-        url={location.href}
+        url={props.location.href}
         date={date}
         excerpt={excerpt}
         html={post.html}
