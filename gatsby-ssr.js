@@ -5,5 +5,45 @@
  */
 
 // You can delete this file if you're not using it
-import wrapWithProvider from "./wrap-with-provider"
+import * as React from 'react'
+import wrapWithProvider from './wrap-with-provider'
 export const wrapRootElement = wrapWithProvider
+
+export const onRenderBody = ({ setPreBodyComponents }) => {
+  setPreBodyComponents([
+    React.createElement('script', {
+      dangerouslySetInnerHTML: {
+        __html: `
+          (() => {    
+            window.__onThemeChange = function() {};                
+            function setTheme(newTheme) {                  
+              window.__theme = newTheme;                  
+              preferredTheme = newTheme;                  
+              document.body.className = 'is-'+newTheme;                 
+              window.__onThemeChange(newTheme);                
+            }
+            console.log('load')
+            let preferredTheme
+            try {
+              preferredTheme = localStorage.getItem('theme')
+            } catch (err) {}
+
+            window.__setPreferredTheme = newTheme => {
+              setTheme(newTheme)
+              try {
+                localStorage.setItem('theme', newTheme)
+              } catch (err) {}
+            }
+
+            let darkQuery = window.matchMedia('(prefers-color-scheme: dark)')
+            darkQuery.addListener(e => {
+              window.__setPreferredTheme(e.matches ? 'dark' : 'light')
+            })
+
+            setTheme(preferredTheme || (darkQuery.matches ? 'dark' : 'light'))
+          })()
+        `,
+      },
+    }),
+  ])
+}

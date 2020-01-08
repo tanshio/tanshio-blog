@@ -9,7 +9,7 @@ import * as React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 import Header from './Header'
-import { ReactNode, useEffect } from 'react'
+import { ReactNode, useEffect, useState } from 'react'
 import { GlobalStyles } from '../styles/GlobalStyle'
 import ArticleList from './ArticleList'
 import { State } from '../store'
@@ -124,6 +124,77 @@ const SmpNav = styled.ul`
   }
 `
 
+type ModeChangeButtonType = {
+  isDark?: boolean
+}
+
+const ModeChangeButton = styled.button<ModeChangeButtonType>`
+  position: absolute;
+  right: 0;
+  top: 0;
+  appearance: none;
+  width: 2rem;
+  height: 2rem;
+  background-color: transparent;
+  border-radius: 0;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  opacity: ${(props) => (props.isDark ? 0.5 : 1)};
+  @media (${mq.sm}) {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    margin-top: -0.5rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+    z-index: 1;
+  }
+
+  &::before {
+    left: 50%;
+    margin-left: -0.5rem;
+    background-color: var(--colorTextPrimary);
+    border: ${(props) => (props.isDark ? '2px solid var(--colorBg)' : 0)};
+  }
+  &:after {
+    background-color: var(--colorBg);
+    right: 10%;
+    opacity: ${(props) => (props.isDark ? 0 : 1)};
+    @media (${mq.sm}) {
+      right: 22%
+    }
+  }
+
+  span {
+    position: absolute;
+    width: 1.4rem;
+    height: 2px;
+    background-color: var(--colorTextPrimary);
+    top: 50%;
+    left: 50%;
+    margin-top: -1px;
+    margin-left: -0.7rem;
+    opacity: ${(props) => (props.isDark ? 1 : 0)};
+    &:nth-of-type(2) {
+      transform: rotate(45deg);
+    }
+    &:nth-of-type(3) {
+      transform: rotate(90deg);
+    }
+    &:nth-of-type(4) {
+      transform: rotate(135deg);
+    }
+  }
+`
+
 const isOpenSelector = (state: State) => state.nav.isOpen
 
 const Layout = (props: LayoutProps) => {
@@ -131,6 +202,24 @@ const Layout = (props: LayoutProps) => {
   const isOpen = useSelector(isOpenSelector)
   const menuRef = useRef<HTMLDivElement>(null)
   const menuButtonRef = useRef<HTMLButtonElement>(null)
+
+  let websiteTheme: string = ''
+  if (typeof window !== `undefined`) {
+    websiteTheme = window.__theme
+  }
+
+  const [theme, setTheme] = useState(websiteTheme)
+
+  useEffect(() => {
+    setTheme(window.__theme)
+    window.__onThemeChange = () => {
+      setTheme(window.__theme)
+    }
+  }, [])
+
+  const themeToggle = () => {
+    window.__setPreferredTheme(websiteTheme === 'dark' ? 'light' : 'dark')
+  }
 
   useEffect(() => {
     let n = window.navigator as any
@@ -152,6 +241,19 @@ const Layout = (props: LayoutProps) => {
   return (
     <>
       <GlobalStyles />
+      <ModeChangeButton
+        aria-label={'change color mode'}
+        isDark={theme === 'dark'}
+        onClick={(e) => {
+          e.preventDefault()
+          themeToggle()
+        }}
+      >
+        <span role={'presentation'} />
+        <span role={'presentation'} />
+        <span role={'presentation'} />
+        <span role={'presentation'} />
+      </ModeChangeButton>
       <Sidebar
         tabIndex={0}
         pathname={props.location.pathname}

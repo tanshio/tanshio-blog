@@ -64,6 +64,13 @@ const PostInner = styled.div`
     }
   }
 
+  p {
+    --fontSize: var(--fontSizePrimary);
+    font-size: var(--fontSIze);
+    //--lineHeight: var(--lineHeightPrimary);
+    //line-height: var(--lineHeightPrimary);
+  }
+
   h2 {
     font-size: 2rem;
     &:before {

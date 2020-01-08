@@ -27,16 +27,6 @@
   },
   {
     "date": "2019-01-03",
-    "title": "Gutenbergを使うなら、むやみにAPI内の要らないデータを削除するのはやめよう",
-    "excerpt": "Gutenbergを使うなら、むやみにAPI内の要らないデータを削除するのはやめよう",
-    "categories": [
-      "WordPress"
-    ],
-    "tags": [],
-    "path": "/blog/2019/01/dont-delete-meta-deta/"
-  },
-  {
-    "date": "2019-01-03",
     "title": "1文字ずつspanで囲むVue ComponentとPHP",
     "excerpt": "1文字ずつspanで囲むVue ComponentとPHP",
     "categories": [
@@ -48,6 +38,16 @@
       "Vue"
     ],
     "path": "/blog/2019/01/surround-vue-and-php/"
+  },
+  {
+    "date": "2019-01-03",
+    "title": "Gutenbergを使うなら、むやみにAPI内の要らないデータを削除するのはやめよう",
+    "excerpt": "Gutenbergを使うなら、むやみにAPI内の要らないデータを削除するのはやめよう",
+    "categories": [
+      "WordPress"
+    ],
+    "tags": [],
+    "path": "/blog/2019/01/dont-delete-meta-deta/"
   },
   {
     "date": "2019-01-01",
@@ -472,6 +472,16 @@
   },
   {
     "date": "2014-03-15",
+    "title": "黒歴史でやる気を出そう",
+    "excerpt": "黒歴史でやる気を出そう",
+    "categories": [
+      "日々のこと"
+    ],
+    "tags": [],
+    "path": "/blog/2014/03/kurorekishi/"
+  },
+  {
+    "date": "2014-03-15",
     "title": "wordmoveでローカルのWordPressを速攻デプロイ",
     "excerpt": "wordmoveでローカルのWordPressを速攻デプロイ",
     "categories": [
@@ -482,16 +492,6 @@
       "WordPress"
     ],
     "path": "/blog/2014/03/wordmove/"
-  },
-  {
-    "date": "2014-03-15",
-    "title": "黒歴史でやる気を出そう",
-    "excerpt": "黒歴史でやる気を出そう",
-    "categories": [
-      "日々のこと"
-    ],
-    "tags": [],
-    "path": "/blog/2014/03/kurorekishi/"
   },
   {
     "date": "2014-03-15",
@@ -625,17 +625,6 @@
   },
   {
     "date": "2014-01-18",
-    "title": "WordPressクラックプラグインに注意！そしてセキュリティ対策",
-    "excerpt": "WordPressクラックプラグインに注意！そしてセキュリティ対策",
-    "categories": [
-      "Security",
-      "WordPress"
-    ],
-    "tags": [],
-    "path": "/blog/2014/01/wpppm-plugin-must-die/"
-  },
-  {
-    "date": "2014-01-18",
     "title": "まだまだ終わらない？これからのIE6、7、8対策",
     "excerpt": "まだまだ終わらない？これからのIE6、7、8対策",
     "categories": [
@@ -646,6 +635,17 @@
       "CSS"
     ],
     "path": "/blog/2014/01/ies-arent-dead/"
+  },
+  {
+    "date": "2014-01-18",
+    "title": "WordPressクラックプラグインに注意！そしてセキュリティ対策",
+    "excerpt": "WordPressクラックプラグインに注意！そしてセキュリティ対策",
+    "categories": [
+      "Security",
+      "WordPress"
+    ],
+    "tags": [],
+    "path": "/blog/2014/01/wpppm-plugin-must-die/"
   },
   {
     "date": "2014-01-12",

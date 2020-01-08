@@ -1,9 +1,32 @@
 import { normalize } from 'styled-normalize'
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle, css } from 'styled-components'
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
 import { PrismStyles } from './Prism'
 import { colors, palette } from './vars/colors'
 import { fontSizes } from './vars/fontSizes'
+
+const DarkStyle = css`
+  --colorBg: #1a1a1a;
+  --colorTextPrimary: #fff;
+  --shareIconStrokeWidth: 2px;
+  --shareIconStrokeColor: var(--colorTextPrimary);
+  --colorIconFb: transparent;
+  --colorIconTw: transparent;
+  --colorIconLine: transparent;
+  --colorIconPocket: transparent;
+`
+
+const LightStyle = css`
+  --colorBg: #e8e8e8;
+  --colorTextPrimary: #1a1a1a;
+  --shareIconStrokeWidth: 0;
+  --shareIconStrokeColor: transparent;
+  --colorIconFb: #3b5998;
+  --colorIconTw: #00aced;
+  --colorIconLine: #00b800;
+  --colorIconPocket: #ef3f56;
+`
+
 export const GlobalStyles = createGlobalStyle`
   @font-face {
     font-family: "Original Yu Gothic";
@@ -42,9 +65,16 @@ export const GlobalStyles = createGlobalStyle`
     --colorTextSelection: #fff;
     --colorTextReverse: #fff;
     --colorTextDecoration: #b35662;
+    
+    --colorIconFb: #3b5998;  
+    --colorIconTw: #00aced;  
+    --colorIconLine: #00b800;  
+    --colorIconPocket: #EF3F56;
+    
+    --shareIconStrokeWidth: 0;
+  
     @media (prefers-color-scheme: dark) {
-      --colorBg: #1a1a1a;
-      --colorTextPrimary: #fff;
+      ${DarkStyle}
     }
     
     --rhythm: 8;
@@ -70,6 +100,9 @@ export const GlobalStyles = createGlobalStyle`
     --fontSizeHeading3: var(--fontSizeMd);
     --fontSizeHeading2: var(--fontSizeXl);
     --fontSizeHeading1: calc(var(--fontSizeUnit) * var(--rhythm) / 4);
+    
+    --lineHeightUnit: 4px;
+    --lineHeightPrimary: calc(var(--lineHeightUnit) * 4);
     
   }
   
@@ -97,6 +130,12 @@ export const GlobalStyles = createGlobalStyle`
     background-color: var(--colorBg);
     -webkit-font-smoothing: antialiased;
     color: var(--colorTextPrimary);
+    &.is-dark {
+      ${DarkStyle}
+    }
+    &.is-light {
+      ${LightStyle}
+    }
   }
   
   ::selection {

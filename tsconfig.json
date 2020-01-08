@@ -8,7 +8,11 @@
     "strict": true,
     "target": "esnext",
     "jsx": "react",
-    "lib": ["dom", "es2015", "es2017"]
+    "lib": ["dom", "es2015", "es2017", "esnext"],
+    "baseUrl": "./",
+    "paths": {
+      "*": ["./src/types/*"]
+    }
   },
   "include": ["./src/**/*"]
 }

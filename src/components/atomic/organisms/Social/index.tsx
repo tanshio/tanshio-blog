@@ -14,11 +14,22 @@ import {
 const SocialWrapper = styled.div`
   display: flex;
   font-size: 0;
-  @media (prefers-color-scheme: dark) {
+
+  circle {
+    fill: transparent;
+    stroke-width: var(--shareIconStrokeWidth);
+    stroke: var(--shareIconStrokeColor);
+  }
+
+  .icon-fb {
     circle {
-      fill: transparent;
-      stroke-width: 2px;
-      stroke: var(--colorTextPrimary);
+      fill: var(--colorIconFb);
+    }
+  }
+
+  .icon-tw {
+    circle {
+      fill: var(--colorIconTw);
     }
   }
 
@@ -27,12 +38,20 @@ const SocialWrapper = styled.div`
       transform-origin: center;
       transform: scale(0.82);
     }
+
+    circle {
+      fill: var(--colorIconLine);
+    }
   }
 
   .icon-pocket {
     path {
       transform-origin: center;
       transform: scale(0.9) translateY(3%);
+    }
+
+    circle {
+      fill: var(--colorIconPocket);
     }
   }
 
@@ -76,10 +95,14 @@ export type SocialProps = {
 export const Social = (props: SocialProps) => {
   return (
     <SocialWrapper>
-      <FacebookShareButton url={props.url}>
+      <FacebookShareButton url={props.url} className={'icon-fb'}>
         <FacebookIcon size={40} round />
       </FacebookShareButton>
-      <TwitterShareButton title={props.title} url={props.url}>
+      <TwitterShareButton
+        title={props.title}
+        url={props.url}
+        className={'icon-tw'}
+      >
         <TwitterIcon size={40} round />
       </TwitterShareButton>
       <LineShareButton
@@ -101,7 +124,7 @@ export const Social = (props: SocialProps) => {
         type={'button'}
         onClick={(e) => {
           e.preventDefault()
-          let n = window.navigator as any
+          let n = window.navigator
           if (n.share) {
             n.share({
               title: props.title,
