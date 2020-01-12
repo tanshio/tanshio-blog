@@ -51,7 +51,6 @@ function Seo({
 
   const metaDescription = description || site.siteMetadata.description
   const siteUrl = site.siteMetadata.siteUrl
-
   return (
     <Helmet
       htmlAttributes={{

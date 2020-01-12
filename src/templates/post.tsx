@@ -50,6 +50,7 @@ const Post = (props: PostInterface) => {
         description={post.frontmatter.excerpt}
         keywords={[`gatsby`, `application`, `react`]}
         path={post.frontmatter.path}
+        ogp={post.frontmatter.ogp && post.frontmatter.ogp.publicURL}
         type={'article'}
       />
       <SinglePost
