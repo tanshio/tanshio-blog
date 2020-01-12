@@ -20,6 +20,7 @@ import { useRef } from 'react'
 import { navigate } from '@reach/router'
 import { Link } from 'gatsby'
 import { shareActionCreators } from '../store/share/actions'
+import { ModeChangeButton } from './atomic/atoms/ModeChangeButton'
 
 interface LayoutProps {
   location: {
@@ -124,77 +125,6 @@ const SmpNav = styled.ul`
   }
 `
 
-type ModeChangeButtonType = {
-  isDark?: boolean
-}
-
-const ModeChangeButton = styled.button<ModeChangeButtonType>`
-  position: absolute;
-  right: 0;
-  top: 0;
-  appearance: none;
-  width: 2rem;
-  height: 2rem;
-  background-color: transparent;
-  border-radius: 0;
-  border: 0;
-  cursor: pointer;
-  padding: 0;
-  opacity: ${(props) => (props.isDark ? 0.5 : 1)};
-  @media (${mq.sm}) {
-    width: 3rem;
-    height: 3rem;
-  }
-
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    margin-top: -0.5rem;
-    width: 1rem;
-    height: 1rem;
-    border-radius: 100%;
-    z-index: 1;
-  }
-
-  &::before {
-    left: 50%;
-    margin-left: -0.5rem;
-    background-color: var(--colorTextPrimary);
-    border: ${(props) => (props.isDark ? '2px solid var(--colorBg)' : 0)};
-  }
-  &:after {
-    background-color: var(--colorBg);
-    right: 10%;
-    opacity: ${(props) => (props.isDark ? 0 : 1)};
-    @media (${mq.sm}) {
-      right: 22%
-    }
-  }
-
-  span {
-    position: absolute;
-    width: 1.4rem;
-    height: 2px;
-    background-color: var(--colorTextPrimary);
-    top: 50%;
-    left: 50%;
-    margin-top: -1px;
-    margin-left: -0.7rem;
-    opacity: ${(props) => (props.isDark ? 1 : 0)};
-    &:nth-of-type(2) {
-      transform: rotate(45deg);
-    }
-    &:nth-of-type(3) {
-      transform: rotate(90deg);
-    }
-    &:nth-of-type(4) {
-      transform: rotate(135deg);
-    }
-  }
-`
-
 const isOpenSelector = (state: State) => state.nav.isOpen
 
 const Layout = (props: LayoutProps) => {
@@ -242,18 +172,9 @@ const Layout = (props: LayoutProps) => {
     <>
       <GlobalStyles />
       <ModeChangeButton
-        aria-label={'change color mode'}
-        isDark={theme === 'dark'}
-        onClick={(e) => {
-          e.preventDefault()
-          themeToggle()
-        }}
-      >
-        <span role={'presentation'} />
-        <span role={'presentation'} />
-        <span role={'presentation'} />
-        <span role={'presentation'} />
-      </ModeChangeButton>
+        aria-label={`change color mode ${theme}`}
+        onClick={themeToggle}
+      />
       <Sidebar
         tabIndex={0}
         pathname={props.location.pathname}

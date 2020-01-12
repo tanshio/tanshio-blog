@@ -14,6 +14,10 @@ const DarkStyle = css`
   --colorIconTw: transparent;
   --colorIconLine: transparent;
   --colorIconPocket: transparent;
+  --modeButtonOpacity: 0.5;
+  --modeButtonCircleBorder: 2px solid var(--colorBg);
+  --modeButtonCircleMoonOpacity: 0;
+  --modeButtonCircleSunOpacity: 1;
 `
 
 const LightStyle = css`
@@ -25,6 +29,10 @@ const LightStyle = css`
   --colorIconTw: #00aced;
   --colorIconLine: #00b800;
   --colorIconPocket: #ef3f56;
+  --modeButtonOpacity: 1;
+  --modeButtonCircleBorder: 0;
+  --modeButtonCircleMoonOpacity: 1;
+  --modeButtonCircleSunOpacity: 0;
 `
 
 export const GlobalStyles = createGlobalStyle`
@@ -72,6 +80,11 @@ export const GlobalStyles = createGlobalStyle`
     --colorIconPocket: #EF3F56;
     
     --shareIconStrokeWidth: 0;
+
+    --modeButtonOpacity: 1;
+    --modeButtonCircleBorder: 0;
+    --modeButtonCircleMoonOpacity: 1;
+    --modeButtonCircleSubOpacity: 0;
   
     @media (prefers-color-scheme: dark) {
       ${DarkStyle}
