@@ -7,7 +7,7 @@ export const Container = styled.div<{ noSidebar?: boolean }>`
   padding: 2rem;
 
   @media (${mq.sm}) {
-    padding: 3rem 3rem 3rem calc(300px + 3rem);
+    padding: 4rem 3rem 4rem calc(300px + 3rem);
     padding-left: ${(props) =>
       props.noSidebar ? '3rem' : 'calc(300px + 3rem)'};
   }

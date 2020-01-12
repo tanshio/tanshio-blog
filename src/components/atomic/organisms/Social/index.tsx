@@ -11,9 +11,12 @@ import {
   TwitterShareButton,
 } from 'react-share'
 
-const SocialWrapper = styled.div`
+export const SocialWrapper = styled.ul`
   display: flex;
   font-size: 0;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 
   circle {
     fill: transparent;
@@ -55,8 +58,8 @@ const SocialWrapper = styled.div`
     }
   }
 
-  button {
-    & + button {
+  li {
+    & + li {
       margin-left: var(--spaceXs);
     }
   }
@@ -95,69 +98,79 @@ export type SocialProps = {
 export const Social = (props: SocialProps) => {
   return (
     <SocialWrapper>
-      <FacebookShareButton url={props.url} className={'icon-fb'}>
-        <FacebookIcon size={40} round />
-      </FacebookShareButton>
-      <TwitterShareButton
-        title={props.title}
-        url={props.url}
-        className={'icon-tw'}
-      >
-        <TwitterIcon size={40} round />
-      </TwitterShareButton>
-      <LineShareButton
-        title={props.title}
-        url={props.url}
-        className={'icon-line'}
-      >
-        <LineIcon size={40} round />
-      </LineShareButton>
-      <PocketShareButton
-        title={props.title}
-        url={props.url}
-        className={'icon-pocket'}
-      >
-        <PocketIcon size={40} round />
-      </PocketShareButton>
-      <ShareButton
-        className={props.hasShare ? 'hasShare' : ''}
-        type={'button'}
-        onClick={(e) => {
-          e.preventDefault()
-          let n = window.navigator
-          if (n.share) {
-            n.share({
-              title: props.title,
-              text: props.title,
-              url: location.href,
-            })
-          }
-        }}
-      >
-        <svg viewBox="0 0 64 64" width="40" height="40">
-          <circle cx="32" cy="32" r="31" fill="#00aced"></circle>
-        </svg>
-        <svg
-          aria-hidden="true"
-          focusable="false"
-          role="img"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 576 512"
-          className={'icon-share'}
+      <li>
+        <FacebookShareButton url={props.url} className={'icon-fb'}>
+          <FacebookIcon size={40} round />
+        </FacebookShareButton>
+      </li>
+      <li>
+        <TwitterShareButton
+          title={props.title}
+          url={props.url}
+          className={'icon-tw'}
         >
-          <g className="fa-group">
-            <path
-              className="fa-secondary"
-              d="M567.69 226.16l-176 152C376.3 391.44 352 380.69 352 360v-15.83l108.61-93.79a56 56 0 0 0 0-84.76L352 71.83V56c0-20.66 24.28-31.46 39.69-18.16l176 152a24 24 0 0 1 0 36.32z"
-              opacity="0.4"
-            />
-            <path
-              className="fa-primary"
-              d="M439.69 226.16l-176 152C248.3 391.44 224 380.69 224 360v-84.19c-108.67 12.53-151.1 58.85-112.59 182 5 16.09-14.42 28.56-28.08 18.63C39.58 444.63 0 383.77 0 322.33 0 191 94.82 149 224 138.78V56c0-20.66 24.28-31.46 39.69-18.16l176 152a24 24 0 0 1 0 36.32z"
-            />
-          </g>
-        </svg>
-      </ShareButton>
+          <TwitterIcon size={40} round />
+        </TwitterShareButton>
+      </li>
+      <li>
+        <LineShareButton
+          title={props.title}
+          url={props.url}
+          className={'icon-line'}
+        >
+          <LineIcon size={40} round />
+        </LineShareButton>
+      </li>
+      <li>
+        <PocketShareButton
+          title={props.title}
+          url={props.url}
+          className={'icon-pocket'}
+        >
+          <PocketIcon size={40} round />
+        </PocketShareButton>
+      </li>
+      <li>
+        <ShareButton
+          className={props.hasShare ? 'hasShare' : ''}
+          type={'button'}
+          onClick={(e) => {
+            e.preventDefault()
+            let n = window.navigator
+            if (n.share) {
+              n.share({
+                title: props.title,
+                text: props.title,
+                url: location.href,
+              })
+            }
+          }}
+        >
+          <svg viewBox="0 0 64 64" width="40" height="40">
+            <circle cx="32" cy="32" r="31" fill="#00aced"></circle>
+          </svg>
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 576 512"
+            className={'icon-share'}
+          >
+            <g className="fa-group">
+              <path
+                className="fa-secondary"
+                d="M567.69 226.16l-176 152C376.3 391.44 352 380.69 352 360v-15.83l108.61-93.79a56 56 0 0 0 0-84.76L352 71.83V56c0-20.66 24.28-31.46 39.69-18.16l176 152a24 24 0 0 1 0 36.32z"
+                opacity="0.4"
+              />
+              <path
+                className="fa-primary"
+                d="M439.69 226.16l-176 152C248.3 391.44 224 380.69 224 360v-84.19c-108.67 12.53-151.1 58.85-112.59 182 5 16.09-14.42 28.56-28.08 18.63C39.58 444.63 0 383.77 0 322.33 0 191 94.82 149 224 138.78V56c0-20.66 24.28-31.46 39.69-18.16l176 152a24 24 0 0 1 0 36.32z"
+              />
+            </g>
+          </svg>
+        </ShareButton>
+      </li>
     </SocialWrapper>
   )
 }

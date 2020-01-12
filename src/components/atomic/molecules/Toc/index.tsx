@@ -2,9 +2,29 @@ import React, { memo, useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import { mq } from '../../../../styles/vars/mq'
 
-const TocWrapper = styled.nav`
+export const TocWrapper = styled.nav`
   h2 {
     margin: 0;
+  }
+
+  & > div > ul {
+    margin: var(--spaceSm) 0 0 0;
+    padding: 0 0 0 var(--spaceMd);
+    li {
+      font-size: var(--fontSizeSm2);
+      line-height: calc(var(--lineHeightParagraph) * 0.85);
+      & > ul {
+        margin-top: var(--spaceXs1);
+      }
+      & + li {
+        margin-top: var(--spaceXs1);
+      }
+    }
+    & > li {
+      & + li {
+        margin-top: var(--spaceXs1);
+      }
+    }
   }
   @media (${mq.lg}) {
     //position: fixed;

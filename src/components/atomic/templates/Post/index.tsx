@@ -2,29 +2,55 @@ import React, { memo, useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import Mikan from 'mikanjs'
 import { DateISO8601 } from '../../../../types'
-import { Time } from '../../atoms/Time'
-import { Toc } from '../../molecules/Toc'
+import { Time, TimeWrapper } from '../../atoms/Time'
+import { Toc, TocWrapper } from '../../molecules/Toc'
 import { mq } from '../../../../styles/vars/mq'
 import { Container } from '../../atoms/Container'
 
-import { Social } from '../../organisms/Social'
+import { Social, SocialWrapper } from '../../organisms/Social'
 
 const PostWrapper = styled.div`
   a {
     color: var(--colorPrimary);
     text-decoration: underline;
     text-decoration-color: var(--colorTextDecoration);
-    will-change: opacity;
     &:hover {
-      opacity: 0.5;
+      background-color: var(--colorTextDecoration);
+      color: var(--colorTextReverse);
     }
     //text-decoration-thickness: 3px;
   }
 
   nav {
-    line-height: 1.8;
     p {
       margin: 0;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p,
+  li {
+    font-size: var(--fontSize);
+    line-height: var(--lineHeight);
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+    }
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+    }
+    &:before {
+      margin-top: calc((var(--lineHeight) - var(--fontSize)) * -0.5);
+    }
+    &:after {
+      margin-bottom: calc((var(--lineHeight) - var(--fontSize)) * -0.5);
     }
   }
 `
@@ -32,7 +58,24 @@ const PostWrapper = styled.div`
 const PostHeader = styled.header`
   h1 {
     margin: 0;
-    font-size: var(--fontSizeHeading1);
+    --fontSize: var(--fontSizeHeading1);
+    --lineHeight: var(--lineHeightHeading1);
+  }
+
+  ${TimeWrapper} {
+    margin-top: var(--spaceSm);
+  }
+
+  ${SocialWrapper} {
+    margin-top: var(--spaceSm);
+  }
+
+  ${TocWrapper} {
+    margin-top: var(--spaceLg);
+    h2 {
+      --fontSize: var(--fontSizePrimary);
+      --lineHeight: var(--lineHeightParagraph);
+    }
   }
 
   @media (${mq.lg}) {
@@ -41,13 +84,34 @@ const PostHeader = styled.header`
     left: 300px;
     top: 0;
     height: 100%;
-    padding: 3rem;
+    padding: 4rem 3rem;
     border-right: 2px solid var(--colorTextPrimary);
+    overflow: auto;
   }
 `
 
 const PostInner = styled.div`
   line-height: 1.8;
+  margin-top: var(--spaceLg);
+
+  .inner > * {
+    margin-bottom: 0;
+    &:first-child {
+      margin-top: 0;
+    }
+
+    li {
+      --fontSize: var(--fontSizePrimary);
+      --lineHeight: var(--lineHeightParagraph);
+      & + li {
+        margin-top: var(--spaceXs);
+      }
+    }
+  }
+
+  hr {
+    margin-top: var(--spaceLg);
+  }
 
   a {
     word-break: break-all;
@@ -56,7 +120,6 @@ const PostInner = styled.div`
   p,
   ul,
   ol {
-    line-height: 1.8;
     & + p,
     ul,
     ol {
@@ -66,18 +129,13 @@ const PostInner = styled.div`
 
   p {
     --fontSize: var(--fontSizePrimary);
-    font-size: var(--fontSIze);
-    //--lineHeight: var(--lineHeightPrimary);
-    //line-height: var(--lineHeightPrimary);
+    --lineHeight: var(--lineHeightParagraph);
+    margin-top: var(--spaceMd);
   }
 
   h2 {
-    font-size: 2rem;
-    &:before {
-      content: '';
-      display: block;
-      margin-top: -0.5em;
-    }
+    --fontSize: var(--fontSizeHeading2);
+    --lineHeight: var(--lineHeightHeading2);
   }
 
   h3 {
@@ -91,6 +149,21 @@ const PostInner = styled.div`
     margin-top: 5rem;
     margin-bottom: 0;
     line-height: 1.4;
+
+    & + h2,
+    & + h3,
+    & + h4,
+    & + h5 {
+      margin-top: var(--spaceSm);
+    }
+
+    & + p .gatsby-resp-image-wrapper {
+      margin-top: var(--spaceMd);
+    }
+  }
+
+  .gatsby-resp-iframe-wrapper {
+    margin-top: var(--spaceLg);
   }
 
   @media (min-width: 900px) {
@@ -107,7 +180,29 @@ const PostInner = styled.div`
   }
 
   @media (${mq.lg}) {
+    margin-top: 0;
     max-width: 800px;
+  }
+
+  .gatsby-code-title {
+    margin-top: var(--spaceLg);
+    & + .gatsby-highlight {
+      margin-top: 0;
+    }
+  }
+
+  .gatsby-highlight {
+    margin-top: var(--spaceMd);
+  }
+
+  .gatsby-resp-image-wrapper {
+    margin-top: var(--spaceLg2);
+  }
+`
+
+const PostBottom = styled.aside`
+  ${SocialWrapper} {
+    margin-top: var(--spaceLg5);
   }
 `
 
@@ -176,12 +271,17 @@ export const Post = (props: PostProps) => {
           )}
         </PostHeader>
         <PostInner>
-          <div dangerouslySetInnerHTML={{ __html: props.html }} />
-          <Social
-            hasShare={props.hasSHare}
-            title={props.title}
-            url={props.url}
+          <div
+            className={'inner'}
+            dangerouslySetInnerHTML={{ __html: props.html }}
           />
+          <PostBottom>
+            <Social
+              hasShare={props.hasSHare}
+              title={props.title}
+              url={props.url}
+            />
+          </PostBottom>
         </PostInner>
       </PostWrapper>
     </Container>

@@ -92,11 +92,16 @@ export const GlobalStyles = createGlobalStyle`
     
     --rhythm: 8;
     --spaceUnit: calc(var(--rhythm) * 1px);
+    --spaceXs1: calc(var(--spaceUnit) * 0.5);
     --spaceXs: var(--spaceUnit);
     --spaceSm: calc(var(--spaceUnit) * 2);
     --spaceMd: calc(var(--spaceUnit) * 3);
     --spaceLg: calc(var(--spaceUnit) * 4);
-    --spaceXl: calc(var(--spaceUnit) * 5);
+    --spaceLg1: calc(var(--spaceUnit) * 5);
+    --spaceLg2: calc(var(--spaceUnit) * 6);
+    --spaceLg3: calc(var(--spaceUnit) * 7);
+    --spaceLg4: calc(var(--spaceUnit) * 8);
+    --spaceLg5: calc(var(--spaceUnit) * 9);
     
     // https://standard.shiftbrain.com/blog/music-math-typography
     --fontSizeRoot: 16px;
@@ -116,6 +121,9 @@ export const GlobalStyles = createGlobalStyle`
     
     --lineHeightUnit: 4px;
     --lineHeightPrimary: calc(var(--lineHeightUnit) * 4);
+    --lineHeightParagraph: calc(var(--lineHeightUnit) * 7);
+    --lineHeightHeading1: calc(var(--lineHeightUnit) * 11);
+    --lineHeightHeading2: calc(var(--lineHeightUnit) * 8);
     
   }
   
