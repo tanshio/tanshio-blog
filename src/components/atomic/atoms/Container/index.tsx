@@ -4,7 +4,7 @@ import { mq } from '../../../../styles/vars/mq'
 
 export const Container = styled.div<{ noSidebar?: boolean }>`
   min-height: 100vh;
-  padding: var(--headerHeight) var(--spaceLg);
+  padding: var(--headerHeight) var(--spaceSm);
 
   @media (${mq.sm}) {
     padding: var(--headerHeight) 3rem var(--headerHeight) calc(300px + 3rem);

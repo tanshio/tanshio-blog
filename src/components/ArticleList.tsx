@@ -5,6 +5,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { palette } from '../styles/vars/colors'
 import { DateISO8601 } from '../types'
 import { Time, TimeWrapper } from './atomic/atoms/Time'
+import { mq } from '../styles/vars/mq'
 
 type ArticleListInterface = {
   date: DateISO8601
@@ -17,6 +18,7 @@ type ArticleListInterface = {
 
 type ArticleListProps = {
   pathname: string
+  filterText: string
   onLinkClick: () => void
 }
 
@@ -32,13 +34,16 @@ const ArticleListWrapper = styled.div<ArticleListWrapperProps>`
 
   & a {
     display: block;
-    padding: 2rem 1rem;
+    padding: var(--spaceMd) var(--spaceSm);
     color: ${(props) =>
       props.current ? 'var(--colorTextReverse)' : 'var(--colorTextPrimary)'};
     background-color: ${(props) =>
       props.current ? 'var(--colorBgDark)' : 'transparent'};
     text-underline-position: under;
     text-decoration: ${(props) => (props.current ? 'underline' : 'none')};
+    @media (${mq.sm}) {
+      padding: var(--spaceMd) var(--spaceSm);
+    }
   }
 
   &:not(.isTouch) {
@@ -53,13 +58,13 @@ const ArticleListWrapper = styled.div<ArticleListWrapperProps>`
 
   ${TimeWrapper} {
     display: block;
-    margin-bottom: 0.5rem;
     font-size: var(--fontSizeSm3);
   }
 `
 
 const ArticleListCategoryList = styled.ul`
   margin: 0;
+  margin-top: var(--spaceXs);
   padding: 0;
   list-style-type: none;
   display: flex;
@@ -76,21 +81,23 @@ const ArticleListCategoryList = styled.ul`
 `
 
 const ArticleListTitle = styled.div`
-  font-size: var(--fontSizeSm2);
-  line-height: 1.6;
-  margin-top: 0.5rem;
-`
+  --fontSize: var(--fontSizeSm2);
+  --lineHeight: var(--lineHeightLinkList);
+  font-size: var(--fontSize);
+  line-height: var(--lineHeight);
+  margin-top: var(--spaceSm);
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+  }
 
-const ArticleFilterInput = styled.input`
-  appearance: none;
-  border: 0;
-  width: 100%;
-  background-color: transparent;
-  padding: 1rem;
-  border-bottom: 2px solid var(--colorTextPrimary);
-  font-size: 0.8rem;
-  color: var(--colorTextPrimary);
-  border-radius: 0;
+  &:before {
+    margin-top: calc((var(--lineHeight) - var(--fontSize)) * -0.5);
+  }
+  &:after {
+    margin-bottom: calc((var(--lineHeight) - var(--fontSize)) * -0.5);
+  }
 `
 
 const ArticleList = (props: ArticleListProps) => {
@@ -98,7 +105,7 @@ const ArticleList = (props: ArticleListProps) => {
   const [posts, setPosts] = useState<ArticleListInterface>([])
   const [isTouch, setIsTouch] = useState(false)
 
-  const [filterText, setFilterText] = useState('')
+  const [filterText, setFilterText] = useState(props.filterText)
   const filterPosts = useMemo(() => {
     if (!filterText) return posts
     return posts.filter((post) => {
@@ -123,16 +130,12 @@ const ArticleList = (props: ArticleListProps) => {
     return () => {}
   }, [])
 
+  useEffect(() => {
+    setFilterText(props.filterText)
+  }, [props.filterText])
+
   return (
     <>
-      <ArticleFilterInput
-        type="text"
-        value={filterText}
-        placeholder={'Search...'}
-        onChange={(e) => {
-          setFilterText(e.target.value)
-        }}
-      />
       {filterPosts.map((post, i) => {
         return (
           <ArticleListWrapper

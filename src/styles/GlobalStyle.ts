@@ -122,6 +122,7 @@ export const GlobalStyles = createGlobalStyle`
     
     --lineHeightUnit: 4px;
     --lineHeightPrimary: calc(var(--lineHeightUnit) * 4);
+    --lineHeightLinkList: calc(var(--lineHeightUnit) * 5);
     --lineHeightParagraph: calc(var(--lineHeightUnit) * 7);
     --lineHeightHeading1: calc(var(--lineHeightUnit) * 11);
     --lineHeightHeading2: calc(var(--lineHeightUnit) * 8);

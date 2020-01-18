@@ -14,6 +14,11 @@ const HeaderLogo = styled.h1`
   font-size: 1rem;
   text-align: center;
   border-bottom: 2px solid var(--colorTextPrimary);
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: var(--headerHeight);
   a {
     display: block;
     color: var(--colorTextPrimary);

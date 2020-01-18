@@ -45,6 +45,7 @@ const PostWrapper = styled.div`
     &:after {
       content: '';
       display: block;
+      height: 0;
     }
     &:before {
       margin-top: calc((var(--lineHeight) - var(--fontSize)) * -0.5);

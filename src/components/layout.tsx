@@ -67,9 +67,9 @@ type MenuButtonType = {
 const MenuButton = styled.button<MenuButtonType>`
   position: fixed;
   appearance: none;
-  padding: 0 var(--spaceXs);
+  padding: 0 var(--spaceSm);
   height: var(--headerHeight);
-  width: var(--spaceLg);
+  width: var(--spaceXl);
   border: 0;
   background-color: transparent;
   left: 0;
@@ -116,14 +116,40 @@ const SmpNav = styled.ul`
     color: var(--colorTextPrimary);
     text-decoration: none;
     display: block;
-    padding: 1rem;
+    padding: 1rem var(--spaceSm);
     font-size: var(--fontSizeSm);
     line-height: 1;
+    @media (${mq.md}) {
+      padding: 1rem;
+    }
   }
 
   @media (${mq.sm}) {
     display: none;
   }
+`
+
+const ArticleFilterInput = styled.input`
+  background-color: var(--colorBg);
+  appearance: none;
+  border: 0;
+  width: 100%;
+  line-height: normal;
+  padding: 1rem var(--spaceSm);
+  border-bottom: 2px solid var(--colorTextPrimary);
+  font-size: var(--fontSizeSm2);
+  color: var(--colorTextPrimary);
+  border-radius: 0;
+  @media (${mq.sm}) {
+    padding: var(--spaceSm);
+  }
+`
+
+const StickyBlock = styled.div`
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: var(--colorBg);
 `
 
 const isOpenSelector = (state: State) => state.nav.isOpen
@@ -133,6 +159,8 @@ const Layout = (props: LayoutProps) => {
   const isOpen = useSelector(isOpenSelector)
   const menuRef = useRef<HTMLDivElement>(null)
   const menuButtonRef = useRef<HTMLButtonElement>(null)
+
+  const [filterText, setFilterText] = useState('')
 
   let websiteTheme: string = ''
   if (typeof window !== `undefined`) {
@@ -182,14 +210,25 @@ const Layout = (props: LayoutProps) => {
         isOpen={isOpen}
         ref={menuRef}
       >
-        <Header />
-        <SmpNav>
-          <li>
-            <Link to={'/about/'}>About</Link>
-          </li>
-        </SmpNav>
+        <StickyBlock>
+          <Header />
+          <SmpNav>
+            <li>
+              <Link to={'/about/'}>About</Link>
+            </li>
+          </SmpNav>
+          <ArticleFilterInput
+            type="text"
+            value={filterText}
+            placeholder={'Search...'}
+            onChange={(e) => {
+              setFilterText(e.target.value)
+            }}
+          />
+        </StickyBlock>
         <ArticleList
           pathname={props.location.pathname}
+          filterText={filterText}
           onLinkClick={() => {
             // dispatch(navActionCreators.close())
           }}
