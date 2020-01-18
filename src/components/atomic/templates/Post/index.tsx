@@ -123,7 +123,7 @@ const PostInner = styled.div`
     & + p,
     ul,
     ol {
-      margin-top: 1.5rem;
+      margin-top: var(--spaceMd);
     }
   }
 
@@ -139,16 +139,16 @@ const PostInner = styled.div`
   }
 
   h3 {
-    font-size: 1.75rem;
+    font-size: var(--fontSizeHeading3);
   }
 
   h2,
   h3,
   h4,
   h5 {
-    margin-top: 5rem;
+    margin-top: var(--spaceXl);
     margin-bottom: 0;
-    line-height: 1.4;
+    line-height: var(--lineHeightHeading2);
 
     & + h2,
     & + h3,
@@ -196,13 +196,13 @@ const PostInner = styled.div`
   }
 
   .gatsby-resp-image-wrapper {
-    margin-top: var(--spaceLg2);
+    margin-top: var(--spaceSm);
   }
 `
 
 const PostBottom = styled.aside`
   ${SocialWrapper} {
-    margin-top: var(--spaceLg5);
+    margin-top: var(--spaceXl2);
   }
 `
 

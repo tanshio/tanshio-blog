@@ -67,8 +67,9 @@ type MenuButtonType = {
 const MenuButton = styled.button<MenuButtonType>`
   position: fixed;
   appearance: none;
-  padding: 8px 4px;
-  width: 2rem;
+  padding: 0 var(--spaceXs);
+  height: var(--headerHeight);
+  width: var(--spaceLg);
   border: 0;
   background-color: transparent;
   left: 0;

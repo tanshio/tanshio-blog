@@ -4,10 +4,10 @@ import { mq } from '../../../../styles/vars/mq'
 
 export const Container = styled.div<{ noSidebar?: boolean }>`
   min-height: 100vh;
-  padding: 2rem;
+  padding: var(--headerHeight) var(--spaceLg);
 
   @media (${mq.sm}) {
-    padding: 4rem 3rem 4rem calc(300px + 3rem);
+    padding: var(--headerHeight) 3rem var(--headerHeight) calc(300px + 3rem);
     padding-left: ${(props) =>
       props.noSidebar ? '3rem' : 'calc(300px + 3rem)'};
   }

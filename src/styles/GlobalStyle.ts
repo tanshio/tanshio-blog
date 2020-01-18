@@ -90,34 +90,35 @@ export const GlobalStyles = createGlobalStyle`
       ${DarkStyle}
     }
     
-    --rhythm: 8;
-    --spaceUnit: calc(var(--rhythm) * 1px);
+    --headerHeight: 4rem;
+    
+    --spaceRhythm: 0.5rem;
+    --spaceUnit: var(--spaceRhythm);
     --spaceXs1: calc(var(--spaceUnit) * 0.5);
     --spaceXs: var(--spaceUnit);
+    --spacePrimary: var(--spaceUnit);
     --spaceSm: calc(var(--spaceUnit) * 2);
     --spaceMd: calc(var(--spaceUnit) * 3);
-    --spaceLg: calc(var(--spaceUnit) * 4);
-    --spaceLg1: calc(var(--spaceUnit) * 5);
-    --spaceLg2: calc(var(--spaceUnit) * 6);
-    --spaceLg3: calc(var(--spaceUnit) * 7);
-    --spaceLg4: calc(var(--spaceUnit) * 8);
-    --spaceLg5: calc(var(--spaceUnit) * 9);
+    --spaceLg: calc(var(--spaceUnit) * 5);
+    --spaceXl: calc(var(--spaceUnit) * 8);
+    --spaceXl2: calc(var(--spaceUnit) * 13);
     
     // https://standard.shiftbrain.com/blog/music-math-typography
-    --fontSizeRoot: 16px;
+    //--fontSizeRoot: 16px;
+    --fontSizeRhythm: 8;
     --fontSizeUnit: 1rem;
-    --fontSizeSm3: calc(var(--fontSizeUnit) * var(--rhythm) / 11);
-    --fontSizeSm2: calc(var(--fontSizeUnit) * var(--rhythm) / 10);
-    --fontSizeSm1: calc(var(--fontSizeUnit) * var(--rhythm) / 9);
-    --fontSizePrimary: calc(var(--fontSizeUnit) * var(--rhythm) / 8);
-    --fontSizeMd: calc(var(--fontSizeUnit) * var(--rhythm) / 7);
-    --fontSizeLg: calc(var(--fontSizeUnit) * var(--rhythm) / 6);
-    --fontSizeXl: calc(var(--fontSizeUnit) * var(--rhythm) / 5);
+    --fontSizeSm3: calc(var(--fontSizeUnit) * var(--fontSizeRhythm) / 11);
+    --fontSizeSm2: calc(var(--fontSizeUnit) * var(--fontSizeRhythm) / 10);
+    --fontSizeSm1: calc(var(--fontSizeUnit) * var(--fontSizeRhythm) / 9);
+    --fontSizePrimary: calc(var(--fontSizeUnit) * var(--fontSizeRhythm) / 8);
+    --fontSizeMd: calc(var(--fontSizeUnit) * var(--fontSizeRhythm) / 7);
+    --fontSizeLg: calc(var(--fontSizeUnit) * var(--fontSizeRhythm) / 6);
+    --fontSizeXl: calc(var(--fontSizeUnit) * var(--fontSizeRhythm) / 5);
     
-    --fontSizeHeadingOther: calc(var(--fontSizeUnit) * var(--rhythm) / 6);
+    --fontSizeHeadingOther: calc(var(--fontSizeUnit) * var(--fontSizeRhythm) / 6);
     --fontSizeHeading3: var(--fontSizeMd);
     --fontSizeHeading2: var(--fontSizeXl);
-    --fontSizeHeading1: calc(var(--fontSizeUnit) * var(--rhythm) / 4);
+    --fontSizeHeading1: calc(var(--fontSizeUnit) * var(--fontSizeRhythm) / 4);
     
     --lineHeightUnit: 4px;
     --lineHeightPrimary: calc(var(--lineHeightUnit) * 4);
@@ -138,7 +139,6 @@ export const GlobalStyles = createGlobalStyle`
   }
   
   html{
-    font-size: var(--fontSizeRoot);
     text-underline-position: under;
     //scroll-behavior: smooth;
   }
@@ -149,7 +149,6 @@ export const GlobalStyles = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     font-family: var(--fontFamilyBase);
     background-color: var(--colorBg);
-    -webkit-font-smoothing: antialiased;
     color: var(--colorTextPrimary);
     &.is-dark {
       ${DarkStyle}

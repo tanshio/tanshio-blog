@@ -7,8 +7,8 @@ const ModeChangeButtonWrapper = styled.button`
   right: 0;
   top: 0;
   appearance: none;
-  width: 2rem;
-  height: 2rem;
+  width: var(--spaceLg);
+  height: 4rem;
   background-color: transparent;
   border-radius: 0;
   border: 0;
@@ -16,8 +16,8 @@ const ModeChangeButtonWrapper = styled.button`
   padding: 0;
   opacity: var(--modeButtonOpacity);
   @media (${mq.sm}) {
-    width: 3rem;
-    height: 3rem;
+    width: 4rem;
+    height: 4rem;
   }
 
   &::before,
@@ -34,17 +34,14 @@ const ModeChangeButtonWrapper = styled.button`
 
   &::before {
     left: 50%;
-    margin-left: -0.5rem;
+    transform: translateX(-50%);
     background-color: var(--colorTextPrimary);
     border: var(--modeButtonCircleBorder);
   }
   &:after {
     background-color: var(--colorBg);
-    right: 10%;
+    transform: translateX(-15%);
     opacity: var(--modeButtonCircleMoonOpacity);
-    @media (${mq.sm}) {
-      right: 22%;
-    }
   }
 
   span {
