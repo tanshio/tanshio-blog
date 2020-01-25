@@ -77,7 +77,9 @@ function Seo({
         },
         {
           property: `og:image`,
-          content: ogp ? `${DOMAIN}${ogp}` : `${DOMAIN}ogp.png`,
+          content: ogp
+            ? `${DOMAIN.substr(0, DOMAIN.length - 1)}${ogp}`
+            : `${DOMAIN}ogp.png`,
         },
         {
           name: `twitter:card`,

@@ -10,43 +10,43 @@ const path = require(`path`)
 const fs = require(`fs`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
-const createCategoryPages = (createPage, posts) => {
-  const TaxsTemplate = path.resolve(`./src/templates/taxonomies.tsx`)
-  const postsByCategories = {}
-  posts.forEach(({ node }) => {
-    // console.log(node.frontmatter)
-    if (node.frontmatter.categories) {
-      node.frontmatter.categories.forEach((category) => {
-        if (!postsByCategories[category]) {
-          postsByCategories[category] = []
-        }
-        postsByCategories[category].push(node)
-      })
-    }
-  })
-
-  const categories = Object.keys(postsByCategories)
-  createPage({
-    path: `/blog/category`,
-    component: TaxsTemplate,
-    context: {
-      categories: categories.sort(),
-    },
-  })
-
-  const postsTemplate = path.resolve('src/templates/posts.tsx')
-  categories.forEach((categoryName) => {
-    const posts = postsByCategories[categoryName]
-    createPage({
-      path: `/blog/category/${categoryName}`,
-      component: postsTemplate,
-      context: {
-        posts,
-        categoryName,
-      },
-    })
-  })
-}
+// const createCategoryPages = (createPage, posts) => {
+//   const TaxsTemplate = path.resolve(`./src/templates/taxonomies.tsx`)
+//   const postsByCategories = {}
+//   posts.forEach(({ node }) => {
+//     // console.log(node.frontmatter)
+//     if (node.frontmatter.categories) {
+//       node.frontmatter.categories.forEach((category) => {
+//         if (!postsByCategories[category]) {
+//           postsByCategories[category] = []
+//         }
+//         postsByCategories[category].push(node)
+//       })
+//     }
+//   })
+//
+//   const categories = Object.keys(postsByCategories)
+//   createPage({
+//     path: `/blog/category`,
+//     component: TaxsTemplate,
+//     context: {
+//       categories: categories.sort(),
+//     },
+//   })
+//
+//   const postsTemplate = path.resolve('src/templates/posts.tsx')
+//   categories.forEach((categoryName) => {
+//     const posts = postsByCategories[categoryName]
+//     createPage({
+//       path: `/blog/category/${categoryName}`,
+//       component: postsTemplate,
+//       context: {
+//         posts,
+//         categoryName,
+//       },
+//     })
+//   })
+// }
 
 const createPosts = (createPage, posts) => {
   // 投稿ページの生成
@@ -109,7 +109,7 @@ exports.createPages = ({ graphql, actions }) => {
 
         const posts = result.data.allMarkdownRemark.edges
 
-        createCategoryPages(createPage, posts)
+        // createCategoryPages(createPage, posts)
         createPosts(createPage, posts)
         const searchJSON = posts.map((post) => {
           const postNode = post.node

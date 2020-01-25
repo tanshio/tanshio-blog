@@ -8,6 +8,8 @@ import { fontSizes } from './vars/fontSizes'
 const DarkStyle = css`
   --colorBg: #1a1a1a;
   --colorTextPrimary: #fff;
+  --colorTextReverse: #1a1a1a;
+  --colorCatHover: var(--colorTextPrimary);
   --shareIconStrokeWidth: 2px;
   --shareIconStrokeColor: var(--colorTextPrimary);
   --colorIconFb: transparent;
@@ -23,6 +25,8 @@ const DarkStyle = css`
 const LightStyle = css`
   --colorBg: #e8e8e8;
   --colorTextPrimary: #1a1a1a;
+  --colorTextReverse: #fff;
+  --colorCatHover: var(--colorBgDark);
   --shareIconStrokeWidth: 0;
   --shareIconStrokeColor: transparent;
   --colorIconFb: #3b5998;
@@ -73,11 +77,14 @@ export const GlobalStyles = createGlobalStyle`
     --colorTextSelection: #fff;
     --colorTextReverse: #fff;
     --colorTextDecoration: #b35662;
+    --colorCatHover: var(--colorBgDark);
     
     --colorIconFb: #3b5998;  
     --colorIconTw: #00aced;  
     --colorIconLine: #00b800;  
     --colorIconPocket: #EF3F56;
+    
+    --colorMenuHover: #fff;
     
     --shareIconStrokeWidth: 0;
 
@@ -91,6 +98,9 @@ export const GlobalStyles = createGlobalStyle`
     }
     
     --headerHeight: 4rem;
+    --sidebarWidth: 300px;
+    --titleWidth: 500px;
+    --articlePadWidth: 3rem;
     
     --spaceRhythm: 0.5rem;
     --spaceUnit: var(--spaceRhythm);
@@ -123,6 +133,8 @@ export const GlobalStyles = createGlobalStyle`
     --lineHeightUnit: 4px;
     --lineHeightPrimary: calc(var(--lineHeightUnit) * 4);
     --lineHeightLinkList: calc(var(--lineHeightUnit) * 5);
+    --lineHeightParagraphXs: calc(var(--lineHeightUnit) * 5);
+    --lineHeightParagraphSm: calc(var(--lineHeightUnit) * 6);
     --lineHeightParagraph: calc(var(--lineHeightUnit) * 7);
     --lineHeightHeading1: calc(var(--lineHeightUnit) * 11);
     --lineHeightHeading2: calc(var(--lineHeightUnit) * 8);
@@ -172,17 +184,6 @@ export const GlobalStyles = createGlobalStyle`
   h6 {
     font-feature-settings: "palt";
     letter-spacing: 0.025em;
-  }
-  
-  a {
-  display: inline-block;
-  //  cursor: pointer;
-  //
-  //  &:link,
-  //  &:visited {
-  //    text-decoration: none;
-  //  }
-  //
   }
   
   .gatsby-resp-image-wrapper {

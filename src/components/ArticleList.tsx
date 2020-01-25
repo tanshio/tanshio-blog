@@ -1,8 +1,7 @@
 import * as React from 'react'
-import { StaticQuery, Link, graphql } from 'gatsby'
+import { Link } from 'gatsby'
 import styled from 'styled-components'
 import { useEffect, useMemo, useState } from 'react'
-import { palette } from '../styles/vars/colors'
 import { DateISO8601 } from '../types'
 import { Time, TimeWrapper } from './atomic/atoms/Time'
 import { mq } from '../styles/vars/mq'
@@ -28,15 +27,13 @@ type ArticleListWrapperProps = {
 }
 
 const ArticleListWrapper = styled.div<ArticleListWrapperProps>`
-  & + & {
-    border-top: 2px solid var(--colorTextPrimary);
-  }
+  border-bottom: 2px solid var(--colorTextPrimary);
 
   & a {
     display: block;
     padding: var(--spaceMd) var(--spaceSm);
     color: ${(props) =>
-      props.current ? 'var(--colorTextReverse)' : 'var(--colorTextPrimary)'};
+      props.current ? 'var(--colorMenuHover)' : 'var(--colorTextPrimary)'};
     background-color: ${(props) =>
       props.current ? 'var(--colorBgDark)' : 'transparent'};
     text-underline-position: under;
@@ -50,7 +47,7 @@ const ArticleListWrapper = styled.div<ArticleListWrapperProps>`
     a {
       &:hover {
         background-color: var(--colorBgDark);
-        color: var(--colorTextReverse);
+        color: var(--colorMenuHover);
         text-decoration: underline;
       }
     }
@@ -73,6 +70,7 @@ const ArticleListCategoryList = styled.ul`
     &:not(:last-of-type) {
       &:after {
         content: ',';
+        text-decoration: none;
         margin-left: 0.2rem;
         margin-right: 0.4rem;
       }
@@ -110,7 +108,10 @@ const ArticleList = (props: ArticleListProps) => {
     if (!filterText) return posts
     return posts.filter((post) => {
       const reg = new RegExp(filterText)
-      return reg.test(post.title)
+      const hasCategory = post.categories.find((cat) => reg.test(cat))
+      const hasTag = post.tags.find((tag) => reg.test(tag))
+
+      return reg.test(post.title) || hasCategory || hasTag
     })
   }, [posts, filterText])
 

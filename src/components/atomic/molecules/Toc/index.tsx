@@ -7,12 +7,67 @@ export const TocWrapper = styled.nav`
     margin: 0;
   }
 
+  h2,
+  li {
+    font-size: var(--fontSize);
+    line-height: var(--lineHeight);
+    text-align: justify;
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+    }
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      height: 0;
+    }
+    &:before {
+      margin-top: calc((var(--lineHeight) - var(--fontSize)) * -0.5);
+    }
+    &:after {
+      margin-bottom: calc((var(--lineHeight) - var(--fontSize)) * -0.5);
+    }
+  }
+
+  h2 {
+    --fontSize: var(--fontSizePrimary);
+    --lineHeight: var(--lineHeightParagraph);
+  }
+
+  li {
+    --fontSize: var(--fontSizeSm2);
+    --lineHeight: calc(var(--lineHeightParagraph) * 0.85);
+    & + li {
+      margin-top: var(--spaceXs);
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+
+    ul,
+    ol {
+      margin-top: var(--spaceXs);
+    }
+  }
+
+  a {
+    color: var(--colorPrimary);
+    text-decoration: underline;
+    text-decoration-color: var(--colorTextDecoration);
+    word-break: break-all;
+    &:hover {
+      background-color: var(--colorTextDecoration);
+      color: var(--colorTextSelection);
+    }
+  }
+
   & > div > ul {
     margin: var(--spaceSm) 0 0 0;
     padding: 0 0 0 var(--spaceMd);
     li {
-      font-size: var(--fontSizeSm2);
-      line-height: calc(var(--lineHeightParagraph) * 0.85);
       & > ul {
         margin-top: var(--spaceXs1);
       }

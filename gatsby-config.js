@@ -71,6 +71,9 @@ module.exports = {
           `gatsby-remark-autolink-headers`,
           `gatsby-remark-responsive-iframe`,
           {
+            resolve: 'gatsby-remark-external-links',
+          },
+          {
             resolve: `gatsby-remark-prismjs`,
             options: {
               classPrefix: 'language-',

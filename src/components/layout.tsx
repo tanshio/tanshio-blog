@@ -7,6 +7,7 @@
 
 import * as React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { useLockBodyScroll, useToggle } from 'react-use'
 
 import Header from './Header'
 import { ReactNode, useEffect, useState } from 'react'
@@ -21,6 +22,7 @@ import { navigate } from '@reach/router'
 import { Link } from 'gatsby'
 import { shareActionCreators } from '../store/share/actions'
 import { ModeChangeButton } from './atomic/atoms/ModeChangeButton'
+import { searchActionCreators } from '../store/search/actions'
 
 interface LayoutProps {
   location: {
@@ -46,7 +48,6 @@ const Sidebar = styled.div<SidebarType>`
   width: 100%;
   height: 100%;
   overflow: auto;
-  border-right: 2px solid var(--colorTextPrimary);
   background-color: var(--colorBg);
   visibility: ${(props) =>
     props.isOpen || isClearedSidebarPages(props.pathname)
@@ -56,6 +57,7 @@ const Sidebar = styled.div<SidebarType>`
   @media (${mq.sm}) {
     width: 300px;
     visibility: visible;
+    border-right: 2px solid var(--colorTextPrimary);
   }
 `
 
@@ -153,14 +155,18 @@ const StickyBlock = styled.div`
 `
 
 const isOpenSelector = (state: State) => state.nav.isOpen
+const searchText = (state: State) => state.search.search
 
 const Layout = (props: LayoutProps) => {
   const dispatch = useDispatch()
   const isOpen = useSelector(isOpenSelector)
+  const search = useSelector(searchText)
   const menuRef = useRef<HTMLDivElement>(null)
   const menuButtonRef = useRef<HTMLButtonElement>(null)
 
-  const [filterText, setFilterText] = useState('')
+  const [filterText, setFilterText] = useState(search)
+  const [locked, toggleLocked] = useToggle(false)
+  useLockBodyScroll(locked)
 
   let websiteTheme: string = ''
   if (typeof window !== `undefined`) {
@@ -170,7 +176,12 @@ const Layout = (props: LayoutProps) => {
   const [theme, setTheme] = useState(websiteTheme)
 
   useEffect(() => {
+    setFilterText(search)
+  }, [search])
+
+  useEffect(() => {
     setTheme(window.__theme)
+    console.log(window.__theme)
     window.__onThemeChange = () => {
       setTheme(window.__theme)
     }
@@ -191,26 +202,29 @@ const Layout = (props: LayoutProps) => {
   useEffect(() => {
     if (/open/.test(props.location.search)) {
       dispatch(navActionCreators.open())
+      toggleLocked(true)
     }
 
     if (!/open/.test(props.location.search) && isOpen) {
       dispatch(navActionCreators.close())
+      toggleLocked(false)
     }
   }, [props.location.search])
   return (
     <>
       <GlobalStyles />
       <ModeChangeButton
-        aria-label={`change color mode ${theme}`}
         onClick={themeToggle}
       />
       <Sidebar
         tabIndex={0}
         pathname={props.location.pathname}
+        aria-label={`change color mode ${theme}`}
         isOpen={isOpen}
         ref={menuRef}
       >
         <StickyBlock>
+          {theme}
           <Header />
           <SmpNav>
             <li>
@@ -218,11 +232,12 @@ const Layout = (props: LayoutProps) => {
             </li>
           </SmpNav>
           <ArticleFilterInput
-            type="text"
+            type="search"
             value={filterText}
             placeholder={'Search...'}
             onChange={(e) => {
               setFilterText(e.target.value)
+              dispatch(searchActionCreators.search(e.target.value))
             }}
           />
         </StickyBlock>
