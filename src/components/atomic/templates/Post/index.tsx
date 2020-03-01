@@ -161,7 +161,7 @@ export const Post = (props: PostProps) => {
           <Content>
             <h1
               dangerouslySetInnerHTML={{
-                __html: Mikan(props.title),
+                __html: props.title ? Mikan(props.title) : '',
               }}
             />
             <Time date={props.date} />

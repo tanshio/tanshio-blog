@@ -26,7 +26,7 @@ export default {
   return (
     <Ogp
       title={
-        'たんしおどっとねっと'
+        'WordPressだったブログをGatsby.jsでリニューアルしました'
       }
     />
   )
@@ -35,7 +35,7 @@ Primary0.story = {
   parameters: {
     screenshot: {
       variants: {
-        '2020/2020-0101-tanshio': {},
+        '2020/2020-0229-renewal-2020': {},
       },
     },
   },

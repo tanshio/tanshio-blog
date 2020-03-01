@@ -224,7 +224,6 @@ const Layout = (props: LayoutProps) => {
         ref={menuRef}
       >
         <StickyBlock>
-          {theme}
           <Header />
           <SmpNav>
             <li>

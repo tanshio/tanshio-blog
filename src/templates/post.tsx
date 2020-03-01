@@ -38,19 +38,34 @@ const hasShareSelector = (state: State) => state.share.hasShare
 
 const Post = (props: PostInterface) => {
   const dispatch = useDispatch()
-  const { tableOfContents, ...post } = props.data.markdownRemark
-  const { title, excerpt } = props.data.markdownRemark.frontmatter
-  const date = props.data.markdownRemark.frontmatter.date as DateISO8601
+  const { ...post } = props.data.markdownRemark
+  const tableOfContents = post.tableOfContents || ''
+  const frontmatter = props.data.markdownRemark?.frontmatter || {
+    title: '',
+    date: '',
+    path: '',
+    excerpt: '',
+    type: 'blog',
+    categories: [],
+    tags: [],
+    ogp: {
+      publicURL: '',
+    },
+  }
+  const title = frontmatter ? frontmatter.title : ''
+  const excerpt = frontmatter ? frontmatter.excerpt : ''
+  const date = frontmatter
+    ? (frontmatter.date as DateISO8601)
+    : ('' as DateISO8601)
   const isOpen = useSelector(isOpenSelector)
   const hasShare = useSelector(hasShareSelector)
   return (
     <>
       <Seo
-        title={post.frontmatter.title}
-        description={post.frontmatter.excerpt}
-        keywords={[`gatsby`, `application`, `react`]}
-        path={post.frontmatter.path}
-        ogp={post.frontmatter.ogp && post.frontmatter.ogp.publicURL}
+        title={title}
+        description={excerpt}
+        path={frontmatter.path}
+        ogp={frontmatter.ogp && frontmatter.ogp.publicURL}
         type={'article'}
       />
       <SinglePost
@@ -63,8 +78,8 @@ const Post = (props: PostInterface) => {
         date={date}
         excerpt={excerpt}
         html={post.html}
-        frontmatter={post.frontmatter}
-        tableOfContents={tableOfContents}
+        frontmatter={frontmatter}
+        tableOfContents={tableOfContents || ''}
         title={title}
       />
     </>
