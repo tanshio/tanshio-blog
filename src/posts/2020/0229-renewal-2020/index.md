@@ -5,7 +5,7 @@ path: "/blog/2020/02/renewal-2020/"
 type: "blog"
 categories: ['日々のこと']
 tags: []
-excerpt: "ブログをリニューアルしましたです"
+excerpt: "2020年に7年使っていた WordPress から Gatsby.js に乗り換えました"
 ogp: "./ogp.png"
 ---
 
