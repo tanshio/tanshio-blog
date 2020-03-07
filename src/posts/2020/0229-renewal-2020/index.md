@@ -44,7 +44,7 @@ WordPress で諸々カスタマイズする場合、WordPress をインストー
 
 ## 構成など
 
-サーバーの置き場所は AWS のAmplify Console。  
+ブログの置き場所は AWS のAmplify Console。  
 フロントはGatsby.js（TypeScript）で、styled-components、storybookを簡易的に導入しています。
 
 GitHubリポジトリ [https://github.com/tanshio/tanshio-blog](https://github.com/tanshio/tanshio-blog)
@@ -63,7 +63,7 @@ Netlify でもいいっちゃいいんですが、画像のダウンロードが
 
 ### Hygen でテンプレート管理
 
-CUI で自分の使いたいテンプレートを作成できる (https://www.hygen.io/)[Hygen] というライブラリを使ってみました。  
+CUI で自分の使いたいテンプレートを作成できる [Hygen](https://www.hygen.io/) というライブラリを使ってみました。  
 このサイトでは投稿、コンポーネントなどを作成できるようにしています。柔軟にファイルが作成できるので非常におすすめ。
 
 ### レイアウト
