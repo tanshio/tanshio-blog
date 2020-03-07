@@ -142,6 +142,7 @@ const ArticleFilterInput = styled.input`
   font-size: var(--fontSizeSm2);
   color: var(--colorTextPrimary);
   border-radius: 0;
+  box-shadow: none;
   @media (${mq.sm}) {
     padding: var(--spaceSm);
   }
@@ -202,12 +203,12 @@ const Layout = (props: LayoutProps) => {
   useEffect(() => {
     if (/open/.test(props.location.search)) {
       dispatch(navActionCreators.open())
-      toggleLocked(true)
+      // toggleLocked(true)
     }
 
     if (!/open/.test(props.location.search) && isOpen) {
       dispatch(navActionCreators.close())
-      toggleLocked(false)
+      // toggleLocked(false)
     }
   }, [props.location.search])
   return (
