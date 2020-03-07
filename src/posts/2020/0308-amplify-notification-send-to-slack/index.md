@@ -52,7 +52,7 @@ https://github.com/tanshio/amplify-sns-to-slack
 クローンしたところと、`src/lambda/amplify/` で `yarn install` でインストール、  
 `direnv` を使っているので、`.envrc.template` を `.envrc` にリネームして、 `direnv allow` で環境変数を有効化します。
 
-AMPLIFY\_SNS\_ID が SNS の ID です
+AMPLIFY\_SNS\_ID が SNS の ID です  
 AMPLIFY\_SNS\_ARN が SNS の ARN です
 
 
