@@ -83,7 +83,7 @@ function Seo({
         },
         {
           name: `twitter:card`,
-          content: `summary_large_image"`,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:creator`,
