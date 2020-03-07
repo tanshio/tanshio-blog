@@ -133,7 +133,7 @@ const SmpNav = styled.ul`
 
 const ArticleFilterInput = styled.input`
   background-color: var(--colorBg);
-  appearance: none;
+  appearance: none !important;
   border: 0;
   width: 100%;
   line-height: normal;
