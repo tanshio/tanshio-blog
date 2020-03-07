@@ -49,6 +49,9 @@ const PostHeader = styled.header`
     margin: 0;
     --fontSize: var(--fontSizeHeading1);
     --lineHeight: var(--lineHeightHeading1);
+    span {
+      white-space: pre;
+    }
   }
 
   ${TimeWrapper} {

@@ -1,5 +1,20 @@
 [
   {
+    "date": "2020-03-08",
+    "title": "AWS CDKでAmplify Consoleの通知をSlackに送りたい！",
+    "excerpt": "AWS CDKでAmplify Consoleの通知をSlackに送りたい！",
+    "categories": [
+      "環境構築",
+      "AWS"
+    ],
+    "tags": [
+      "Node.js",
+      "Lambda",
+      "TypeScript"
+    ],
+    "path": "/blog/2020/03/amplify-notification-send-to-slack/"
+  },
+  {
     "date": "2020-02-29",
     "title": "WordPressだったブログをGatsby.jsでリニューアルしました",
     "excerpt": "2020年に7年使っていた WordPress から Gatsby.js に乗り換えました",

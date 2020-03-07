@@ -26,7 +26,7 @@ export default {
   return (
     <Ogp
       title={
-        'WordPressだったブログをGatsby.jsでリニューアルしました'
+        'AWS CDKでAmplify Consoleの通知をSlackに送りたい！'
       }
     />
   )
@@ -35,7 +35,7 @@ Primary0.story = {
   parameters: {
     screenshot: {
       variants: {
-        '2020/2020-0229-renewal-2020': {},
+        '2020/2020-0308-amplify-notification-send-to-slack': {},
       },
     },
   },
