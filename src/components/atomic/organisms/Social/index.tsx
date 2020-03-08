@@ -76,6 +76,11 @@ const ShareButton = styled.button`
   &.hasShare {
     display: inline-block;
   }
+  circle {
+    stroke-width: var(--shareIconNativeStrokeWidth);
+    stroke: var(--shareIconNativeStrokeColor);
+    fill: var(--shareIconNativeFillColor);
+  }
   .icon-share {
     position: absolute;
     top: calc(50% - 12px);
@@ -84,7 +89,7 @@ const ShareButton = styled.button`
     height: 24px;
     transform: scale(0.9);
     path {
-      fill: #fff;
+      fill: var(--shareIconNativeIconColor);
     }
   }
 `

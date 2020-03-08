@@ -12,6 +12,10 @@ const DarkStyle = css`
   --colorCatHover: var(--colorTextPrimary);
   --shareIconStrokeWidth: 2px;
   --shareIconStrokeColor: var(--colorTextPrimary);
+  --shareIconNativeStrokeWidth: 2px;
+  --shareIconNativeStrokeColor: var(--colorTextPrimary);
+  --shareIconNativeFillColor: transparent;
+  --shareIconNativeIconColor: var(--colorTextPrimary);
   --colorIconFb: transparent;
   --colorIconTw: transparent;
   --colorIconLine: transparent;
@@ -29,6 +33,10 @@ const LightStyle = css`
   --colorCatHover: var(--colorBgDark);
   --shareIconStrokeWidth: 0;
   --shareIconStrokeColor: transparent;
+  --shareIconNativeStrokeWidth: 1;
+  --shareIconNativeStrokeColor: var(--colorTextPrimary);
+  --shareIconNativeFillColor: transparent;
+  --shareIconNativeIconColor: #666;
   --colorIconFb: #3b5998;
   --colorIconTw: #00aced;
   --colorIconLine: #00b800;
