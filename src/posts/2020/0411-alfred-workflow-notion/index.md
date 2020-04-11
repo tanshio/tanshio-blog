@@ -30,7 +30,7 @@ Obtaining your workflow variables の見出しの下の設定をします。
 Alfred workflow から検索したい Notion のワークスペースをブラウザから開き、 `quick find` のページで何でもいいので検索します。  
 Chrome などの開発者ツールで、 Network → search のページの Header から `cookie` と Request Payload の `spaceId` をメモします。 
 
-![URLのコピー](Alfred_Preferences.png)
+![ワークフロー](Alfred_Preferences.png)
 
 インストールした Alfred workflow で、変数 `cookie` と `notionSpaceId` を設定します。
 
@@ -47,6 +47,8 @@ searchResultObject.link = "notion://www.notion.so/" + 〜〜〜
 ```
 
 以上でAlfred から `ns` で検索するとNotionアプリで開くようになります。
+
+![Alfredから呼び出す](alfred.png)
 
 ## 終わりに
 
