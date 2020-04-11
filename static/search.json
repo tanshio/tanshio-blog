@@ -1,5 +1,17 @@
 [
   {
+    "date": "2020-04-11",
+    "title": "Alfred workflowでNotionアプリを起動する",
+    "excerpt": "Alfred workflowでNotionアプリを起動する",
+    "categories": [
+      "日々のこと"
+    ],
+    "tags": [
+      "Notion"
+    ],
+    "path": "/blog/2020/04/alfred-workflow-notion/"
+  },
+  {
     "date": "2020-03-08",
     "title": "AWS CDKでAmplify Consoleの通知をSlackに送りたい！",
     "excerpt": "AWS CDKでAmplify Consoleの通知をSlackに送りたい！",

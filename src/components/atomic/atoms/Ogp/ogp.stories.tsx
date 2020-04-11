@@ -26,7 +26,7 @@ export default {
   return (
     <Ogp
       title={
-        'AWS CDKでAmplify Consoleの通知をSlackに送りたい！'
+        'Alfred workflowでNotionアプリを起動する'
       }
     />
   )
@@ -35,7 +35,7 @@ Primary0.story = {
   parameters: {
     screenshot: {
       variants: {
-        '2020/2020-0308-amplify-notification-send-to-slack': {},
+        '2020/2020-0411-alfred-workflow-notion': {},
       },
     },
   },
