@@ -49,7 +49,7 @@
     "gatsby-remark-prismjs": "^3.3.27",
     "gatsby-remark-responsive-iframe": "^2.2.30",
     "gatsby-source-filesystem": "^2.1.42",
-    "gatsby-transformer-remark": "^2.6.42",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.3.9",
     "immer": "^5.0.1",
     "mikanjs": "^1.0.11",
